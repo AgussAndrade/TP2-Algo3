@@ -7,7 +7,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Integrante 1** - [Pablo Salvador Dimartino](https://github.com/psdimartino) - 101231
 * **Integrante 2** - [Agustin Ariel Andrade](https://github.com/AgussAndrade) - 104046
 * **Integrante 3** - [Gabriel Lorenzo Ortega](https://github.com/GabyOrtega) - 104548
-* **Integrante 4** - [integrante4](https://github.com/integrante4)
+* **Integrante 4** - [Emmanuel Walter Sarzi](https://github.com/manusarzi) - 104047
 
 Corrector: **{Sebastian Blazquez}**
 
