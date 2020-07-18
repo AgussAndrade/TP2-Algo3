@@ -2,7 +2,7 @@
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
-## Grupo {5}
+## Grupo {05}
 
 * **Integrante 1** - [Pablo Salvador Dimartino](https://github.com/psdimartino) - 101231
 * **Integrante 2** - [Agustin Ariel Andrade](https://github.com/AgussAndrade) - 104046
