@@ -7,12 +7,13 @@ public class PreguntaTest {
     @Test
     public void test01UnaPreguntaDeVerdaderoYFalsoPuedeCrearseIndicandoleLaRespuestaCorrecta(){
         String nombre = "Argentina es un pais";
-        Opcion opcionCorrecta = new Opcion("falso", new Correcta);
-        Opcion opcionIncorrecta = new Opcion("verdadero", new IncorrectaClasica);
+        Opcion opcionCorrecta = new Correcta("falso");
+        Opcion opcionIncorrecta = new Incorrecta("verdadero");
         Pregunta pregunta = new PreguntaVerdaderoFalso(nombre, opcionCorrecta, opcionIncorrecta);
         assertEquals("Argentina es un pais", pregunta.nombre());
+        assertEquals("falso", pregunta.opcionCorrecta());
     }
-    @Test
+/*    @Test
     public void test02UnaPreguntaDeVerdaderoFalsoClásicoRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente(){
         String nombre = "argensimia es un pais";
         Opcion opcionCorrecta = new Opcion("falso", new Correcta);
@@ -20,6 +21,6 @@ public class PreguntaTest {
         Pregunta pregunta = new PreguntaVerdaderoFalso(nombre, opcionCorrecta, opcionIncorrecta);
         assertEquals("Argentina es un pais", pregunta.nombre());
 
-    }
+    } */
 }
-/*     */
+
