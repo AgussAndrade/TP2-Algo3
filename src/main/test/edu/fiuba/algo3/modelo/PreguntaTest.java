@@ -18,7 +18,6 @@ public class PreguntaTest {
         assertEquals("Argentina es un pais", pregunta.nombre());
     }
     @Test
-
     public void test02UnaPreguntaDeVerdaderoFalsoClasicoRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente(){
         String nombre = "Argentina es un pais";
         List<Opcion> opciones = new ArrayList<>();
