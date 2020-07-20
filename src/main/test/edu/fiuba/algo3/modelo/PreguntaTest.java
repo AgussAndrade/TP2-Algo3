@@ -17,13 +17,23 @@ public class PreguntaTest {
         Pregunta pregunta = new PreguntaVerdaderoFalso(nombre, opciones);
         assertEquals("Argentina es un pais", pregunta.nombre());
     }
-/*    @Test
-    public void test02UnaPreguntaDeVerdaderoFalsoClásicoRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente(){
-        String nombre = "argensimia es un pais";
-        Opcion opcionCorrecta = new Opcion("falso", new Correcta);
-        Opcion opcionIncorrecta = new Opcion("verdadero", new IncorrectaClasica);
-        Pregunta pregunta = new PreguntaVerdaderoFalso(nombre, opcionCorrecta, opcionIncorrecta);
-        assertEquals("Argentina es un pais", pregunta.nombre());
-    } */
+    @Test
+
+    public void test02UnaPreguntaDeVerdaderoFalsoClasicoRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente(){
+        String nombre = "Argentina es un pais";
+        List<Opcion> opciones = new ArrayList<>();
+        opciones.add(new Correcta("falso"));
+        opciones.add(new Incorrecta("verdadero"));
+        Pregunta pregunta = new PreguntaVerdaderoFalso(nombre, opciones);
+        Jugador jugador = new Jugador("Juan");
+        Jugador jugadora = new Jugador("Juana");
+        List<Respuesta> respuestas = new ArrayList<>();
+        respuestas.add(new Respuesta(jugador, opciones.get(0)));
+        respuestas.add(new Respuesta(jugadora, opciones.get(1)));
+        pregunta.comprobarRespuestas(respuestas);
+        assertEquals(1, jugador.puntos());
+        assertEquals(0, jugadora.puntos());
+
+    }
 }
 

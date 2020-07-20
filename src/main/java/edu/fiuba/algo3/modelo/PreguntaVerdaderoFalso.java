@@ -12,4 +12,10 @@ public class PreguntaVerdaderoFalso implements Pregunta {
     public String nombre(){
         return enunciado;
     }
+
+    public void comprobarRespuestas(List<Respuesta> respuestas){
+        for(Respuesta respuesta : respuestas) {
+            respuesta.validar();
+        }
+    }
 }
