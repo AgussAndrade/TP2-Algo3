@@ -1,18 +1,15 @@
 package edu.fiuba.algo3.modelo;
 
+import java.util.List;
+
 public class PreguntaVerdaderoFalso implements Pregunta {
     String enunciado;
-    Opcion correcta;
-    Opcion incorrecta;
-    public PreguntaVerdaderoFalso(String enunciado, Opcion opcionCorrecta, Opcion opcionIncorrecta) {
+    List<Opcion> opciones;
+    public PreguntaVerdaderoFalso(String enunciado, List<Opcion> opciones) {
         this.enunciado = enunciado;
-        correcta = opcionCorrecta;
-        incorrecta = opcionIncorrecta;
+        this.opciones = opciones;
     }
     public String nombre(){
         return enunciado;
-    }
-    public String opcionCorrecta(){
-        return correcta.texto();
     }
 }
