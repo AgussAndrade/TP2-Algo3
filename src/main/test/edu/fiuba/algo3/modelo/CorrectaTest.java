@@ -9,7 +9,7 @@ public class CorrectaTest {
     @Test
     public void test01UnaOpcionCorrectaSabeCuantosPuntosConsigueSegunUnaEstrategia(){
         Estrategia estrategia = new Clasica();
-        Opcion correcta = new Correcta();
+        Opcion correcta = new Correcta("Argentina es un Pais");
         assertEquals(1, correcta.obtenerPuntos(estrategia));
     }
 }
