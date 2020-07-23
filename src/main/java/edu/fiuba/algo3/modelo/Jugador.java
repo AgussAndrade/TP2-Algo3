@@ -11,7 +11,12 @@ public class Jugador{
     public int puntos() {
         return puntaje;
     }
+
     public void sumarPuntos(int cantidadDePuntos){
         puntaje += cantidadDePuntos;
+    }
+
+    public String nombre() {
+        return nombre;
     }
 }
