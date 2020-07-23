@@ -17,18 +17,19 @@ Corrector: **{Sebastian Blazquez}**
 Listado de software/herramientas necesarias para el proyecto
 
 ```
-java 11
-maven 3.6.0
-...
+
+java 14
+Apache Maven 3.6.3
+
 ```
 
 ## Ejecutando las pruebas
-
-Explicación de como ejecutar las pruebas
-
+```
+$ mvn clean test
+```
 ## Ejecutando la aplicación
 
-Explicación de como ejecutar la aplicación
+La aplicación se encuentra en desarollo y no es posible ejecutarla.
 
 ## Licencia
 
