@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
-public class Respuesta {
+public class  Respuesta {
     private Jugador responsable;
     private Opcion seleccion;
 

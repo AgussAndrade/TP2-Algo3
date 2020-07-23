@@ -12,13 +12,13 @@ public class PreguntaVerdaderoFalso implements Pregunta {
         this.opciones = opciones;
         this.estrategia = estrategia;
     }
+
     public String nombre(){
         return enunciado;
     }
 
     public void comprobarRespuestas(List<Respuesta> respuestas){
         for(Respuesta respuesta : respuestas) {
-            //estrategia.asignarPuntos(respuesta);
             respuesta.validar(estrategia);
         }
     }

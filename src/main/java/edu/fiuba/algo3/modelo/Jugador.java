@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
-public class Jugador {
+public class Jugador{
     private int puntaje = 0;
     private String nombre;
 

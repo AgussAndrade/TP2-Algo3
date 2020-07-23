@@ -5,6 +5,7 @@ public class Correcta implements Opcion {
     public Correcta(String nombre) {
         this.nombre = nombre;
     }
+
     @Override
     public String texto(){
         return nombre;
