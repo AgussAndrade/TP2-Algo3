@@ -1,8 +1,8 @@
-# TP2 Algoritmos 3: {Kahoot}
+# TP2 Algoritmos 3: Kahoot
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
 
-## Grupo {05}
+## Grupo 05
 
 * **Integrante 1** - [Pablo Salvador Dimartino](https://github.com/psdimartino) - 101231
 * **Integrante 2** - [Agustin Ariel Andrade](https://github.com/AgussAndrade) - 104046
@@ -10,7 +10,7 @@ Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUB
 * **Integrante 4** - [Emmanuel Walter Sarzi](https://github.com/manusarzi) - 104047
 * **Integrante 5** - [Nahuel Cellini Rotunno](https://github.com/NCellini) - 103320
 
-Corrector: **{Sebastian Blazquez}**
+Corrector: **Sebastian Blazque**
 
 ### Pre-requisitos
 
