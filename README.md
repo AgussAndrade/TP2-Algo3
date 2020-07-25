@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/github/AgussAndrade/TP2-Algo3)](https://travis-ci.com/github/AgussAndrade/TP2-Algo3)
-<br />
+[![Build Status](https://www.travis-ci.org/AgussAndrade/TP2-Algo3.svg?branch=master)](https://www.travis-ci.org/AgussAndrade/TP2-Algo3)
 
 # TP2 Algoritmos 3: Kahoot
 
