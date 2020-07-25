@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/github/AgussAndrade/TP2-Algo3)](https://travis-ci.com/github/AgussAndrade/TP2-Algo3)
+<br />
+
 # TP2 Algoritmos 3: Kahoot
 
 Trabajo Práctico número 2 de la materia Algoritmos y Programación III de FIUBA
