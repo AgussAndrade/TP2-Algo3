@@ -2,14 +2,14 @@ package edu.fiuba.algo3.modelo;
 
 import java.util.List;
 
-public class PreguntaVerdaderoFalso implements Pregunta {
+public class VerdaderoFalso implements Pregunta {
     String enunciado;
     List<Opcion> opciones;
     Estrategia estrategia;
 
-    public PreguntaVerdaderoFalso(String enunciado, List<Opcion> opciones, Estrategia estrategia) {
+    public VerdaderoFalso(String enunciado, List<Opcion> opciones, Estrategia estrategia) {
         this.enunciado = enunciado;
-        this.opciones = opciones;
+        this.opciones = List.copyOf(opciones);
         this.estrategia = estrategia;
     }
 
