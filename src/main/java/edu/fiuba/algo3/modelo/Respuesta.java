@@ -1,14 +1,19 @@
 package edu.fiuba.algo3.modelo;
 
-public class  Respuesta {
-    private Jugador responsable;
-    private Opcion seleccion;
+import java.util.List;
 
-    public Respuesta(Jugador responsable, Opcion seleccion){
+public class Respuesta {
+    private Jugador responsable;
+    private List<Opcion> selecciones;
+
+    public Respuesta(Jugador responsable, List<Opcion> selecciones){
         this.responsable = responsable;
-        this.seleccion = seleccion;
+        this.selecciones = selecciones;
+
     }
     public void validar(Estrategia estrategia){
-        responsable.sumarPuntos(seleccion.obtenerPuntos(estrategia));
+
+        estrategia.sumarPuntos(responsable,selecciones);
     }
 }
+
