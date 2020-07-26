@@ -2,8 +2,18 @@ package edu.fiuba.algo3.modelo;
 
 import java.util.List;
 
-public interface Pregunta {
-    public String nombre();
+public abstract class Pregunta {
+    protected String enunciado;
+    protected List<Opcion> opciones;
+    protected Estrategia estrategia;
 
-    void comprobarRespuestas(List<Respuesta> respuestas);
+    public String nombre(){
+        return enunciado;
+    }
+
+    public void comprobarRespuestas(List<Respuesta> respuestas){
+        for(Respuesta respuesta : respuestas) {
+            respuesta.validar(estrategia);
+        }
+    }
 }
