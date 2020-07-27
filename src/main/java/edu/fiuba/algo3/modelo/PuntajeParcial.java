@@ -19,6 +19,6 @@ public class PuntajeParcial implements Estrategia {
         for(Opcion seleccion : selecciones) {
             puntosASumar += seleccion.obtenerPuntos(this);
         }
-        jugador.sumarPuntos( puntosASumar);
+        jugador.sumarPuntos(puntosASumar);
     }
 }
