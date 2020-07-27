@@ -11,9 +11,13 @@ public class Respuesta {
         this.selecciones = selecciones;
 
     }
-    public void validar(Estrategia estrategia){
 
-        estrategia.sumarPuntos(responsable,selecciones);
+    public Jugador jugador() {
+        return responsable;
+    }
+
+    public List<Opcion> selecciones() {
+        return selecciones;
     }
 }
 

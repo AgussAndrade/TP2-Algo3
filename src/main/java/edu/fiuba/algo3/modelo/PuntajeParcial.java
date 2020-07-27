@@ -14,11 +14,11 @@ public class PuntajeParcial implements Estrategia {
     }
 
     @Override
-    public void sumarPuntos(Jugador jugador, List<Opcion> selecciones){
+    public void sumarPuntos(Respuesta respuesta){
         int puntosASumar = 0;
-        for(Opcion seleccion : selecciones) {
+        for(Opcion seleccion : respuesta.selecciones()) {
             puntosASumar += seleccion.obtenerPuntos(this);
         }
-        jugador.sumarPuntos(puntosASumar);
+        respuesta.jugador().sumarPuntos(puntosASumar);
     }
 }
