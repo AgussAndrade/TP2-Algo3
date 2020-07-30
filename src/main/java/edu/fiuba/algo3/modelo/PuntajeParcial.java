@@ -1,7 +1,5 @@
 package edu.fiuba.algo3.modelo;
 
-import java.util.List;
-
 public class PuntajeParcial implements Estrategia {
     @Override
     public int puntosPorIncorrecta() {
