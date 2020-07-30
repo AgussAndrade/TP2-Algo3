@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
 public class Clasica implements Estrategia {
-    int multiplicable = 1;
+    int sumable = 1;
 
     private int cantidadDeRespuestasCorrectas;
 
@@ -11,7 +11,7 @@ public class Clasica implements Estrategia {
 
     @Override
     public int puntosPorIncorrecta() {
-        multiplicable = 0;
+        sumable = 0;
         return 0;
     }
 
@@ -22,14 +22,14 @@ public class Clasica implements Estrategia {
 
     @Override
     public void sumarPuntos(Respuesta respuesta){
-        int puntosASumar = 0;
+        int respondido = 0;
         for(Opcion seleccion : respuesta.selecciones()) {
-            puntosASumar += seleccion.obtenerPuntos(this);
+            respondido += seleccion.obtenerPuntos(this);
         }
-        if(puntosASumar != cantidadDeRespuestasCorrectas){
-            multiplicable = 0;
+        if(respondido != cantidadDeRespuestasCorrectas){
+            sumable = 0;
         }
-        respuesta.jugador().sumarPuntos( multiplicable);
-        multiplicable = 1;
+        respuesta.jugador().sumarPuntos(sumable);
+        sumable = 1;
     }
 }
