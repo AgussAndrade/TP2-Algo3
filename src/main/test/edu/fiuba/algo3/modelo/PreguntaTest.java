@@ -43,7 +43,7 @@ public class PreguntaTest {
 
     }
     @Test
-    public void test03UnaPreguntaDeVerdaderoFalsoConPenalidadPuedeCrearseIndicándoleCualEsLaRespuestaCorrecta(){
+    public void test03UnaPreguntaDeVerdaderoFalsoConPenalidadPuedeCrearseIndicandoleCualEsLaRespuestaCorrecta(){
         String nombre = "Argentina es un pais";
 
         Pregunta pregunta = VerdaderoFalso.verdadera(nombre, new Penalizable());
