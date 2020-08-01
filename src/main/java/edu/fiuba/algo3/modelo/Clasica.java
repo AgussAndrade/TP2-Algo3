@@ -3,12 +3,9 @@ package edu.fiuba.algo3.modelo;
 import java.util.List;
 
 public class Clasica implements Estrategia {
-    int sumable = 1;
 
-    private int cantidadDeRespuestasCorrectas;
 
-    public Clasica(int cantidadDeRespuestasCorrectas){
-        this.cantidadDeRespuestasCorrectas = cantidadDeRespuestasCorrectas;
+    public Clasica(){
     }
 
 
