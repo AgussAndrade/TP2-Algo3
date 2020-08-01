@@ -12,7 +12,7 @@ public class Correcta implements Opcion {
     }
 
     @Override
-    public int obtenerPuntos(Estrategia estrategia) {
-        return estrategia.puntosPorCorrecta();
+    public boolean esCorrecta() {
+        return true;
     }
 }

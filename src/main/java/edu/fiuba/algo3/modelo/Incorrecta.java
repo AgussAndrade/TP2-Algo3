@@ -12,7 +12,7 @@ public class Incorrecta implements Opcion {
     }
 
     @Override
-    public int obtenerPuntos(Estrategia estrategia){
-        return estrategia.puntosPorIncorrecta();
+    public int esCorrecta(){
+        return false;
     }
 }
