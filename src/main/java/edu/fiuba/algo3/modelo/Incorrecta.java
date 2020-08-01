@@ -12,7 +12,7 @@ public class Incorrecta implements Opcion {
     }
 
     @Override
-    public int esCorrecta(){
+    public boolean esCorrecta(){
         return false;
     }
 }
