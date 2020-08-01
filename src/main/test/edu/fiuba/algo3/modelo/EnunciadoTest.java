@@ -19,7 +19,7 @@ public class EnunciadoTest {
         opciones.add(opcionIncorrecta);
         Pregunta pregunta = VerdaderoFalso(nombre, opciones, new Clasica());
 
-        assertEquals("Argentina es un pais", pregunta.nombre());
+        assertEquals("Argentina es un pais", pregunta.enunciado());
     }
 
     @Test
@@ -61,7 +61,7 @@ public class EnunciadoTest {
         opciones.add(opcionIncorrecta);
         Pregunta pregunta = new VerdaderoFalso(nombre, opciones, new Penalizable());
 
-        assertEquals("Argentina es un pais", pregunta.nombre());
+        assertEquals("Argentina es un pais", pregunta.enunciado());
 
     }
     @Test
@@ -106,7 +106,7 @@ public class EnunciadoTest {
 
         Pregunta pregunta = new MultipleChoice(nombre, opciones, new Clasica());
 
-        assertEquals("Cuales son provincias", pregunta.nombre());
+        assertEquals("Cuales son provincias", pregunta.enunciado());
     }
 
     @Test
@@ -118,7 +118,7 @@ public class EnunciadoTest {
         opciones.add(new Incorrecta("La pampa"));
         opciones.add(new Incorrecta("Lanus"));
 
-        Pregunta pregunta = new MultipleChoice(nombre, opciones, new Clasica(1));
+        Pregunta pregunta = new MultipleChoice(nombre, opciones, new Clasica());
         Jugador jugador = new Jugador("Juan");
         Jugador jugadora = new Jugador("Juana");
 
@@ -149,7 +149,7 @@ public class EnunciadoTest {
 
         Pregunta pregunta = new MultipleChoice(nombre, opciones, new PuntajeParcial());
 
-        assertEquals("Cuales son provincias", pregunta.nombre());
+        assertEquals("Cuales son provincias", pregunta.enunciado());
     }
     @Test
     public void test08UnaPreguntaDeMultipleChoiceConPuntajeParcialRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
@@ -191,7 +191,7 @@ public class EnunciadoTest {
 
         Pregunta pregunta = new MultipleChoice(nombre, opciones, new Penalizable());
 
-        assertEquals("Cuales son provincias", pregunta.nombre());
+        assertEquals("Cuales son provincias", pregunta.enunciado());
     }
     @Test
     public void test10UnaPreguntaDeMultipleChoicePenalizableRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
