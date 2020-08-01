@@ -4,16 +4,7 @@ import java.util.List;
 
 public class Penalizable implements Estrategia {
 
-    @Override
-    public int puntosPorIncorrecta() {
-        return -1;
-    }
-
-    @Override
-    public int puntosPorCorrecta() {
-        return 1;
-    }
-
+    
     @Override
     public void sumarPuntos(Respuesta respuesta, List<Opcion> opciones){
         int puntosASumar = 0;
