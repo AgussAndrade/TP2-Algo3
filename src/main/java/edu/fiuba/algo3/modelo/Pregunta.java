@@ -7,7 +7,7 @@ public abstract class Pregunta {
     protected List<Opcion> opciones;
     protected Estrategia estrategia;
 
-    public String nombre(){
+    public String enunciado(){
         return enunciado;
     }
 
