@@ -7,13 +7,17 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PreguntaTest {
+public class EnunciadoTest {
 
     @Test
     public void test01UnaPreguntaDeVerdaderoYFalsoPuedeCrearseIndicandoleLaRespuestaCorrecta(){
         String nombre = "Argentina es un pais";
-
-        Pregunta pregunta = VerdaderoFalso.verdadera(nombre, new Clasica(1));
+        List<Opcion> opciones = new ArrayList<>();
+        Opcion opcionCorrecta = new Correcta("True");
+        Opcion opcionIncorrecta = new Incorrecta("False");
+        opciones.add(opcionCorrecta);
+        opciones.add(opcionIncorrecta);
+        Pregunta pregunta = VerdaderoFalso(nombre, opciones, new Clasica());
 
         assertEquals("Argentina es un pais", pregunta.nombre());
     }
@@ -21,8 +25,13 @@ public class PreguntaTest {
     @Test
     public void test02UnaPreguntaDeVerdaderoFalsoClasicoRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente(){
         String nombre = "Argentina es un pais";
+        List<Opcion> opciones = new ArrayList<>();
+        Opcion opcionCorrecta = new Correcta("True");
+        Opcion opcionIncorrecta = new Incorrecta("False");
+        opciones.add(opcionCorrecta);
+        opciones.add(opcionIncorrecta);
 
-        Pregunta pregunta = VerdaderoFalso.verdadera(nombre, new Clasica(1));
+        Pregunta pregunta = VerdaderoFalso(nombre, opciones, new Clasica());
 
         Jugador jugador = new Jugador("Juan");
         Jugador jugadora = new Jugador("Juana");
@@ -45,8 +54,12 @@ public class PreguntaTest {
     @Test
     public void test03UnaPreguntaDeVerdaderoFalsoConPenalidadPuedeCrearseIndicandoleCualEsLaRespuestaCorrecta(){
         String nombre = "Argentina es un pais";
-
-        Pregunta pregunta = VerdaderoFalso.verdadera(nombre, new Penalizable());
+        List<Opcion> opciones = new ArrayList<>();
+        Opcion opcionCorrecta = new Correcta("True");
+        Opcion opcionIncorrecta = new Incorrecta("False");
+        opciones.add(opcionCorrecta);
+        opciones.add(opcionIncorrecta);
+        Pregunta pregunta = new VerdaderoFalso(nombre, opciones, new Penalizable());
 
         assertEquals("Argentina es un pais", pregunta.nombre());
 
@@ -54,8 +67,12 @@ public class PreguntaTest {
     @Test
     public void test04UnaPreguntaDeVerdaderoFalsoPenalizableRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
         String nombre = "Argentina es un pais";
-
-        Pregunta pregunta = VerdaderoFalso.verdadera(nombre, new Penalizable());
+        List<Opcion> opciones = new ArrayList<>();
+        Opcion opcionCorrecta = new Correcta("True");
+        Opcion opcionIncorrecta = new Incorrecta("False");
+        opciones.add(opcionCorrecta);
+        opciones.add(opcionIncorrecta);
+        Pregunta pregunta = new VerdaderoFalso(nombre, opciones, new Penalizable());
 
         Jugador jugador = new Jugador("Juan");
         Jugador jugadora = new Jugador("Juana");
@@ -79,13 +96,15 @@ public class PreguntaTest {
     @Test
     public void test05UnaPreguntaDeMultipleChoiceClasicaPuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
         String nombre = "Cuales son provincias";
-
         List<Opcion> opciones = new ArrayList<>();
-        opciones.add(new Correcta("Buenos Aires"));
-        opciones.add(new Incorrecta("La pampa"));
-        opciones.add(new Incorrecta("Lanus"));
+        Opcion primerOpcion = new Correcta("Buenos Aires");
+        Opcion segundaOpcion = new Incorrecta("La pampa");
+        Opcion tercerOpcion = new Incorrecta("Lanus");
+        opciones.add(primerOpcion);
+        opciones.add(segundaOpcion);
+        opciones.add(tercerOpcion);
 
-        Pregunta pregunta = new MultipleChoice(nombre, opciones, new Clasica(1));
+        Pregunta pregunta = new MultipleChoice(nombre, opciones, new Clasica());
 
         assertEquals("Cuales son provincias", pregunta.nombre());
     }
