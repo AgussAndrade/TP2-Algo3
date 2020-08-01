@@ -10,29 +10,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PuntajeParcialTest {
     @Test
-    public void test01UnaEstrategiaPuntajeParcialDevuelve1PuntosPorRespuestaCorrecta(){
-        PuntajeParcial estrategia = new PuntajeParcial();
-        assertEquals(1, estrategia.puntosPorCorrecta());
-    }
-
-    @Test
-    public void test02UnaEstrategiaPuntajeParcialDevuelve0PuntosPorRespuestaIncorrecta(){
-        PuntajeParcial estrategia = new PuntajeParcial();
-        assertEquals(0, estrategia.puntosPorIncorrecta());
-    }
-
-    @Test
-    public void test03UnJugadorRespondeCorrectamenteYPuntajeParcialSumaLosPuntosCorrectamente(){
+    public void test01UnJugadorRespondeCorrectamenteYPuntajeParcialSumaLosPuntosCorrectamente(){
         Estrategia puntajeParcial = new PuntajeParcial();
         Jugador jugador = new Jugador("Juan");
         List<Opcion> selecciones = new ArrayList<>();
+        List<Opcion> opcionesPosibles = new ArrayList<>();
+        Opcion opcionCorrecta = new Correcta("Correcta");
+        Opcion opcionIncorrecta = new Incorrecta("Incorrecta");
 
-        selecciones.add(new Correcta("Correcta"));
-        selecciones.add(new Incorrecta("Incorrecta"));
+        opcionesPosibles.add(opcionCorrecta);
+        opcionesPosibles.add(opcionIncorrecta);
+
+        selecciones.add(opcionCorrecta);
+        selecciones.add(opcionIncorrecta);
 
         Respuesta respuesta = new Respuesta(jugador,selecciones);
 
-        puntajeParcial.sumarPuntos(respuesta);
+        puntajeParcial.sumarPuntos(respuesta,opcionesPosibles);
 
         assertEquals(1,jugador.puntos());
     }

@@ -8,31 +8,27 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PenalizableTest {
-    @Test
-    public void test01UnaEstrategiaPenalizableSumaPuntosPorRespuestaCorrecta(){
-        Penalizable estrategia = new Penalizable();
-        assertEquals(1, estrategia.puntosPorCorrecta());
-    }
 
     @Test
-    public void test02UnaEstrategiaPenalizableRestaPuntosPorRespuestaIncorrecta(){
-        Penalizable estrategia = new Penalizable();
-        assertEquals(-1, estrategia.puntosPorIncorrecta());
-    }
-
-    @Test
-    public void test03unJugadorTieneUnaRespuestaCorrectaEIncorrectaYTiene0puntos(){
+    public void test01unJugadorTieneUnaRespuestaCorrectaEIncorrectaYSuma0puntos(){
 
         Estrategia penalizable = new Penalizable();
         Jugador jugador = new Jugador("Juan");
+        List<Opcion> opcionesPosibles = new ArrayList<>();
         List<Opcion> selecciones = new ArrayList<>();
 
-        selecciones.add(new Correcta("Correcta"));
-        selecciones.add(new Incorrecta("Incorrecta"));
+        Opcion opcionCorrecta = new Correcta("Correcta");
+        Opcion opcionIncorrecta = new Incorrecta("Incorrecta");
+
+        opcionesPosibles.add(opcionCorrecta);
+        opcionesPosibles.add(opcionIncorrecta);
+
+        selecciones.add(opcionCorrecta);
+        selecciones.add(opcionIncorrecta);
 
         Respuesta respuesta = new Respuesta(jugador,selecciones);
 
-        penalizable.sumarPuntos(respuesta);
+        penalizable.sumarPuntos(respuesta,opcionesPosibles);
 
         assertEquals(0,jugador.puntos());
     }

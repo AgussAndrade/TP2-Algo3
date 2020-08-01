@@ -17,7 +17,7 @@ public class EnunciadoTest {
         Opcion opcionIncorrecta = new Incorrecta("False");
         opciones.add(opcionCorrecta);
         opciones.add(opcionIncorrecta);
-        Pregunta pregunta = VerdaderoFalso(nombre, opciones, new Clasica());
+        Pregunta pregunta = new VerdaderoFalso(nombre, opciones, new Clasica());
 
         assertEquals("Argentina es un pais", pregunta.enunciado());
     }
@@ -31,7 +31,7 @@ public class EnunciadoTest {
         opciones.add(opcionCorrecta);
         opciones.add(opcionIncorrecta);
 
-        Pregunta pregunta = VerdaderoFalso(nombre, opciones, new Clasica());
+        Pregunta pregunta = new VerdaderoFalso(nombre, opciones, new Clasica());
 
         Jugador jugador = new Jugador("Juan");
         Jugador jugadora = new Jugador("Juana");
