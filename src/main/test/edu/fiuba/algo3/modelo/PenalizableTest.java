@@ -10,25 +10,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PenalizableTest {
 
     @Test
-    public void test01unJugadorTieneUnaRespuestaCorrectaEIncorrectaYSuma0puntos(){
+    public void test01unJugadorSeleccionaUnaRespuestaCorrectaYUnaIncorrectaYSuma0puntos(){
 
         Estrategia penalizable = new Penalizable();
         Jugador jugador = new Jugador("Juan");
-        List<Opcion> opcionesPosibles = new ArrayList<>();
-        List<Opcion> selecciones = new ArrayList<>();
 
+        List<Opcion> opciones = new ArrayList<>();
         Opcion opcionCorrecta = new Correcta("Correcta");
         Opcion opcionIncorrecta = new Incorrecta("Incorrecta");
 
-        opcionesPosibles.add(opcionCorrecta);
-        opcionesPosibles.add(opcionIncorrecta);
+        opcionCorrecta.seleccionar();
+        opcionIncorrecta.seleccionar();
+        opciones.add(opcionCorrecta);
+        opciones.add(opcionIncorrecta);
+        Respuesta respuesta = new Respuesta(jugador,opciones);
 
-        selecciones.add(opcionCorrecta);
-        selecciones.add(opcionIncorrecta);
 
-        Respuesta respuesta = new Respuesta(jugador,selecciones);
-
-        penalizable.sumarPuntos(respuesta,opcionesPosibles);
+        penalizable.sumarPuntos(respuesta);
 
         assertEquals(0,jugador.puntos());
     }

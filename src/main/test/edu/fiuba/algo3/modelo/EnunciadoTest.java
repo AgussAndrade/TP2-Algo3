@@ -36,10 +36,10 @@ public class EnunciadoTest {
         Jugador jugador = new Jugador("Juan");
         Jugador jugadora = new Jugador("Juana");
 
-        List<Opcion> opcionesElegidasJugador = new ArrayList<>();
-        opcionesElegidasJugador.add(new Correcta("falso"));
-        List<Opcion> opcionesElegidasJugadora = new ArrayList<>();
-        opcionesElegidasJugadora.add(new Incorrecta("verdadero"));
+        List<Opcion> opcionesElegidasJugador = new ArrayList<>(opciones);
+        opcionesElegidasJugador.get(0).seleccionar();
+        List<Opcion> opcionesElegidasJugadora = new ArrayList<>(opciones);
+        opcionesElegidasJugadora.get(0).seleccionar();
 
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(new Respuesta(jugador, opcionesElegidasJugador));

@@ -13,20 +13,17 @@ public class PuntajeParcialTest {
     public void test01UnJugadorRespondeCorrectamenteYPuntajeParcialSumaLosPuntosCorrectamente(){
         Estrategia puntajeParcial = new PuntajeParcial();
         Jugador jugador = new Jugador("Juan");
-        List<Opcion> selecciones = new ArrayList<>();
-        List<Opcion> opcionesPosibles = new ArrayList<>();
+        List<Opcion> opciones = new ArrayList<>();
         Opcion opcionCorrecta = new Correcta("Correcta");
         Opcion opcionIncorrecta = new Incorrecta("Incorrecta");
 
-        opcionesPosibles.add(opcionCorrecta);
-        opcionesPosibles.add(opcionIncorrecta);
+        opcionCorrecta.seleccionar();
+        opciones.add(opcionCorrecta);
+        opciones.add(opcionIncorrecta);
 
-        selecciones.add(opcionCorrecta);
-        selecciones.add(opcionIncorrecta);
+        Respuesta respuesta = new Respuesta(jugador,opciones);
 
-        Respuesta respuesta = new Respuesta(jugador,selecciones);
-
-        puntajeParcial.sumarPuntos(respuesta,opcionesPosibles);
+        puntajeParcial.sumarPuntos(respuesta);
 
         assertEquals(1,jugador.puntos());
     }

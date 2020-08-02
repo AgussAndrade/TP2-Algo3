@@ -20,11 +20,9 @@ public class MultipleChoiceTest {
         Pregunta pregunta = new MultipleChoice(nombre, opciones, new Clasica());
         Jugador jugador = new Jugador("Juan");
 
-        List<Opcion> opcionesElegidasJugador = new ArrayList<>();
-        opcionesElegidasJugador.add(opciones.get(0));
-
+        opciones.get(0).seleccionar();
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador));
+        respuestas.add(new Respuesta(jugador, opciones));
 
         pregunta.comprobarRespuestas(respuestas);
 

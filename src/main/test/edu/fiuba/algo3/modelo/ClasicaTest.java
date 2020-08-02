@@ -29,7 +29,7 @@ public class ClasicaTest {
 
         Respuesta respuesta = new Respuesta(jugador,selecciones);
 
-        clasica.sumarPuntos(respuesta,opcionesPosibles);
+        clasica.sumarPuntos(respuesta);
 
         assertEquals(0,jugador.puntos());
     }
@@ -52,7 +52,7 @@ public class ClasicaTest {
 
         Respuesta respuesta = new Respuesta(jugador,selecciones);
 
-        clasica.sumarPuntos(respuesta,opcionesPosibles);
+        clasica.sumarPuntos(respuesta);
 
         assertEquals(1,jugador.puntos());
     }

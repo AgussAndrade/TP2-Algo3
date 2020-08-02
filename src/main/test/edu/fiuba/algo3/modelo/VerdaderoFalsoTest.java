@@ -19,11 +19,9 @@ public class VerdaderoFalsoTest {
         Pregunta pregunta = new VerdaderoFalso(nombre, opciones, new Clasica());
         Jugador jugador = new Jugador("Juan");
 
-        List<Opcion> selecciones = new ArrayList<>();
-        selecciones.add(opciones.get(0));
-
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, selecciones));
+        opciones.get(0).seleccionar();
+        respuestas.add(new Respuesta(jugador, opciones));
 
         pregunta.comprobarRespuestas(respuestas);
 
