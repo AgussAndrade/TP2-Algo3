@@ -20,6 +20,7 @@ public class ClasicaTest {
         Opcion opcionCorrecta = new Correcta("Correcta");
         Opcion opcionIncorrecta = new Incorrecta("Incorrecta");
 
+        opcionIncorrecta.seleccionar();
         opcionesPosibles.add(opcionCorrecta);
         opcionesPosibles.add(opcionIncorrecta);
 
@@ -42,6 +43,8 @@ public class ClasicaTest {
         List<Opcion> selecciones = new ArrayList<>();
 
         Opcion opcionCorrecta = new Correcta("Correcta");
+
+        opcionCorrecta.seleccionar();
 
         opcionesPosibles.add(opcionCorrecta);
 
