@@ -26,7 +26,7 @@ public class PenalizableTest {
         Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1),false);
 
 
-        penalizable.sumarPuntos(respuesta);
+        penalizable.devolverSumaDePuntos(respuesta);
 
         assertEquals(0,jugador.puntos());
     }

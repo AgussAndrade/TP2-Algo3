@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Penalizable implements Estrategia {
     @Override
-    public int sumarPuntos(Respuesta respuesta) {
+    public int devolverSumaDePuntos(Respuesta respuesta) {
         Multiplicador multiplicador = respuesta.multiplicador();
         int aSumar = 0;
         for (Opcion seleccion : respuesta.selecciones()) {
