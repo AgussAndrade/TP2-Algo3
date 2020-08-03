@@ -14,7 +14,7 @@ public abstract class Pregunta {
 
     public void comprobarRespuestas(List<Respuesta> respuestas){
         for(Respuesta respuesta : respuestas) {
-            estrategia.devolverSumaDePuntos(respuesta);
+            respuesta.jugador().sumarPuntos(estrategia.devolverSumaDePuntos(respuesta));
         }
     }
 
