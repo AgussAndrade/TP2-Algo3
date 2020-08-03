@@ -15,7 +15,7 @@ public class RespuestaTest {
        Jugador jugador = new Jugador("Juan");
        List<Opcion> selecciones = new ArrayList<>();
 
-       Respuesta respuesta = new Respuesta(jugador,selecciones);
+       Respuesta respuesta = new Respuesta(jugador,selecciones,new Multiplicador(1),false);
 
        assertEquals(jugador,respuesta.jugador());
     }
@@ -28,7 +28,7 @@ public class RespuestaTest {
 
        selecciones.add(new Correcta("Correcta"));
        selecciones.add(new Incorrecta("Incorrecta"));
-       Respuesta respuesta = new Respuesta (jugador,selecciones);
+       Respuesta respuesta = new Respuesta (jugador,selecciones,new Multiplicador(1),false);
 
        assertEquals(selecciones,respuesta.selecciones());
 

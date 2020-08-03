@@ -4,12 +4,12 @@ import java.util.List;
 
 public class Clasica implements Estrategia {
     @Override
-    public void sumarPuntos(Respuesta respuesta) {
+    public int sumarPuntos(Respuesta respuesta) {
         for (Opcion seleccion : respuesta.selecciones()) {
             if (!seleccion.fueSeleccionadaCorrectamente()) {
-                return;
+                return 0;
             }
         }
-        respuesta.jugador().sumarPuntos(1);
+        return (1);
     }
 }

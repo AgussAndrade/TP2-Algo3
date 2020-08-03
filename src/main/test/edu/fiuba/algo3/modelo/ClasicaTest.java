@@ -27,7 +27,7 @@ public class ClasicaTest {
         selecciones.add(opcionCorrecta);
         selecciones.add(opcionIncorrecta);
 
-        Respuesta respuesta = new Respuesta(jugador,selecciones);
+        Respuesta respuesta = new Respuesta(jugador,selecciones, new Multiplicador(1),false);
 
         clasica.sumarPuntos(respuesta);
 
@@ -50,7 +50,7 @@ public class ClasicaTest {
 
         selecciones.add(opcionCorrecta);
 
-        Respuesta respuesta = new Respuesta(jugador,selecciones);
+        Respuesta respuesta = new Respuesta(jugador,selecciones,new Multiplicador(1),false);
 
         clasica.sumarPuntos(respuesta);
 

@@ -31,7 +31,7 @@ public class OrderedChoiceTest {
 
         List<Respuesta> respuestas = new ArrayList<>();
 
-        respuestas.add(new Respuesta(jugador, opciones));
+        respuestas.add(new Respuesta(jugador, opciones,new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 
@@ -63,7 +63,7 @@ public class OrderedChoiceTest {
 
         List<Respuesta> respuestas = new ArrayList<>();
 
-        respuestas.add(new Respuesta(jugador, opciones));
+        respuestas.add(new Respuesta(jugador, opciones,new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 

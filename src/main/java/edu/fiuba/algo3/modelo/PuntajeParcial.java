@@ -5,16 +5,16 @@ import java.util.List;
 public class PuntajeParcial implements Estrategia {
 
     @Override
-    public void sumarPuntos(Respuesta respuesta){
+    public int sumarPuntos(Respuesta respuesta){
         int puntosASumar = 0;
         for(Opcion seleccion : respuesta.selecciones()) {
             if(!seleccion.fueSeleccionadaCorrectamente() && !seleccion.esCorrecta()){
-                return;
+                return 0;
             }
             else if (seleccion.fueSeleccionadaCorrectamente() && seleccion.esCorrecta()) {
                 puntosASumar+=1;
             }
         }
-        respuesta.jugador().sumarPuntos(puntosASumar);
+        return (puntosASumar);
     }
 }

@@ -21,7 +21,7 @@ public class VerdaderoFalsoTest {
 
         List<Respuesta> respuestas = new ArrayList<>();
         opciones.get(0).seleccionar();
-        respuestas.add(new Respuesta(jugador, opciones));
+        respuestas.add(new Respuesta(jugador, opciones,new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 

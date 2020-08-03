@@ -21,7 +21,7 @@ public class PuntajeParcialTest {
         opciones.add(opcionCorrecta);
         opciones.add(opcionIncorrecta);
 
-        Respuesta respuesta = new Respuesta(jugador,opciones);
+        Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1),false);
 
         puntajeParcial.sumarPuntos(respuesta);
 

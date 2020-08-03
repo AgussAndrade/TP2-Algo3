@@ -23,7 +23,7 @@ public class PenalizableTest {
         opcionIncorrecta.seleccionar();
         opciones.add(opcionCorrecta);
         opciones.add(opcionIncorrecta);
-        Respuesta respuesta = new Respuesta(jugador,opciones);
+        Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1),false);
 
 
         penalizable.sumarPuntos(respuesta);
