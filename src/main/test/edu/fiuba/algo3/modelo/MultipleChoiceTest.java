@@ -28,4 +28,22 @@ public class MultipleChoiceTest {
 
         assertEquals(1, jugador.puntos());
     }
+
+    @Test
+    public void test02UnaPreguntaDeMultipleChoiceRecibeOpcionesYLasDevuelve() {
+        String nombre = "Cuales son provincias";
+
+        List<Opcion> opciones = new ArrayList<>();
+        opciones.add(new Correcta("Buenos Aires"));
+        opciones.add(new Incorrecta("La pampa"));
+
+        Pregunta pregunta = new MultipleChoice(nombre, opciones, new Clasica());
+
+        List<Opcion> opcionesDevueltas = pregunta.obtenerOpciones();
+
+        assertEquals(opciones.get(0).texto(), opcionesDevueltas.get(0).texto());
+        assertEquals(opciones.get(0).getClass(), opcionesDevueltas.get(0).getClass());
+        assertEquals(opciones.get(1).texto(), opcionesDevueltas.get(1).texto());
+        assertEquals(opciones.get(1).getClass(), opcionesDevueltas.get(1).getClass());
+    }
 }
