@@ -1,15 +1,23 @@
 package edu.fiuba.algo3.modelo;
 
 public class OpcionPosicion implements Opcion {
-    String texto;
+    String enunciado;
     int posicion;
     int posicionSeleccionada = 0;
+
     public OpcionPosicion(String texto, int posicion){
         this.posicion = posicion;
-        this.texto = texto;
+        this.enunciado = texto;
     }
+
+    @Override
     public String texto(){
-        return texto;
+        return enunciado;
+    }
+
+    @Override
+    public Opcion copiarOpcion() {
+        return new OpcionPosicion(enunciado,posicion);
     }
 
     @Override

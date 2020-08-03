@@ -36,14 +36,14 @@ public class EnunciadoTest {
         Jugador jugador = new Jugador("Juan");
         Jugador jugadora = new Jugador("Juana");
 
-        List<Opcion> opcionesElegidasJugador = new ArrayList<>(opciones);
+        List<Opcion> opcionesElegidasJugador = pregunta.obtenerOpciones();
         opcionesElegidasJugador.get(0).seleccionar();
         List<Opcion> opcionesElegidasJugadora = new ArrayList<>(opciones);
-        opcionesElegidasJugadora.get(0).seleccionar();
+        opcionesElegidasJugadora.get(1).seleccionar();
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 
@@ -84,8 +84,8 @@ public class EnunciadoTest {
 
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador));
-        respuestas.add(new Respuesta(jugadora, opcionesElegidasJugadora));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugadora, opcionesElegidasJugadora, new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 
@@ -129,8 +129,8 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.add( opciones.get(0));
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 
@@ -171,8 +171,8 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.add( opciones.get(0));
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 
@@ -213,8 +213,8 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.add( opciones.get(0));
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
 
         pregunta.comprobarRespuestas(respuestas);
 

@@ -1,17 +1,22 @@
 package edu.fiuba.algo3.modelo;
 
 public class OpcionDeGrupo implements Opcion{
-    String texto;
+    String enunciado;
     int grupo;
     int grupoSeleccionado = 0;
 
-    public OpcionDeGrupo(String texto, int grupo){
+    public OpcionDeGrupo(String enunciado, int grupo){
         this.grupo = grupo;
-        this.texto = texto;
+        this.enunciado = enunciado;
+    }
+
+    @Override
+    public Opcion copiarOpcion(){
+        return new OpcionDeGrupo(enunciado,grupo);
     }
 
     public String texto(){
-        return texto;
+        return enunciado;
     }
 
     @Override

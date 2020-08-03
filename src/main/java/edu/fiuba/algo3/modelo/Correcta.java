@@ -1,16 +1,21 @@
 package edu.fiuba.algo3.modelo;
 
 public class Correcta implements Opcion {
-    String nombre;
-    boolean fueSeleccionada = false;
+    protected String enunciado;
+    protected boolean fueSeleccionada = false;
 
-    public Correcta(String nombre) {
-        this.nombre = nombre;
+    public Correcta(String enunciado) {
+        this.enunciado = enunciado;
+    }
+
+    @Override
+    public Opcion copiarOpcion(){
+        return new Correcta(enunciado);
     }
 
     @Override
     public String texto(){
-        return nombre;
+        return enunciado;
     }
 
     @Override

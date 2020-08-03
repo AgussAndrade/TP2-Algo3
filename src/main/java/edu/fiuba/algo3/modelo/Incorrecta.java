@@ -1,15 +1,20 @@
 package edu.fiuba.algo3.modelo;
 
 public class Incorrecta implements Opcion {
-    String nombre;
+    String enunciado;
     boolean fueSeleccionada=false;
     public Incorrecta(String nombre) {
-        this.nombre = nombre;
+        this.enunciado = nombre;
     }
 
     @Override
     public String texto(){
-        return nombre;
+        return enunciado;
+    }
+
+    @Override
+    public Opcion copiarOpcion(){
+        return new Incorrecta(enunciado);
     }
 
     @Override
