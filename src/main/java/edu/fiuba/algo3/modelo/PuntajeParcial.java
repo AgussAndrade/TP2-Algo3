@@ -8,10 +8,7 @@ public class PuntajeParcial implements Estrategia {
     public int devolverSumaDePuntos(Respuesta respuesta){
         int puntosASumar = 0;
         for(Opcion seleccion : respuesta.selecciones()) {
-            if(!seleccion.fueSeleccionadaCorrectamente() && !seleccion.esCorrecta()){
-                return 0;
-            }
-            else if (seleccion.fueSeleccionadaCorrectamente() && seleccion.esCorrecta()) {
+            if (seleccion.fueSeleccionadaCorrectamente() && seleccion.esCorrecta()) {
                 puntosASumar+=1;
             }
         }

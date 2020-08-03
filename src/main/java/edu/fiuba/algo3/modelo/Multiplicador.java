@@ -6,7 +6,7 @@ public class Multiplicador {
         this.aMultiplicar = aMultiplicar;
     }
     public int multiplicarPuntos ( int puntos){
-        return puntos * aMultiplicar;
+        return (puntos * aMultiplicar);
     }
 
 }

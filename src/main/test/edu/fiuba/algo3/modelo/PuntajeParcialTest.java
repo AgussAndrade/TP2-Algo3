@@ -23,8 +23,7 @@ public class PuntajeParcialTest {
 
         Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1),false);
 
-        puntajeParcial.devolverSumaDePuntos(respuesta);
 
-        assertEquals(1,jugador.puntos());
+        assertEquals(1,puntajeParcial.devolverSumaDePuntos(respuesta));
     }
 }

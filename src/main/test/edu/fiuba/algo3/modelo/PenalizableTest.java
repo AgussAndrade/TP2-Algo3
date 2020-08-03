@@ -25,9 +25,6 @@ public class PenalizableTest {
         opciones.add(opcionIncorrecta);
         Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1),false);
 
-
-        penalizable.devolverSumaDePuntos(respuesta);
-
-        assertEquals(0,jugador.puntos());
+        assertEquals(0,penalizable.devolverSumaDePuntos(respuesta));
     }
 }

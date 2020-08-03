@@ -11,7 +11,10 @@ public class Penalizable implements Estrategia {
             if (!seleccion.fueSeleccionadaCorrectamente() && !seleccion.esCorrecta()) {
                 aSumar += (multiplicador.multiplicarPuntos(-1));
             }
-            aSumar += (multiplicador.multiplicarPuntos(1));
+            else if (seleccion.fueSeleccionadaCorrectamente() && seleccion.esCorrecta()) {
+                aSumar += (multiplicador.multiplicarPuntos(1));
+
+            }
         }
         return aSumar;
     }

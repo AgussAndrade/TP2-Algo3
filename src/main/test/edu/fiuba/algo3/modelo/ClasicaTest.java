@@ -52,8 +52,7 @@ public class ClasicaTest {
 
         Respuesta respuesta = new Respuesta(jugador,selecciones,new Multiplicador(1),false);
 
-        clasica.devolverSumaDePuntos(respuesta);
 
-        assertEquals(1,jugador.puntos());
+        assertEquals(1,clasica.devolverSumaDePuntos(respuesta));
     }
 }
