@@ -221,6 +221,112 @@ public class EnunciadoTest {
         assertEquals(0, jugadora.puntos());
 
     }
+    @Test
+    public void test11UnaPreguntaOrderedChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+        String nombre = "Jugadores de futbol más altos";
+        List<Opcion> opciones = new ArrayList<>();
+        opciones.add(new OpcionPosicion("Ibrahimovic", 1));
+        opciones.add(new OpcionPosicion("Aguero", 2));
+        opciones.add(new OpcionPosicion("Messi", 3));
+        Pregunta pregunta = new GroupChoice(nombre, opciones, new Clasica());
+
+        assertEquals("Jugadores de futbol más altos", pregunta.enunciado());
+    }
+
+    @Test
+    public void test12UnaPreguntaOrderedChoiceRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
+        String nombre = "Jugadores de futbol más altos";
+        List<Opcion> opciones = new ArrayList<>();
+        opciones.add(new OpcionPosicion("Ibrahimovic", 1));
+        opciones.add(new OpcionPosicion("Aguero", 2));
+        opciones.add(new OpcionPosicion("Messi", 3));
+        Pregunta pregunta = new OrderedChoice(nombre, opciones, new Clasica());
+        List<Opcion> seleccionJugador1 = pregunta.obtenerOpciones();
+        List<Opcion> seleccionJugador2 = pregunta.obtenerOpciones();
+
+        seleccionJugador1.get(0).seleccionar(1);
+        seleccionJugador1.get(1).seleccionar(2);
+        seleccionJugador1.get(2).seleccionar(3);
+
+
+        Jugador jugador1 = new Jugador("Juan");
+        Jugador jugador2 = new Jugador("Juana");
+
+        seleccionJugador2.get(0).seleccionar(3);
+        seleccionJugador2.get(1).seleccionar(1);
+        seleccionJugador2.get(2).seleccionar(2);
+
+
+
+        List<Respuesta> respuestas = new ArrayList<>();
+
+        respuestas.add(new Respuesta(jugador1, seleccionJugador1, new Multiplicador(1), false));
+        respuestas.add(new Respuesta(jugador2, seleccionJugador2, new Multiplicador(1), false));
+
+        pregunta.comprobarRespuestas(respuestas);
+
+        assertEquals(1, jugador1.puntos());
+        assertEquals(0, jugador2.puntos());
+
+    }
+    @Test
+    public void test13UnaPreguntaGroupChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+        String nombre = "Distinguir paises de provincias";
+        List<Opcion> opciones = new ArrayList<>();
+        opciones.add(new OpcionDeGrupo("Cuba", 1));
+        opciones.add(new OpcionPosicion("Venezuela", 1));
+        opciones.add(new OpcionPosicion("Berlin", 2));
+        Pregunta pregunta = new GroupChoice(nombre, opciones, new Clasica());
+
+        assertEquals("Distinguir paises de provincias", pregunta.enunciado());
+    }
+
+    @Test
+    public void test14UnaPreguntaGroupChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+        String nombre = "Distinguir paises de provincias";
+        List<Opcion> opciones = new ArrayList<>();
+        opciones.add(new OpcionDeGrupo("Cuba", 1));
+        opciones.add(new OpcionPosicion("Venezuela", 1));
+        opciones.add(new OpcionPosicion("Berlin", 2));
+        Pregunta pregunta = new GroupChoice(nombre, opciones, new Penalizable());
+
+        assertEquals("Distinguir paises de provincias", pregunta.enunciado());
+    }
+    @Test
+    public void test15UnaPreguntaGroupChoiceRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
+        String nombre = "Distinguir paises de provincias";
+        List<Opcion> opciones = new ArrayList<>();
+        opciones.add(new OpcionDeGrupo("Cuba", 1));
+        opciones.add(new OpcionDeGrupo("Venezuela", 1));
+        opciones.add(new OpcionDeGrupo("Berlin", 2));
+        Pregunta pregunta = new GroupChoice(nombre, opciones, new Clasica());
+        List<Opcion> seleccionJugador1 = pregunta.obtenerOpciones();
+        List<Opcion> seleccionJugador2 = pregunta.obtenerOpciones();
+
+        seleccionJugador1.get(0).seleccionar(1);
+        seleccionJugador1.get(1).seleccionar(1);
+        seleccionJugador1.get(2).seleccionar(2);
+
+        Jugador jugador1 = new Jugador("Juan");
+        Jugador jugador2 = new Jugador("Juana");
+
+        seleccionJugador2.get(0).seleccionar(2);
+        seleccionJugador2.get(1).seleccionar(2);
+        seleccionJugador2.get(2).seleccionar(1);
+
+        List<Respuesta> respuestas = new ArrayList<>();
+
+        respuestas.add(new Respuesta(jugador1, seleccionJugador1, new Multiplicador(1), false));
+        respuestas.add(new Respuesta(jugador2, seleccionJugador2, new Multiplicador(1), false));
+
+        pregunta.comprobarRespuestas(respuestas);
+
+        assertEquals(1, jugador1.puntos());
+        assertEquals(0, jugador2.puntos());
+
+    }
+
+
 }
 
 
