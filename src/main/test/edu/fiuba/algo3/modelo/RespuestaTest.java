@@ -1,5 +1,8 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.opciones.Correcta;
+import edu.fiuba.algo3.modelo.opciones.Incorrecta;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

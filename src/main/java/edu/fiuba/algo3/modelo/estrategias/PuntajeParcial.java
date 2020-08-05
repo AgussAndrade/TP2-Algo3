@@ -1,6 +1,7 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.estrategias;
 
-import java.util.List;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
+import edu.fiuba.algo3.modelo.Respuesta;
 
 public class PuntajeParcial implements Estrategia {
 

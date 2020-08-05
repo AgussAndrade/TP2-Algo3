@@ -1,4 +1,7 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.estrategias;
+
+import edu.fiuba.algo3.modelo.Respuesta;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
 
 import java.util.List;
 

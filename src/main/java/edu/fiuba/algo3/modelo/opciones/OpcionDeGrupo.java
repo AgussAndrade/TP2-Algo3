@@ -1,6 +1,6 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.opciones;
 
-public class OpcionDeGrupo implements Opcion{
+public class OpcionDeGrupo implements Opcion {
     String enunciado;
     int grupo;
     int grupoSeleccionado = 0;

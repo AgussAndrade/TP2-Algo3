@@ -1,5 +1,10 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.estrategias.Clasica;
+import edu.fiuba.algo3.modelo.estrategias.Penalizable;
+import edu.fiuba.algo3.modelo.estrategias.PuntajeParcial;
+import edu.fiuba.algo3.modelo.opciones.*;
+import edu.fiuba.algo3.modelo.preguntas.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
