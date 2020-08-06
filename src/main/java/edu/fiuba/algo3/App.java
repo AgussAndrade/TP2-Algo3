@@ -16,12 +16,6 @@ public class App extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("/InterfazPreguntaVerdaderoYFalsoPenalizable.fxml"));
         stage.setTitle("asdasdasdas");
-        StackPane layout = new StackPane();
-
-        Button button = new Button();
-        button.setText("asdasdasd");
-        layout.getChildren().add(button);
-
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
