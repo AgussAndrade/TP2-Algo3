@@ -46,10 +46,10 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.get(1).seleccionar();
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1)));
 
-        pregunta.comprobarRespuestas(respuestas);
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
         assertEquals(1, jugador.puntos());
         assertEquals(0, jugadora.puntos());
@@ -88,17 +88,44 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.get(1).seleccionar();
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1)));
 
-        pregunta.comprobarRespuestas(respuestas);
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
         assertEquals(1, jugador.puntos());
         assertEquals(-1, jugadora.puntos());
     }
+    @Test
+    public void test05UnaPreguntaVerdaderoFalsoConExclusividadRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente(){
+        String nombre = "Argentina es un pais";
+        List<Opcion> opciones = new ArrayList<>();
+        Opcion opcionCorrecta = new Correcta("True");
+        Opcion opcionIncorrecta = new Incorrecta("False");
+        opciones.add(opcionCorrecta);
+        opciones.add(opcionIncorrecta);
+        Pregunta pregunta = new VerdaderoFalso(nombre, opciones, new Clasica());
+
+        Jugador jugador = new Jugador("Juan");
+        Jugador jugadora = new Jugador("Juana");
+
+        List<Opcion> opcionesElegidasJugador = pregunta.obtenerOpciones();
+        opcionesElegidasJugador.get(0).seleccionar();
+        List<Opcion> opcionesElegidasJugadora = pregunta.obtenerOpciones();
+        opcionesElegidasJugadora.get(1).seleccionar();
+
+        List<Respuesta> respuestas = new ArrayList<>();
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1)));
+
+        pregunta.comprobarRespuestas(respuestas, new AplicadorConExclusividad(1));
+
+        assertEquals(2, jugador.puntos());
+        assertEquals(0, jugadora.puntos());
+    }
 
     @Test
-    public void test05UnaPreguntaDeMultipleChoiceClasicaPuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+    public void test06UnaPreguntaDeMultipleChoiceClasicaPuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
         String nombre = "Cuales son provincias";
         List<Opcion> opciones = new ArrayList<>();
         Opcion primerOpcion = new Correcta("Buenos Aires");
@@ -114,7 +141,7 @@ public class EnunciadoTest {
     }
 
     @Test
-    public void test06UnaPreguntaDeMultipleChoiceClasicaRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
+    public void test07UnaPreguntaDeMultipleChoiceClasicaRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
         String nombre = "Cuales son provincias";
 
         List<Opcion> opciones = new ArrayList<>();
@@ -133,17 +160,17 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.get(1).seleccionar();
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1)));
 
-        pregunta.comprobarRespuestas(respuestas);
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
         assertEquals(1, jugador.puntos());
         assertEquals(0, jugadora.puntos());
 
     }
     @Test
-    public void test07UnaPreguntaDeMultipleChoiceConPuntajeParcialPuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+    public void test08UnaPreguntaDeMultipleChoiceConPuntajeParcialPuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
         String nombre = "Cuales son provincias";
 
         List<Opcion> opciones = new ArrayList<>();
@@ -156,7 +183,7 @@ public class EnunciadoTest {
         assertEquals("Cuales son provincias", pregunta.enunciado());
     }
     @Test
-    public void test08UnaPreguntaDeMultipleChoiceConPuntajeParcialRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
+    public void test09UnaPreguntaDeMultipleChoiceConPuntajeParcialRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
         String nombre = "Cuales son provincias";
 
         List<Opcion> opciones = new ArrayList<>();
@@ -175,17 +202,17 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.get(1).seleccionar();
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1)));
 
-        pregunta.comprobarRespuestas(respuestas);
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
         assertEquals(1, jugador.puntos());
-        assertEquals(1, jugadora.puntos());
+        assertEquals(0, jugadora.puntos());
 
     }
     @Test
-    public void test09UnaPreguntaDeMultipleChoiceConPenalidadPuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+    public void test10UnaPreguntaDeMultipleChoiceConPenalidadPuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
         String nombre = "Cuales son provincias";
 
         List<Opcion> opciones = new ArrayList<>();
@@ -198,7 +225,7 @@ public class EnunciadoTest {
         assertEquals("Cuales son provincias", pregunta.enunciado());
     }
     @Test
-    public void test10UnaPreguntaDeMultipleChoicePenalizableRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
+    public void test11UnaPreguntaDeMultipleChoicePenalizableRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
         String nombre = "Cuales son provincias";
 
         List<Opcion> opciones = new ArrayList<>();
@@ -217,17 +244,17 @@ public class EnunciadoTest {
         opcionesElegidasJugadora.get(1).seleccionar();
 
         List<Respuesta> respuestas = new ArrayList<>();
-        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1),false));
-        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1),false));
+        respuestas.add(new Respuesta(jugador, opcionesElegidasJugador, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugadora,opcionesElegidasJugadora, new Multiplicador(1)));
 
-        pregunta.comprobarRespuestas(respuestas);
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
         assertEquals(1, jugador.puntos());
         assertEquals(0, jugadora.puntos());
 
     }
     @Test
-    public void test11UnaPreguntaOrderedChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+    public void test12UnaPreguntaOrderedChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
         String nombre = "Jugadores de futbol más altos";
         List<Opcion> opciones = new ArrayList<>();
         opciones.add(new OpcionPosicion("Ibrahimovic", 1));
@@ -239,7 +266,7 @@ public class EnunciadoTest {
     }
 
     @Test
-    public void test12UnaPreguntaOrderedChoiceRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
+    public void test13UnaPreguntaOrderedChoiceRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
         String nombre = "Jugadores de futbol más altos";
         List<Opcion> opciones = new ArrayList<>();
         opciones.add(new OpcionPosicion("Ibrahimovic", 1));
@@ -265,17 +292,17 @@ public class EnunciadoTest {
 
         List<Respuesta> respuestas = new ArrayList<>();
 
-        respuestas.add(new Respuesta(jugador1, seleccionJugador1, new Multiplicador(1), false));
-        respuestas.add(new Respuesta(jugador2, seleccionJugador2, new Multiplicador(1), false));
+        respuestas.add(new Respuesta(jugador1, seleccionJugador1, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugador2, seleccionJugador2, new Multiplicador(1)));
 
-        pregunta.comprobarRespuestas(respuestas);
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
         assertEquals(1, jugador1.puntos());
         assertEquals(0, jugador2.puntos());
 
     }
     @Test
-    public void test13UnaPreguntaGroupChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+    public void test14UnaPreguntaGroupChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
         String nombre = "Distinguir paises de provincias";
         List<Opcion> opciones = new ArrayList<>();
         opciones.add(new OpcionDeGrupo("Cuba", 1));
@@ -287,7 +314,7 @@ public class EnunciadoTest {
     }
 
     @Test
-    public void test14UnaPreguntaGroupChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
+    public void test15UnaPreguntaGroupChoicePuedeCrearseIndicandoleCualesSonSusRespuestasCorrectas(){
         String nombre = "Distinguir paises de provincias";
         List<Opcion> opciones = new ArrayList<>();
         opciones.add(new OpcionDeGrupo("Cuba", 1));
@@ -298,7 +325,7 @@ public class EnunciadoTest {
         assertEquals("Distinguir paises de provincias", pregunta.enunciado());
     }
     @Test
-    public void test15UnaPreguntaGroupChoiceRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
+    public void test16UnaPreguntaGroupChoiceRecibeUnaListaDeRespuestasYAsignaCorrectamentePuntosALosJugadoresQueRespondieronCorrectamente() {
         String nombre = "Distinguir paises de provincias";
         List<Opcion> opciones = new ArrayList<>();
         opciones.add(new OpcionDeGrupo("Cuba", 1));
@@ -321,10 +348,10 @@ public class EnunciadoTest {
 
         List<Respuesta> respuestas = new ArrayList<>();
 
-        respuestas.add(new Respuesta(jugador1, seleccionJugador1, new Multiplicador(1), false));
-        respuestas.add(new Respuesta(jugador2, seleccionJugador2, new Multiplicador(1), false));
+        respuestas.add(new Respuesta(jugador1, seleccionJugador1, new Multiplicador(1)));
+        respuestas.add(new Respuesta(jugador2, seleccionJugador2, new Multiplicador(1)));
 
-        pregunta.comprobarRespuestas(respuestas);
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
         assertEquals(1, jugador1.puntos());
         assertEquals(0, jugador2.puntos());

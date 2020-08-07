@@ -1,18 +1,23 @@
 package edu.fiuba.algo3.modelo.estrategias;
 
 import edu.fiuba.algo3.modelo.Respuesta;
-import edu.fiuba.algo3.modelo.opciones.Opcion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Clasica implements Estrategia {
     @Override
-    public int devolverSumaDePuntos(Respuesta respuesta) {
-        for (Opcion seleccion : respuesta.selecciones()) {
-            if (!seleccion.fueSeleccionadaCorrectamente()) {
-                return 0;
+    public List<Respuesta> setearSumaDePuntos(List<Respuesta> respuestas) {
+        List<Respuesta> respondieronCorrectamente = new ArrayList<>();
+        for(Respuesta respuesta : respuestas){
+            if(respuesta.cantidadDeOpcionesSeleccionadasCorrectamente() == respuesta.cantidadDeOpciones()){
+                respuesta.definirPuntosAAgregar(1);
+                respondieronCorrectamente.add(respuesta);
+            }
+            else{
+                respuesta.definirPuntosAAgregar(0);
             }
         }
-        return (1);
+        return respondieronCorrectamente;
     }
 }
