@@ -9,7 +9,6 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Kahoot kahoot = new Kahoot(stage);
-        kahoot.iniciarJuego();
     }
 
     public static void main(String[] args) {

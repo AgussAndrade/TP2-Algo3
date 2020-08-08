@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.Interfaz.ControladorPrincipal;
+import edu.fiuba.algo3.Interfaz.ControladorRegistroDeJugadores;
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
 import edu.fiuba.algo3.modelo.opciones.Correcta;
 import edu.fiuba.algo3.modelo.opciones.Incorrecta;
@@ -32,22 +34,9 @@ public class Kahoot {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        ControladorPrincipal controladorPrincipal = (ControladorPrincipal) loader.getController();
+        controladorPrincipal.inicializar(jugadores, preguntas);
     }
 
-    public void iniciarJuego() throws IOException {
 
-        /*Se cargan de archivo las preguntas*/
-        List<Jugador> jugadores = new ArrayList<>();
-        List<Pregunta> preguntas= new ArrayList<>();
-        List<Opcion> opciones = new ArrayList<>();
-        opciones.add(new Correcta("Correcta"));
-        opciones.add(new Incorrecta("Incorrecta"));
-        preguntas.add(new VerdaderoFalso("Brasil es un pais", opciones, new Clasica()));
-
-        /*Se cargan los jugadores -  Deberia hacerse en un controlador*/
-        jugadores.add(new Jugador("Juan"));
-        jugadores.add(new Jugador("Roberto"));
-
-    }
 }
-//    ControladorMenuDeInicio controladorPrincipal = (ControladorMenuDeInicio)loader.getController();

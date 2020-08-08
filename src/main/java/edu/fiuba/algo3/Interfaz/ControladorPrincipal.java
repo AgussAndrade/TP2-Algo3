@@ -24,7 +24,8 @@ public class ControladorPrincipal {
     }
 
     public void iniciarJuego() throws IOException {
-        GridPane nuevoAnchorPane = FXMLLoader.load(getClass().getResource("/InterfazPreguntaVerdaderoYFalso.fxml"));
+        AnchorPane nuevoAnchorPane = FXMLLoader.load(getClass().getResource("/InterfazRegistroJugadores.fxml"));
         anchorInicio.getChildren().setAll(nuevoAnchorPane);
+        //ControladorMenuDeInicio controladorPrincipal = (ControladorMenuDeInicio)loader.getController();
     }
 }
