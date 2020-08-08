@@ -12,15 +12,13 @@ public abstract class Pregunta {
     protected String enunciado;
     protected List<Opcion> opciones;
     protected Estrategia estrategia;
-    protected AplicadorDePuntos puntuador;
 
     public String enunciado(){
         return enunciado;
     }
 
     public void comprobarRespuestas(List<Respuesta> respuestas, AplicadorDePuntos aplicador){
-        aplicador.devolverSumaDePuntos(estrategia.setearSumaDePuntos(respuestas));
-
+        aplicador.sumarPuntos(estrategia.validarRespuestas(respuestas));
     }
 
     public List<Opcion> obtenerOpciones(){

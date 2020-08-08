@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PuntajeParcial implements Estrategia {
     @Override
-    public List<Respuesta> setearSumaDePuntos(List<Respuesta> respuestas) {
+    public List<Respuesta> validarRespuestas(List<Respuesta> respuestas) {
         List<Respuesta> respondieronCorrectamente = new ArrayList<>();
         for (Respuesta respuesta : respuestas) {
             if (respuesta.cantidadDeOpcionesSeleccionadasCorrectamente() == respuesta.cantidadDeOpciones()) {

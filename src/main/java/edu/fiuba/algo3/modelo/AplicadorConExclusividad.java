@@ -8,7 +8,7 @@ public class AplicadorConExclusividad implements AplicadorDePuntos{
     public AplicadorConExclusividad(int cantidadDeLlamados){
         factorDeExclusividad = 2 * cantidadDeLlamados;
     }
-    public void devolverSumaDePuntos(List<Respuesta> respuestasCorrectas){
+    public void sumarPuntos(List<Respuesta> respuestasCorrectas){
         Respuesta respuestaCorrecta;
         if(respuestasCorrectas.size() == 1){
             respuestaCorrecta = respuestasCorrectas.get(0);

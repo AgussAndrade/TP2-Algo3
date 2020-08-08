@@ -55,5 +55,15 @@ public class Respuesta {
     public int obtenerPuntos(){
         return puntosAAgregar;
     }
+
+    public int cantidadDeOpcionesIncorrectasSeleccionadasincorrectamente() {
+        int incorrectasSeleccionadasIncorrectamente = 0;
+        for(Opcion opcion : selecciones){
+            if(!opcion.fueSeleccionadaCorrectamente() && !opcion.esCorrecta()){
+                incorrectasSeleccionadasIncorrectamente += 1;
+            }
+        }
+        return incorrectasSeleccionadasIncorrectamente;
+    }
 }
 

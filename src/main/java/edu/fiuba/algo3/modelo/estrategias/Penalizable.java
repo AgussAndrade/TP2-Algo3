@@ -8,19 +8,9 @@ import java.util.List;
 
 public class Penalizable implements Estrategia {
     @Override
-    public List<Respuesta> setearSumaDePuntos(List<Respuesta> respuestas){
+    public List<Respuesta> validarRespuestas(List<Respuesta> respuestas){
         for(Respuesta respuesta : respuestas) {
-            int aSumar = 0;
-            for (Opcion seleccion : respuesta.selecciones()) {
-                if (!seleccion.fueSeleccionadaCorrectamente() && !seleccion.esCorrecta()) {
-                    aSumar += (respuesta.multiplicador().multiplicarPuntos(-1));
-                }
-                else if (seleccion.fueSeleccionadaCorrectamente() && seleccion.esCorrecta()) {
-                    aSumar += (respuesta.multiplicador().multiplicarPuntos(1));
-
-                }
-            }
-            respuesta.definirPuntosAAgregar(aSumar);
+            respuesta.definirPuntosAAgregar(respuesta.cantidadDeOpcionesCorrectasSeleccionadasCorrectamente() - respuesta.cantidadDeOpcionesIncorrectasSeleccionadasincorrectamente());
         }
         return respuestas;
 
