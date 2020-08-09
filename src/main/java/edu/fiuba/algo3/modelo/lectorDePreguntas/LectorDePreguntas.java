@@ -20,13 +20,13 @@ public class LectorDePreguntas {
      public List<Pregunta> LectorDePreguntas(String direccionPreguntas, String tipoDePregunta){
          List<Pregunta> preguntasCreadas = new ArrayList<>();
          PreguntaFactory fabricaDePreguntas = new PreguntaFactory();
+         OpcionesFactory fabricaDeOpciones = new OpcionesFactory();
          JSONParser parser = new JSONParser();
          try{
              Object objeto = parser.parse(new FileReader(direccionPreguntas));
              JSONObject objetoJson = (JSONObject) objeto;
              JSONArray preguntasDeUnTipo = (JSONArray) objetoJson.get(tipoDePregunta);
              for (Object preguntaJSON : preguntasDeUnTipo) {
-                 OpcionesFactory fabricaDeOpciones = new OpcionesFactory();
                  JSONObject pregunta = (JSONObject) preguntaJSON;
                  String enunciado = (String) pregunta.get("enunciado");
                  JSONObject opciones = (JSONObject) pregunta.get("opciones");
@@ -59,6 +59,8 @@ public class LectorDePreguntas {
 
              }
              return fabricaDePreguntas.getPreguntas();
+         }catch(){
+
          } catch (ParseException e) {
              e.printStackTrace();
          } catch (FileNotFoundException exception) {
@@ -70,42 +72,46 @@ public class LectorDePreguntas {
 
      }
      private List<Binaria> leerOpcionesVeraderoFalso(JSONObject opciones, OpcionesFactory fabricaDeOpciones) {
+        List<Binaria> opcionesADevolver = new ArrayList<>();
         String opcionCorrecta = (String) opciones.get("correcta");
         String opcionIncorrecta = (String) opciones.get("incorrecta");
-        fabricaDeOpciones.crearOpcionCorrecta(opcionCorrecta);
-        fabricaDeOpciones.crearOpcionIncorrecta(opcionIncorrecta);
+        opcionesADevolver.add(fabricaDeOpciones.crearOpcionCorrecta(opcionCorrecta));
+        opcionesADevolver.add(fabricaDeOpciones.crearOpcionIncorrecta(opcionIncorrecta));
         return opcionesADevolver;
      }
      private List<Binaria> leerOpcionesMultipleChoice(JSONObject opciones, OpcionesFactory fabricaDeOpciones){
+         List<Binaria> opcionesADevolver = new ArrayList<>();
          JSONArray opcionesCorrectas = (JSONArray) opciones.get("correcta");
          JSONArray opcionesIncorrectas = (JSONArray) opciones.get("incorrecta");
          for(Object opcionCorrecta : opcionesCorrectas){
-             fabricaDeOpciones.crearOpcionCorrecta((String)opcionCorrecta);
+             opcionesADevolver.add(fabricaDeOpciones.crearOpcionCorrecta((String)opcionCorrecta));
          }
          for(Object opcionIncorrecta : opcionesIncorrectas){
-             fabricaDeOpciones.crearOpcionIncorrecta((String) opcionIncorrecta;
+             opcionesADevolver.add(fabricaDeOpciones.crearOpcionIncorrecta((String) opcionIncorrecta);
          }
-         return fabricaDeOpciones.getOpciones();
+         return opcionesADevolver;
      }
      private List<Posicionable> leerOpcionesOrderedChoice(JSONObject opciones, OpcionesFactory fabricaDeOpciones){
+         List<Posicionable> opcionesADevolver = new ArrayList<>();
          JSONArray opcionesConOrden = (JSONArray) opciones.get("opciones");
          Integer contador = 0;
          for(Object opcionPosicionable : opcionesConOrden){
              contador += 1;
-             fabricaDeOpciones.crearOpcionConPosicion(((JSONObject) opcionPosicionable).get(contador.toString()), contador);
+             opcionesADevolver.add(fabricaDeOpciones.crearOpcionGrupalConPosicion(((JSONObject) opcionPosicionable).get(contador.toString()), contador));
          }
-         return fabricaDeOpciones.getOpciones();
+         return opcionesADevolver;
 
      }
      private List<Grupal> leerOpcionesGroupChoice(JSONObject opciones, OpcionesFactory fabricaDeOpciones){
+        List<Grupal> opcionesADevolver = new ArrayList<>();
         JSONArray opcionesGrupoA = (JSONArray) opciones.get("A");
         JSONArray opcionesGrupoB = (JSONArray) opciones.get("B");
         for(Object opcionGrupoA : opcionesGrupoA){
-            fabricaDeOpciones.crearOpcionDeGupoA((String) opcionGrupoA);
+            opcionesADevolver.add(fabricaDeOpciones.crearOpcionDeGupoA((String) opcionGrupoA));
         }
         for(Object opcionGrupoB : opcionesGrupoB){
-            fabricaDeOpciones.crearOpcionDeGrupoB((String) opcionGrupoB);
+            opcionesADevolver.add(fabricaDeOpciones.crearOpcionDeGrupoB((String) opcionGrupoB));
         }
-        return fabricaDeOpciones.getOpciones();
+        return opcionesADevolver;
      }
 }
