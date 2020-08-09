@@ -448,7 +448,9 @@ public class EnunciadoTest {
         List<Respuesta> respuestas = new ArrayList<>();
         RespuestaBuilder respuestaBuilder = new RespuestaBuilder();
         respuestaBuilder.conResponsable(jugador);
+
         List<Opcion> opcionesAAgregarJugador = List.copyOf(seleccionJugador);
+
         respuestaBuilder.conSelecciones(opcionesAAgregarJugador);
         respuestaBuilder.conMultiplicador(new Multiplicador(1));
 
@@ -456,14 +458,14 @@ public class EnunciadoTest {
 
         RespuestaBuilder respuestaJugadoraBuilder = new RespuestaBuilder();
         respuestaJugadoraBuilder.conResponsable(jugadora);
-        List<Opcion> opcionesAAgregarJugadora = List.copyOf(seleccionJugador);
+        List<Opcion> opcionesAAgregarJugadora = List.copyOf(seleccionJugadora);
         respuestaJugadoraBuilder.conSelecciones(opcionesAAgregarJugadora);
         respuestaJugadoraBuilder.conMultiplicador(new Multiplicador(1));
 
         respuestas.add(respuestaJugadoraBuilder.build());
 
         pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
-        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
+
 
         assertEquals(1, jugador.puntos());
         assertEquals(0, jugadora.puntos());

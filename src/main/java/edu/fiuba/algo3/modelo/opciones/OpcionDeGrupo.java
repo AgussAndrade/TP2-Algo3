@@ -28,7 +28,7 @@ public class OpcionDeGrupo implements Grupal {
 
     @Override
     public boolean fueSeleccionadaCorrectamente() {
-        return grupo.equals( grupoSeleccionado);
+        return grupo.equals(grupoSeleccionado);
     }
 
     @Override
