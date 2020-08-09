@@ -52,7 +52,7 @@
     [
       {
         "enunciado" : "Ordenar los siguientes valores de forma descendente",
-        "opciones" : [{"1" : "10"},{"2" : "7"}, {"3" : "1"}]
+        "opciones" : {"opciones" : [{"1" : "10"},{"2" : "7"}, {"3" : "1"}]}
       }
     ],
 
@@ -60,7 +60,7 @@
     [
       {
         "enunciado" : "Separar los paises de las ciudades",
-        "opciones" : [{"A" : "Argentina"},{"A" : "Francia"}, {"B" : "Madrid"}]
+        "opciones" : {"A" : ["Argentina","Francia"], B : ["Lima"]}
       }
     ]
 }
