@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo.opciones;
 
+
+
 public class OpcionDeGrupo implements Grupal {
     String enunciado;
     String grupo;
@@ -26,7 +28,7 @@ public class OpcionDeGrupo implements Grupal {
 
     @Override
     public boolean fueSeleccionadaCorrectamente() {
-        return grupoSeleccionado == grupo;
+        return grupo.equals( grupoSeleccionado);
     }
 
     @Override
