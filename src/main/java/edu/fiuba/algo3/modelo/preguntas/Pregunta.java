@@ -10,7 +10,6 @@ import java.util.List;
 
 public abstract class Pregunta {
     protected String enunciado;
-    protected List<Opcion> opciones;
     protected Estrategia estrategia;
 
     public String enunciado(){
@@ -21,11 +20,4 @@ public abstract class Pregunta {
         aplicador.sumarPuntos(estrategia.validarRespuestas(respuestas));
     }
 
-    public List<Opcion> obtenerOpciones(){
-        List<Opcion> opcionesCopiadas = new ArrayList<>();
-        for(Opcion opcionACopiar : opciones){
-            opcionesCopiadas.add(opcionACopiar.copiarOpcion());
-        }
-        return opcionesCopiadas;
-    }
 }

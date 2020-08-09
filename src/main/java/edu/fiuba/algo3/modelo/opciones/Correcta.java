@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.opciones;
 
-public class Correcta implements Opcion {
+public class Correcta implements Binarias{
     protected String enunciado;
     protected boolean fueSeleccionada = false;
 
@@ -9,7 +9,7 @@ public class Correcta implements Opcion {
     }
 
     @Override
-    public Opcion copiarOpcion(){
+    public Binarias copiarOpcion(){
         return new Correcta(enunciado);
     }
 
@@ -33,8 +33,4 @@ public class Correcta implements Opcion {
         fueSeleccionada = true;
     }
 
-    @Override
-    public void seleccionar(int parametro) {
-        fueSeleccionada = true;
-    }
 }

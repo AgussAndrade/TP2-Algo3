@@ -23,17 +23,21 @@ public class ClasicaTest {
         List<Opcion> opcionesPosibles = new ArrayList<>();
         List<Opcion> selecciones = new ArrayList<>();
 
-        Opcion opcionCorrecta = new Correcta("Correcta");
-        Opcion opcionIncorrecta = new Incorrecta("Incorrecta");
+        Correcta opcionCorrecta = new Correcta("Correcta");
+        Incorrecta opcionIncorrecta = new Incorrecta("Incorrecta");
 
         opcionIncorrecta.seleccionar();
         opcionesPosibles.add(opcionCorrecta);
         opcionesPosibles.add(opcionIncorrecta);
 
-        selecciones.add(opcionCorrecta);
-        selecciones.add(opcionIncorrecta);
+        selecciones.add( opcionCorrecta);
+        selecciones.add( opcionIncorrecta);
 
-        Respuesta respuesta = new Respuesta(jugador,selecciones, new Multiplicador(1));
+        RespuestaBuilder respuestaBuilder = new RespuestaBuilder();
+        respuestaBuilder.conResponsable(jugador);
+        respuestaBuilder.conSelecciones(selecciones);
+        respuestaBuilder.conMultiplicador(new Multiplicador(1));
+        Respuesta respuesta = respuestaBuilder.build();
         List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(respuesta);
         clasica.validarRespuestas(respuestas);
@@ -49,7 +53,7 @@ public class ClasicaTest {
         List<Opcion> opcionesPosibles = new ArrayList<>();
         List<Opcion> selecciones = new ArrayList<>();
 
-        Opcion opcionCorrecta = new Correcta("Correcta");
+        Correcta opcionCorrecta = new Correcta("Correcta");
 
         opcionCorrecta.seleccionar();
 
@@ -57,8 +61,11 @@ public class ClasicaTest {
 
         selecciones.add(opcionCorrecta);
 
-        Respuesta respuesta = new Respuesta(jugador,selecciones,new Multiplicador(1));
-        List<Respuesta> respuestas = new ArrayList<>();
+        RespuestaBuilder respuestaBuilder = new RespuestaBuilder();
+        respuestaBuilder.conResponsable(jugador);
+        respuestaBuilder.conSelecciones(selecciones);
+        respuestaBuilder.conMultiplicador(new Multiplicador(1));
+        Respuesta respuesta = respuestaBuilder.build();List<Respuesta> respuestas = new ArrayList<>();
         respuestas.add(respuesta);
         clasica.validarRespuestas(respuestas);
 
