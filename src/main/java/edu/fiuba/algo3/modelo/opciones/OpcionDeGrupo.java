@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.opciones;
 
-public class OpcionDeGrupo implements Grupales {
+public class OpcionDeGrupo implements Grupal {
     String enunciado;
     String grupo;
     String grupoSeleccionado;
@@ -11,7 +11,7 @@ public class OpcionDeGrupo implements Grupales {
     }
 
     @Override
-    public Grupales copiarOpcion(){
+    public Grupal copiarOpcion(){
         return new OpcionDeGrupo(enunciado,grupo);
     }
 

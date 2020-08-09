@@ -11,7 +11,7 @@
 //public class PreguntaFactory {
 //    private List<Pregunta> preguntas;
 //
-//    public void crearVerdaderoFalsoClasica(String enunciado,List<Opcion> opciones){
+//    public void crearVerdaderoFalsoClasica(String enunciado,List<Binarias> opciones){
 //        if (!(comprobarCantidadDeOpciones(opciones,2,2))){
 //            //TIRAR EXCEPCION//
 //        }
@@ -19,7 +19,7 @@
 //        this.preguntas.add(verdaderoFalsoClasica);
 //    }
 //
-//    public void crearVerdaderoFalsoPenalizable(String enunciado,List<Opcion> opciones){
+//    public void crearVerdaderoFalsoPenalizable(String enunciado,List<Binarias> opciones){
 //        if (!(comprobarCantidadDeOpciones(opciones,2,2))){
 //            //TIRAR EXCEPCION//
 //        }

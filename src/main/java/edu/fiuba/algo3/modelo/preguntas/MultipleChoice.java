@@ -1,21 +1,21 @@
 package edu.fiuba.algo3.modelo.preguntas;
 
-import edu.fiuba.algo3.modelo.opciones.Binarias;
+import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MultipleChoice extends Pregunta {
-    private List<Binarias> opciones;
-    public MultipleChoice(String enunciado, List<Binarias> opciones, Estrategia estrategia) {
+    private List<Binaria> opciones;
+    public MultipleChoice(String enunciado, List<Binaria> opciones, Estrategia estrategia) {
         this.enunciado = enunciado;
         this.opciones = List.copyOf(opciones);
         this.estrategia = estrategia;
     }
-    public List<Binarias> obtenerOpciones(){
-        List<Binarias> opcionesCopiadas = new ArrayList<>();
-        for(Binarias opcionACopiar : opciones){
+    public List<Binaria> obtenerOpciones(){
+        List<Binaria> opcionesCopiadas = new ArrayList<>();
+        for(Binaria opcionACopiar : opciones){
             opcionesCopiadas.add(opcionACopiar.copiarOpcion());
         }
         return opcionesCopiadas;

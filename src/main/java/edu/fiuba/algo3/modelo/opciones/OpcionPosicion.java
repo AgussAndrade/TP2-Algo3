@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.opciones;
 
-public class OpcionPosicion implements Posicionables {
+public class OpcionPosicion implements Posicionable {
     String enunciado;
     int posicion;
     int posicionSeleccionada = 0;
@@ -16,7 +16,7 @@ public class OpcionPosicion implements Posicionables {
     }
 
     @Override
-    public Posicionables copiarOpcion() {
+    public Posicionable copiarOpcion() {
         return new OpcionPosicion(enunciado,posicion);
     }
 
