@@ -1,3 +1,4 @@
+/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
@@ -34,3 +35,4 @@ public class VerdaderoFalsoTest {
         assertEquals(1, jugador.puntos());
     }
 }
+*/

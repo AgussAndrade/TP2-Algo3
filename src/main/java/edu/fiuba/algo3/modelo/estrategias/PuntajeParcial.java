@@ -1,18 +1,20 @@
 package edu.fiuba.algo3.modelo.estrategias;
 
-import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.Respuesta;
 
-public class PuntajeParcial implements Estrategia {
+import java.util.ArrayList;
+import java.util.List;
 
+public class PuntajeParcial implements Estrategia {
     @Override
-    public int devolverSumaDePuntos(Respuesta respuesta){
-        int puntosASumar = 0;
-        for(Opcion seleccion : respuesta.selecciones()) {
-            if (seleccion.fueSeleccionadaCorrectamente() && seleccion.esCorrecta()) {
-                puntosASumar+=1;
+    public List<Respuesta> validarRespuestas(List<Respuesta> respuestas) {
+        List<Respuesta> respondieronCorrectamente = new ArrayList<>();
+        for (Respuesta respuesta : respuestas) {
+            if (respuesta.cantidadDeOpcionesSeleccionadasCorrectamente() == respuesta.cantidadDeOpciones()) {
+                respuesta.definirPuntosAAgregar(respuesta.cantidadDeOpcionesCorrectasSeleccionadasCorrectamente());
+                respondieronCorrectamente.add(respuesta);
             }
         }
-        return (puntosASumar);
+        return respondieronCorrectamente;
     }
 }

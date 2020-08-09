@@ -1,3 +1,4 @@
+/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
@@ -32,4 +33,4 @@ public class PenalizableTest {
 
         assertEquals(0,penalizable.devolverSumaDePuntos(respuesta));
     }
-}
+}*/

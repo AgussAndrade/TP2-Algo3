@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.modelo.preguntas;
 
+import edu.fiuba.algo3.modelo.AplicadorDePuntos;
 import edu.fiuba.algo3.modelo.Respuesta;
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
@@ -16,10 +17,8 @@ public abstract class Pregunta {
         return enunciado;
     }
 
-    public void comprobarRespuestas(List<Respuesta> respuestas){
-        for(Respuesta respuesta : respuestas) {
-            respuesta.jugador().sumarPuntos(estrategia.devolverSumaDePuntos(respuesta));
-        }
+    public void comprobarRespuestas(List<Respuesta> respuestas, AplicadorDePuntos aplicador){
+        aplicador.sumarPuntos(estrategia.validarRespuestas(respuestas));
     }
 
     public List<Opcion> obtenerOpciones(){

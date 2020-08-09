@@ -1,3 +1,4 @@
+/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
@@ -75,3 +76,4 @@ public class OrderedChoiceTest {
         assertEquals(0, jugador.puntos());
     }
 }
+*/
