@@ -1,4 +1,3 @@
-/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
@@ -29,8 +28,10 @@ public class PenalizableTest {
         opcionIncorrecta.seleccionar();
         opciones.add(opcionCorrecta);
         opciones.add(opcionIncorrecta);
-        Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1),false);
-
-        assertEquals(0,penalizable.devolverSumaDePuntos(respuesta));
+        Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1));
+        List<Respuesta> respuestas = new ArrayList<>();
+        respuestas.add(respuesta);
+        penalizable.validarRespuestas(respuestas);
+        assertEquals(0,respuesta.obtenerPuntos());
     }
-}*/
+}

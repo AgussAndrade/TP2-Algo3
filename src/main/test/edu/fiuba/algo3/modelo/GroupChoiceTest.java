@@ -1,4 +1,3 @@
-/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
@@ -65,4 +64,4 @@ public class GroupChoiceTest {
 
         assertEquals(0, jugador.puntos());
     }
-}*/
+}

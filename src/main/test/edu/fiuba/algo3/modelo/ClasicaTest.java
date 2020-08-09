@@ -1,4 +1,4 @@
-/*
+
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
@@ -34,10 +34,11 @@ public class ClasicaTest {
         selecciones.add(opcionIncorrecta);
 
         Respuesta respuesta = new Respuesta(jugador,selecciones, new Multiplicador(1));
+        List<Respuesta> respuestas = new ArrayList<>();
+        respuestas.add(respuesta);
+        clasica.validarRespuestas(respuestas);
 
-        clasica.setearSumaDePuntos(respuesta, new AplicadorSimple());
-
-        assertEquals(0,jugador.puntos());
+        assertEquals(0,respuesta.obtenerPuntos());
     }
 
     @Test
@@ -57,9 +58,11 @@ public class ClasicaTest {
         selecciones.add(opcionCorrecta);
 
         Respuesta respuesta = new Respuesta(jugador,selecciones,new Multiplicador(1));
+        List<Respuesta> respuestas = new ArrayList<>();
+        respuestas.add(respuesta);
+        clasica.validarRespuestas(respuestas);
 
-
-        assertEquals(1,clasica.setearSumaDePuntos(respuesta));
+        assertEquals(1,respuesta.obtenerPuntos());
     }
 }
-*/
+
