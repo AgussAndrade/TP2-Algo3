@@ -1,17 +1,28 @@
 package edu.fiuba.algo3.Interfaz;
 
+import edu.fiuba.algo3.modelo.Jugador;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
-public class ControladorRegistroDeJugadores {
+import java.io.IOException;
+import java.security.cert.PolicyNode;
+
+public class ControladorRegistroDeJugadores extends ControladorPrincipal {
     @FXML
     public TextField nombreJugador1;
     public Button enviar;
     public TextField nombreJugador2;
+    @FXML
+    public AnchorPane anchorPrincipal;
 
-    public void registrarJugadores(ActionEvent actionEvent) {
-        nombreJugador1.getText();
+    public void registrarJugadores(ActionEvent actionEvent) throws IOException {
+        jugadores.add(new Jugador(nombreJugador1.getText()));
+        jugadores.add(new Jugador(nombreJugador2.getText()));
+        AnchorPane nuevoAnchorPane = FXMLLoader.load(getClass().getResource("/InterfazPreguntaVerdaderoYFalso.fxml"));
+        anchorPrincipal.getChildren().setAll(nuevoAnchorPane);
     }
 }

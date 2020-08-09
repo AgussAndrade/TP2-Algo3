@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorRegistroDeJugadores">
+<AnchorPane fx:id="anchorPrincipal" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorRegistroDeJugadores">
    <children>
       <TextField fx:id="nombreJugador1" layoutX="257.0" layoutY="98.0" prefHeight="51.0" prefWidth="259.0" />
       <Label layoutX="67.0" layoutY="107.0" prefHeight="34.0" prefWidth="169.0" text="Nombre jugador Nº1" />

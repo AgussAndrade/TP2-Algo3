@@ -9,13 +9,8 @@ import javafx.scene.control.Label;
 
 import java.util.List;
 
-public class ControladorVerdaderoYFalso {
-    /*MODELO*/
-    private Pregunta pregunta;
-    private List<Jugador> jugadores;
+public class ControladorVerdaderoYFalso extends ControladorPrincipal{
 
-    /*VISTA*/
-    /* private URL vistaPregunta = getClass().getResource("/InterfazPreguntaVerdaderoYFalso.fxml");*/
     public Label nombreJugador1, puntajeJugador1, puntajeJugador2, enunciado, temporizador, nombreJugador2;
     public Button botonVerdadero, botonFalso;
 
@@ -24,16 +19,11 @@ public class ControladorVerdaderoYFalso {
 
     @FXML
     public void initialize() {
-        nombreJugador1.setText("nombreJugador1");
-        nombreJugador2.setText("nombreJugador2");
-        enunciado.setText("Verdadero o falso");
-    }
-
-    public void inicializar(Pregunta pregunta, List<Jugador> jugadores){
-        this.pregunta = pregunta;
         nombreJugador1.setText(jugadores.get(0).nombre());
         nombreJugador2.setText(jugadores.get(1).nombre());
-        enunciado.setText(pregunta.enunciado());
+        puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
+        puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
+//        enunciado.setText(pregunta.enunciado());
     }
 
     public void seleccionadoVerdadero(ActionEvent actionEvent) {
