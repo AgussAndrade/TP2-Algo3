@@ -1,20 +1,24 @@
 package edu.fiuba.algo3.modelo.lectorDePreguntas;
 
 import edu.fiuba.algo3.modelo.OpcionesFactory;
+import edu.fiuba.algo3.modelo.PreguntaFactory;
 import edu.fiuba.algo3.modelo.opciones.*;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class LectorDePreguntas {
-     public LectorDePreguntas(String direccionPreguntas, String tipoDePregunta){
+     public List<Pregunta> LectorDePreguntas(String direccionPreguntas, String tipoDePregunta){
+         List<Pregunta> preguntasCreadas = new ArrayList<>();
          PreguntaFactory fabricaDePreguntas = new PreguntaFactory();
          OpcionesFactory fabricaDeOpciones = new OpcionesFactory();
          JSONParser parser = new JSONParser();
@@ -28,19 +32,41 @@ public class LectorDePreguntas {
                  JSONObject opciones = (JSONObject) pregunta.get("opciones");
                  if(tipoDePregunta.contains("verdaderoFalso")){
                      List<Binaria> opcionesVerdaderoFalso = this.leerOpcionesVeraderoFalso(opciones, fabricaDeOpciones);
+                     if(tipoDePregunta.contains("Clasica")){
+                         fabricaDePreguntas.crearVerdaderoFalsoClasica(enunciado, opcionesVerdaderoFalso);
+                     }
+                     else{
+                        fabricaDePreguntas.crearVerdaderoFalsoPenalizable(enunciado, opcionesVerdaderoFalso);
+                     }
                  }
                  if(tipoDePregunta.contains("multipleChoice")){
                      List<Binaria> opcionesMultipleChoice = this.leerOpcionesMultipleChoice(opciones, fabricaDeOpciones);
+                     if(tipoDePregunta.contains("Clasica")){
+                         fabricaDePreguntas.crearMultipleChoiceClasica(enunciado, opcionesMultipleChoice);
+                     }
+                     else{
+                         fabricaDePreguntas.crearMultipleChoicePenalizable(enunciado, opcionesMultipleChoice);
+                     }
                  }
                  if(tipoDePregunta.contains("orderedChoice")){
                      List<Posicionable> opcionesOrderedChoice = this.leerOpcionesOrderedChoice(opciones, fabricaDeOpciones);
+                     fabricaDePreguntas.crearOrderedChoice(enunciado, opcionesOrderedChoice);
                  }
                  if(tipoDePregunta.contains("groupChoice")){
-                     List<Grupal> opcionesVerdaderoFalso = this.leerOpcionesGroupChoice(opciones, fabricaDeOpciones);
+                     List<Grupal> opcionesGroupChoice = this.leerOpcionesGroupChoice(opciones, fabricaDeOpciones);
+                    fabricaDePreguntas.crearGroupChoice(enunciado, opcionesGroupChoice);
                  }
+
              }
+             return fabricaDePreguntas.getPreguntas();
          }catch(){
 
+         } catch (ParseException e) {
+             e.printStackTrace();
+         } catch (FileNotFoundException exception) {
+             exception.printStackTrace();
+         } catch (IOException e) {
+             e.printStackTrace();
          }
 
 
