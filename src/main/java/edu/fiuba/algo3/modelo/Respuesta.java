@@ -10,11 +10,18 @@ public class Respuesta {
     private Multiplicador multiplicador;
     private int puntosAAgregar;
 
-    public Respuesta(Jugador responsable, List<Opcion> selecciones,Multiplicador multiplicador){
+    public void setResponsable(Jugador responsable) {
         this.responsable = responsable;
+    }
+
+    public void setSelecciones(List<Opcion> selecciones){
         this.selecciones = selecciones;
+    }
+
+    public void setMultiplicador(Multiplicador multiplicador) {
         this.multiplicador = multiplicador;
     }
+
 
     public Jugador jugador() {
         return responsable;
