@@ -1,4 +1,3 @@
-/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
@@ -27,10 +26,11 @@ public class PuntajeParcialTest {
         opciones.add(opcionCorrecta);
         opciones.add(opcionIncorrecta);
 
-        Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1),false);
+        Respuesta respuesta = new Respuesta(jugador,opciones,new Multiplicador(1));
+        List<Respuesta> respuestas = new ArrayList<>();
+        respuestas.add(respuesta);
+        puntajeParcial.validarRespuestas(respuestas);
 
-
-        assertEquals(1,puntajeParcial.devolverSumaDePuntos(respuesta));
+        assertEquals(1,respuesta.obtenerPuntos());
     }
 }
-*/

@@ -1,4 +1,3 @@
-/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.opciones.Correcta;
@@ -19,7 +18,7 @@ public class RespuestaTest {
        Jugador jugador = new Jugador("Juan");
        List<Opcion> selecciones = new ArrayList<>();
 
-       Respuesta respuesta = new Respuesta(jugador,selecciones,new Multiplicador(1),false);
+       Respuesta respuesta = new Respuesta(jugador,selecciones,new Multiplicador(1));
 
        assertEquals(jugador,respuesta.jugador());
     }
@@ -32,11 +31,10 @@ public class RespuestaTest {
 
        selecciones.add(new Correcta("Correcta"));
        selecciones.add(new Incorrecta("Incorrecta"));
-       Respuesta respuesta = new Respuesta (jugador,selecciones,new Multiplicador(1),false);
+       Respuesta respuesta = new Respuesta (jugador,selecciones,new Multiplicador(1));
 
-       assertEquals(selecciones,respuesta.selecciones());
+       assertEquals(selecciones.size(),respuesta.cantidadDeOpciones());
 
     }
 
 }
-*/

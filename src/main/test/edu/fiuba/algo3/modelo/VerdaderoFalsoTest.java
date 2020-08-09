@@ -1,4 +1,3 @@
-/*
 package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
@@ -28,11 +27,8 @@ public class VerdaderoFalsoTest {
 
         List<Respuesta> respuestas = new ArrayList<>();
         opciones.get(0).seleccionar();
-        respuestas.add(new Respuesta(jugador, opciones,new Multiplicador(1),false));
-
-        pregunta.comprobarRespuestas(respuestas);
-
+        respuestas.add(new Respuesta(jugador, opciones,new Multiplicador(1)));
+        pregunta.comprobarRespuestas(respuestas,new AplicadorSimple());
         assertEquals(1, jugador.puntos());
     }
 }
-*/
