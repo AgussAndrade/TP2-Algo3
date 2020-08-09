@@ -1,31 +1,42 @@
-.button
+.buttonTrue
 {
-    -fx-background-color :  #BE5E1F;
+    -fx-background-color :   #43B581;
     -fx-background-radius :  20 20 20 20;
 }
-.button:hover
+.buttonTrue:hover
 {
-    -fx-background-color : #F47521 ;
+    -fx-background-color : #69C49A ;
     -fx-background-radius :  20 20 20 20;
 }
-.button:pressed
-{
-    -fx-background-color : #7E3E14 ;
-    -fx-background-radius :  20 20 20 20;
-}
+/*.buttonTrue:pressed*/
+/*{*/
+/*    -fx-background-color : #7E3E14 ;*/
+/*    -fx-background-radius :  20 20 20 20;*/
+/*}*/
 
-.button2
+.buttonFalse
 {
-    -fx-background-color :  #BE5E1F;
+    -fx-background-color :  #F04747;
     -fx-background-radius :  20 20 20 20;
 }
-.button2:hover
+.buttonFalse:hover
 {
-    -fx-background-color : #f47521;
+    -fx-background-color : #F26666;
     -fx-background-radius :  20 20 20 20;
 }
-.button2:pressed
+/*.buttonFalse:pressed*/
+/*{*/
+/*    -fx-background-color : #7E3E14 ;*/
+/*    -fx-background-radius :  20 20 20 20;*/
+/*}*/
+
+.multiplierButton
 {
-    -fx-background-color : #7E3E14 ;
+    -fx-background-color :  #8697D4;
+    -fx-background-radius :  20 20 20 20;
+}
+.multiplierButton:hover
+{
+    -fx-background-color : #A4B1DF;
     -fx-background-radius :  20 20 20 20;
 }

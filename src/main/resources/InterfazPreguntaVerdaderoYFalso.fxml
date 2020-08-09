@@ -6,58 +6,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane maxHeight="569.0" maxWidth="1313.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="1313.0" style="-fx-background-color: #262626;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorVerdaderoYFalso">
-   <children>
-      <AnchorPane prefHeight="569.0" prefWidth="220.0" style="-fx-background-color: #191919;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="1449.0" snapToPixel="false" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorVerdaderoYFalso">
+   <left>
+      <AnchorPane prefHeight="632.0" prefWidth="374.0" style="-fx-background-color: #2F3136;" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="10.0" layoutY="14.0" prefHeight="63.0" prefWidth="200.0" style="-fx-background-color: #FCE0CD; -fx-background-radius: 20 20 20 20;">
+            <Pane layoutX="87.0" layoutY="33.0" prefHeight="63.0" prefWidth="200.0" style="-fx-background-color: #393C42; -fx-background-radius: 20 20 20 20;">
                <children>
-                  <Label fx:id="nombreJugador1" alignment="CENTER" layoutX="16.0" layoutY="10.0" prefHeight="43.0" prefWidth="168.0" text="Jugador 1" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="1.0" prefHeight="62.0" prefWidth="198.0" text="Jugador 1" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
                      <font>
                         <Font name="Arial Black" size="24.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Label layoutX="14.0" layoutY="104.0" prefHeight="63.0" prefWidth="105.0" text="Puntaje:" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Label>
-            <Label fx:id="puntajeJugador1" layoutX="133.0" layoutY="109.0" prefHeight="53.0" prefWidth="47.0" text="15" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="1113.0" prefHeight="569.0" prefWidth="220.0" style="-fx-background-color: #191919;" stylesheets="@css/fullpackstyling.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   </left>
+   <center>
+      <AnchorPane prefHeight="704.0" prefWidth="850.0" style="-fx-background-color: #36393F;" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="10.0" layoutY="14.0" prefHeight="63.0" prefWidth="200.0" style="-fx-background-color: #FCE0CD; -fx-background-radius: 20 20 20 20;">
-               <children>
-                  <Label fx:id="nombreJugador2" alignment="CENTER" layoutX="47.0" layoutY="11.0" text="Jugador 2" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
-                     <font>
-                        <Font name="Arial Black" size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Label layoutX="27.0" layoutY="100.0" prefHeight="63.0" prefWidth="105.0" text="Puntaje:" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="114.0" layoutY="37.0" prefHeight="138.0" prefWidth="857.0" style="-fx-background-color: #40444B; -fx-background-radius: 20 20 20 20;" text="Argentina es un Pais" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="37.0">
                <font>
-                  <Font name="System Bold" size="25.0" />
+                  <Font name="System Bold" size="63.0" />
                </font>
             </Label>
-            <Label fx:id="puntajeJugador2" layoutX="150.0" layoutY="105.0" prefHeight="53.0" prefWidth="47.0" text="12" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="221.0" prefHeight="569.0" prefWidth="872.0">
-         <children>
-            <Button fx:id="botonVerdadero" layoutX="34.0" layoutY="367.0" mnemonicParsing="false" onAction="#seleccionadoVerdadero" prefHeight="113.0" prefWidth="343.0" stylesheets="@css/fullpackstyling.css" text="Verdadero" textFill="#262626">
+            <Button layoutX="114.0" layoutY="468.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="buttonTrue" stylesheets="@../../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Verdadero" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="114.0">
                <font>
                   <Font name="System Bold" size="45.0" />
                </font>
@@ -65,39 +41,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Pane layoutX="62.0" layoutY="86.0" prefHeight="113.0" prefWidth="749.0" style="-fx-background-color: #FCE0CD; -fx-background-radius: 30 30 30 30;" AnchorPane.topAnchor="86.0">
-               <children>
-                  <Label fx:id="enunciado" layoutX="122.0" layoutY="14.0" prefHeight="85.0" prefWidth="506.0" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="50.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane layoutX="376.0" layoutY="224.0" prefHeight="121.0" prefWidth="120.0" style="-fx-background-color: #FCE0CD; -fx-background-radius: 70 70 70 70;">
-               <children>
-                  <Label fx:id="temporizador" layoutX="36.0" layoutY="48.0" text="10">
-                     <font>
-                        <Font name="System Bold" size="41.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="27.0" layoutY="24.0" prefHeight="24.0" prefWidth="71.0" text="Tiempo">
-                     <font>
-                        <Font name="System Bold" size="19.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane layoutX="154.0" layoutY="14.0" prefHeight="50.0" prefWidth="565.0" style="-fx-background-color: #BE5E1F; -fx-background-radius: 20 20 20 20;">
-               <children>
-                  <Label layoutX="15.0" layoutY="-1.0" prefHeight="64.0" prefWidth="579.0" text="Verdadero o Falso - penalizable" textAlignment="CENTER" textFill="#262626">
-                     <font>
-                        <Font name="System Bold" size="36.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Button fx:id="botonFalso" depthTest="ENABLE" layoutX="489.0" layoutY="367.0" mnemonicParsing="false" onAction="#seleccionadoFalso" prefHeight="113.0" prefWidth="343.0" stylesheets="@css/fullpackstyling.css" text="Falso" textFill="#262626">
+            <Button depthTest="ENABLE" layoutX="628.0" layoutY="468.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="buttonFalse" stylesheets="@../../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Falso" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.rightAnchor="114.0">
                <font>
                   <Font name="System Bold" size="45.0" />
                </font>
@@ -105,7 +49,34 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <AnchorPane layoutX="6.0" layoutY="268.0" prefHeight="200.0" prefWidth="519.0" />
          </children>
       </AnchorPane>
-   </children>
-</AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="72.0" prefWidth="1449.0" style="-fx-background-color: #202225;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="15.0" prefHeight="42.0" prefWidth="224.0" text="Puntos jugador 1:" textFill="#f2f2f2">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="17.0" prefHeight="41.0" prefWidth="83.0" text="18" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="1144.0" layoutY="15.0" prefHeight="42.0" prefWidth="224.0" text="Puntos jugador 2:" textFill="#f2f2f2" AnchorPane.rightAnchor="81.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="1378.0" layoutY="16.0" prefHeight="41.0" prefWidth="57.0" text="26" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
