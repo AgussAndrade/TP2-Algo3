@@ -13,63 +13,62 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
+/*
+   Esto va en kahoot.java:
+   LecorDePreguntas lectorDePreguntas;
+   lectorDePreguntas = new lectorDePreguntas();
+   preguntas = lectorDePreguntas.leerPreguntas("preguntas.json");
+   }
+
+*/
 public class LectorDePreguntas {
-     public List<Pregunta> LectorDePreguntas(String direccionPreguntas, String tipoDePregunta){
-         List<Pregunta> preguntasCreadas = new ArrayList<>();
+     public List<Pregunta> leerPreguntas(String direccionPreguntas){
          PreguntaFactory fabricaDePreguntas = new PreguntaFactory();
-         OpcionesFactory fabricaDeOpciones = new OpcionesFactory();
-         JSONParser parser = new JSONParser();
-         try{
-             Object objeto = parser.parse(new FileReader(direccionPreguntas));
-             JSONObject objetoJson = (JSONObject) objeto;
-             JSONArray preguntasDeUnTipo = (JSONArray) objetoJson.get(tipoDePregunta);
-             for (Object preguntaJSON : preguntasDeUnTipo) {
-                 JSONObject pregunta = (JSONObject) preguntaJSON;
-                 String enunciado = (String) pregunta.get("enunciado");
-                 JSONObject opciones = (JSONObject) pregunta.get("opciones");
-                 if(tipoDePregunta.contains("verdaderoFalso")){
-                     List<Binaria> opcionesVerdaderoFalso = this.leerOpcionesVeraderoFalso(opciones, fabricaDeOpciones);
-                     if(tipoDePregunta.contains("Clasica")){
-                         fabricaDePreguntas.crearVerdaderoFalsoClasica(enunciado, opcionesVerdaderoFalso);
+         List<String> tiposDePregunta = List.of("VerdaderoFalsoClasica", "VerdaderoFalsoPenalizable", "MultipleChoiceClasica", "MultipleChoicePenalizable", "MultipleChoicePuntajeParcial", "OrderedChoice", "GroupChoice");
+         for(String tipoDePregunta : tiposDePregunta){
+             OpcionesFactory fabricaDeOpciones = new OpcionesFactory();
+             JSONParser parser = new JSONParser();
+             try{
+                 Object objeto = parser.parse(new FileReader(direccionPreguntas));
+                 JSONObject objetoJson = (JSONObject) objeto;
+                 JSONArray preguntasDeUnTipo = (JSONArray) objetoJson.get(tipoDePregunta);
+                 for (Object preguntaJSON : preguntasDeUnTipo) {
+                     JSONObject pregunta = (JSONObject) preguntaJSON;
+                     String enunciado = (String) pregunta.get("enunciado");
+                     JSONObject opciones = (JSONObject) pregunta.get("opciones");
+                     if (tipoDePregunta.contains("verdaderoFalso")) {
+                         List<Binaria> opcionesVerdaderoFalso = this.leerOpcionesVeraderoFalso(opciones, fabricaDeOpciones);
+                         if (tipoDePregunta.contains("Clasica")) {
+                             fabricaDePreguntas.crearVerdaderoFalsoClasica(enunciado, opcionesVerdaderoFalso);
+                         } else {
+                             fabricaDePreguntas.crearVerdaderoFalsoPenalizable(enunciado, opcionesVerdaderoFalso);
+                         }
                      }
-                     else{
-                        fabricaDePreguntas.crearVerdaderoFalsoPenalizable(enunciado, opcionesVerdaderoFalso);
+                     if (tipoDePregunta.contains("multipleChoice")) {
+                         List<Binaria> opcionesMultipleChoice = this.leerOpcionesMultipleChoice(opciones, fabricaDeOpciones);
+                         if (tipoDePregunta.contains("Clasica")) {
+                             fabricaDePreguntas.crearMultipleChoiceClasica(enunciado, opcionesMultipleChoice);
+                         } else {
+                             fabricaDePreguntas.crearMultipleChoicePenalizable(enunciado, opcionesMultipleChoice);
+                         }
                      }
-                 }
-                 if(tipoDePregunta.contains("multipleChoice")){
-                     List<Binaria> opcionesMultipleChoice = this.leerOpcionesMultipleChoice(opciones, fabricaDeOpciones);
-                     if(tipoDePregunta.contains("Clasica")){
-                         fabricaDePreguntas.crearMultipleChoiceClasica(enunciado, opcionesMultipleChoice);
+                     if (tipoDePregunta.contains("orderedChoice")) {
+                         List<Posicionable> opcionesOrderedChoice = this.leerOpcionesOrderedChoice(opciones, fabricaDeOpciones);
+                         fabricaDePreguntas.crearOrderedChoice(enunciado, opcionesOrderedChoice);
                      }
-                     else{
-                         fabricaDePreguntas.crearMultipleChoicePenalizable(enunciado, opcionesMultipleChoice);
+                     if (tipoDePregunta.contains("groupChoice")) {
+                         List<Grupal> opcionesGroupChoice = this.leerOpcionesGroupChoice(opciones, fabricaDeOpciones);
+                         fabricaDePreguntas.crearGroupChoice(enunciado, opcionesGroupChoice);
                      }
-                 }
-                 if(tipoDePregunta.contains("orderedChoice")){
-                     List<Posicionable> opcionesOrderedChoice = this.leerOpcionesOrderedChoice(opciones, fabricaDeOpciones);
-                     fabricaDePreguntas.crearOrderedChoice(enunciado, opcionesOrderedChoice);
-                 }
-                 if(tipoDePregunta.contains("groupChoice")){
-                     List<Grupal> opcionesGroupChoice = this.leerOpcionesGroupChoice(opciones, fabricaDeOpciones);
-                    fabricaDePreguntas.crearGroupChoice(enunciado, opcionesGroupChoice);
-                 }
 
+                 }
+             } catch (ParseException | IOException e) {
+                 e.printStackTrace();
              }
-             return fabricaDePreguntas.getPreguntas();
-         }catch(){
-
-         } catch (ParseException e) {
-             e.printStackTrace();
-         } catch (FileNotFoundException exception) {
-             exception.printStackTrace();
-         } catch (IOException e) {
-             e.printStackTrace();
          }
-
-
+         return fabricaDePreguntas.getPreguntas();
      }
      private List<Binaria> leerOpcionesVeraderoFalso(JSONObject opciones, OpcionesFactory fabricaDeOpciones) {
         List<Binaria> opcionesADevolver = new ArrayList<>();
@@ -87,17 +86,17 @@ public class LectorDePreguntas {
              opcionesADevolver.add(fabricaDeOpciones.crearOpcionCorrecta((String)opcionCorrecta));
          }
          for(Object opcionIncorrecta : opcionesIncorrectas){
-             opcionesADevolver.add(fabricaDeOpciones.crearOpcionIncorrecta((String) opcionIncorrecta);
+             opcionesADevolver.add(fabricaDeOpciones.crearOpcionIncorrecta((String) opcionIncorrecta));
          }
          return opcionesADevolver;
      }
      private List<Posicionable> leerOpcionesOrderedChoice(JSONObject opciones, OpcionesFactory fabricaDeOpciones){
          List<Posicionable> opcionesADevolver = new ArrayList<>();
          JSONArray opcionesConOrden = (JSONArray) opciones.get("opciones");
-         Integer contador = 0;
+         int contador = 0;
          for(Object opcionPosicionable : opcionesConOrden){
              contador += 1;
-             opcionesADevolver.add(fabricaDeOpciones.crearOpcionGrupalConPosicion(((JSONObject) opcionPosicionable).get(contador.toString()), contador));
+             opcionesADevolver.add(fabricaDeOpciones.crearOpcionConPosicion(((String)((JSONObject) opcionPosicionable).get(Integer.toString(contador))), contador));
          }
          return opcionesADevolver;
 
