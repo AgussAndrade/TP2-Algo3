@@ -7,22 +7,14 @@ import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-   Esto va en kahoot.java:
-   LecorDePreguntas lectorDePreguntas;
-   lectorDePreguntas = new lectorDePreguntas();
-   preguntas = lectorDePreguntas.leerPreguntas("preguntas.json");
-   }
 
-*/
 public class LectorDePreguntas {
      public List<Pregunta> leerPreguntas(String direccionPreguntas){
          PreguntaFactory fabricaDePreguntas = new PreguntaFactory();
@@ -64,7 +56,7 @@ public class LectorDePreguntas {
                      }
 
                  }
-             } catch (ParseException | IOException e) {
+             } catch ( IOException | org.json.simple.parser.ParseException e) {
                  e.printStackTrace();
              }
          }

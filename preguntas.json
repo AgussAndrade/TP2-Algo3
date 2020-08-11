@@ -60,7 +60,7 @@
     [
       {
         "enunciado" : "Separar los paises de las ciudades",
-        "opciones" : {"A" : ["Argentina","Francia"], B : ["Lima"]}
+        "opciones" : {"A" : ["Argentina","Francia"], "B" : ["Lima"]}
       }
     ]
 }
