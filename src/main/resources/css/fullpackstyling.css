@@ -50,3 +50,11 @@
     -fx-background-color :  #40444B;
     -fx-background-radius :  10 10 10 10;
 }
+
+.textField
+{
+    -fx-background-color :  #303338;
+    -fx-border-radius :  5 5 5 5;
+    -fx-border-color: #040405 ;
+    -fx-text-fill:  #8c9095;
+}
