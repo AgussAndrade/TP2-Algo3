@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorInicio" maxHeight="569.0" maxWidth="1313.0" minHeight="569.0" minWidth="1313.0" prefHeight="569.0" prefWidth="1313.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorInicio">
+<AnchorPane fx:id="anchorInicio" maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorInicio">
     <children>
-        <ButtonBar layoutX="1029.0" layoutY="14.0" prefHeight="40.0" prefWidth="270.0">
+        <ButtonBar layoutX="827.0" layoutY="14.0" prefHeight="73.0" prefWidth="439.0">
             <buttons>
-                <Button mnemonicParsing="false" text="Opciones" />
-                <Button mnemonicParsing="false" text="Agregar pregunta" />
+                <Button alignment="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="209.0" styleClass="optionButton" stylesheets="@css/fullpackstyling.css" text="Agregar pregunta" textAlignment="CENTER" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+                <Button alignment="CENTER" minWidth="34.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="167.0" styleClass="optionButton" stylesheets="@css/fullpackstyling.css" text="Opciones" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             </buttons>
         </ButtonBar>
-        <Button fx:id="botonIniciar" layoutX="588.0" layoutY="311.0" mnemonicParsing="false" onAction="#iniciarJuego" prefHeight="68.0" prefWidth="137.0" text="Iniciar" />
-        <Label layoutX="502.0" layoutY="127.0" text="Kahoot">
+        <Button fx:id="botonIniciar" alignment="CENTER" layoutX="427.0" layoutY="397.0" mnemonicParsing="false" onAction="#iniciarJuego" prefHeight="139.0" prefWidth="458.0" styleClass="blueButton" stylesheets="@css/fullpackstyling.css" text="Iniciar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="65.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <Label layoutX="465.0" layoutY="159.0" text="Kahoot 2" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="90.0" />
             </font>

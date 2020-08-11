@@ -19,10 +19,10 @@ public class ControladorVerdaderoYFalso extends ControladorPrincipal{
 
     @FXML
     public void initialize() {
-        nombreJugador1.setText(jugadores.get(0).nombre());
-        nombreJugador2.setText(jugadores.get(1).nombre());
-        puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
-        puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
+        //nombreJugador1.setText(jugadores.get(0).nombre());
+        //nombreJugador2.setText(jugadores.get(1).nombre());
+        //puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
+        //puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
 //        enunciado.setText(pregunta.enunciado());
     }
 

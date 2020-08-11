@@ -32,7 +32,7 @@ public class Kahoot {
         stage.setResizable(false);
         stage.show();
         lectorDePreguntas = new LectorDePreguntas();
-        preguntas = lectorDePreguntas.leerPreguntas("preguntas.json");
+        //preguntas = lectorDePreguntas.leerPreguntas("preguntas.json");
         ControladorPrincipal.inicializar(preguntas);
     }
 
