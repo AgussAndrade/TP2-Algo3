@@ -32,7 +32,6 @@
       <JFXTextField fx:id="nombreJugador1" focusColor="#8697d4" layoutX="420.0" layoutY="272.0" prefHeight="51.0" prefWidth="440.0" style="-fx-background-color: #303338; -fx-border-color: #040405; -fx-border-radius: 5 5 5 5; -fx-text-fill: #8c9095;">
          <font>
             <Font size="15.0" />
-         </font>
-      </JFXTextField>
+         </font></JFXTextField>
    </children>
 </AnchorPane>
