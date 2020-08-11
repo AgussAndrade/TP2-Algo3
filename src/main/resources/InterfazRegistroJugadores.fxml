@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TextField?>
 <AnchorPane fx:id="anchorPrincipal" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorRegistroDeJugadores">
    <children>
       <Label layoutX="420.0" layoutY="238.0" prefHeight="25.0" prefWidth="143.0" text="Nombre jugador Nº1" textFill="#8c9095" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="691.0">
@@ -25,14 +26,14 @@
             <Font name="System Bold" size="42.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="nombreJugador2" focusColor="#8697d4" layoutX="420.0" layoutY="391.0" prefHeight="51.0" prefWidth="440.0" styleClass="textField" stylesheets="@css/fullpackstyling.css">
+      <TextField fx:id="nombreJugador2"  layoutX="420.0" layoutY="391.0" prefHeight="51.0" prefWidth="440.0" styleClass="textField" stylesheets="@css/fullpackstyling.css">
          <font>
             <Font size="15.0" />
-         </font></JFXTextField>
-      <JFXTextField fx:id="nombreJugador1" focusColor="#8697d4" layoutX="420.0" layoutY="269.0" prefHeight="51.0" prefWidth="440.0" styleClass="textField" stylesheets="@css/fullpackstyling.css">
+         </font></TextField>
+      <TextField fx:id="nombreJugador1"  layoutX="420.0" layoutY="269.0" prefHeight="51.0" prefWidth="440.0" styleClass="textField" stylesheets="@css/fullpackstyling.css">
          <font>
             <Font size="15.0" />
          </font>
-      </JFXTextField>
+      </TextField>
    </children>
 </AnchorPane>

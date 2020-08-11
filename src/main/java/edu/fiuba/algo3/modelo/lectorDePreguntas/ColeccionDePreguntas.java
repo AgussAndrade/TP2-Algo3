@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.OpcionesFactory;
 import edu.fiuba.algo3.modelo.PreguntaFactory;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.opciones.Grupal;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.opciones.Posicionable;
 import edu.fiuba.algo3.modelo.preguntas.*;
 import org.json.simple.JSONArray;
@@ -148,4 +149,5 @@ public class ColeccionDePreguntas {
                 this.coleccionDePreguntasOrderedChoice.add(PreguntaFactory.crearOrderedChoice(enunciado, listaDeOpciones));
     }
 }
+
 }

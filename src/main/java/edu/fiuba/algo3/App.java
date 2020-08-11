@@ -8,7 +8,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Kahoot kahoot = new Kahoot(stage);
+        Kahoot kahoot = new Kahoot();
+        kahoot.cargarPreguntas("preguntas.json");
+        kahoot.iniciarVista(stage);
     }
 
     public static void main(String[] args) {

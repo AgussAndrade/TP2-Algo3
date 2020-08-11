@@ -14,27 +14,17 @@ import java.io.IOException;
 import java.util.List;
 
 public class Kahoot {
-    List<Jugador> jugadores;
     ColeccionDePreguntas preguntas;
-    LectorDePreguntas lectorDePreguntas;
-    FXMLLoader loader;
-    Parent root;
-    Scene scene ;
-    Stage stage;
 
-    public Kahoot(Stage stage) throws IOException {
-        /*Se arma la ventana inicial*/
-        this.stage = stage;
-        stage.setTitle("Kahoot!");
-        loader = new FXMLLoader(getClass().getResource("/MenuDeInicio.fxml"));
-        root = loader.load();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
-        lectorDePreguntas = new LectorDePreguntas();
-        preguntas = lectorDePreguntas.leerPreguntas("preguntas.json");
-        ControladorPrincipal.inicializar(preguntas);
+    public Kahoot(){
     }
 
+    public void cargarPreguntas(String archivoPreguntas){
+        LectorDePreguntas lectorDePreguntas = new LectorDePreguntas();
+        preguntas = lectorDePreguntas.leerPreguntas(archivoPreguntas);
+    }
+
+    public void iniciarVista(Stage stage) throws IOException {
+        ControladorPrincipal.inicializar(preguntas, stage);
+    }
 }
