@@ -2,6 +2,7 @@ package edu.fiuba.algo3.modelo;
 
 import edu.fiuba.algo3.Interfaz.ControladorInicio;
 import edu.fiuba.algo3.Interfaz.ControladorPrincipal;
+import edu.fiuba.algo3.modelo.lectorDePreguntas.ColeccionDePreguntas;
 import edu.fiuba.algo3.modelo.lectorDePreguntas.LectorDePreguntas;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +15,7 @@ import java.util.List;
 
 public class Kahoot {
     List<Jugador> jugadores;
-    List<Pregunta> preguntas;
+    ColeccionDePreguntas preguntas;
     LectorDePreguntas lectorDePreguntas;
     FXMLLoader loader;
     Parent root;
@@ -32,7 +33,7 @@ public class Kahoot {
         stage.setResizable(false);
         stage.show();
         lectorDePreguntas = new LectorDePreguntas();
-        //preguntas = lectorDePreguntas.leerPreguntas("preguntas.json");
+        preguntas = lectorDePreguntas.leerPreguntas("preguntas.json");
         ControladorPrincipal.inicializar(preguntas);
     }
 

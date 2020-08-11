@@ -15,78 +15,67 @@ import java.util.List;
 public class PreguntaFactory {
     private List<Pregunta> preguntas;
 
-    public void crearVerdaderoFalsoClasica(String enunciado,List<Binaria> opciones){
+    public static VerdaderoFalso crearVerdaderoFalsoClasica(String enunciado,List<Binaria> opciones){
         List<Opcion> opcionesAChequearCantidad = List.copyOf(opciones);
         if (!(comprobarCantidadDeOpciones(opcionesAChequearCantidad,2,2))){
             //TIRAR EXCEPCION//
         }
-        VerdaderoFalso verdaderoFalsoClasica = new VerdaderoFalso(enunciado, opciones, new Clasica());
-        this.preguntas.add(verdaderoFalsoClasica);
+        return new VerdaderoFalso(enunciado, opciones, new Clasica());
     }
 
-    public void crearVerdaderoFalsoPenalizable(String enunciado,List<Binaria> opciones){
+    public static VerdaderoFalso crearVerdaderoFalsoPenalizable(String enunciado,List<Binaria> opciones){
         List<Opcion> opcionesAChequearCantidad = List.copyOf(opciones);
         if (!(comprobarCantidadDeOpciones(opcionesAChequearCantidad,2,2))){
             //TIRAR EXCEPCION//
         }
-        VerdaderoFalso verdaderoFalsoPenalizable = new VerdaderoFalso(enunciado, opciones, new Penalizable());
-        this.preguntas.add(verdaderoFalsoPenalizable);
+        return (new VerdaderoFalso(enunciado, opciones, new Penalizable()));
     }
 
-    public void crearMultipleChoiceClasica(String enunciado,List<Binaria> opciones){
+    public static MultipleChoice crearMultipleChoiceClasica(String enunciado,List<Binaria> opciones){
         List<Opcion> opcionesAChequearCantidad = List.copyOf(opciones);
         if (!(comprobarCantidadDeOpciones(opcionesAChequearCantidad,2,5))){
             //TIRAR EXCEPCION//
         }
-        MultipleChoice multipleChoiceClasica = new MultipleChoice(enunciado, opciones, new Clasica());
-        this.preguntas.add(multipleChoiceClasica);
+        return new MultipleChoice(enunciado, opciones, new Clasica());
 
     }
 
-    public void crearMultipleChoicePuntajeParcial(String enunciado,List<Binaria> opciones){
+    public static MultipleChoice crearMultipleChoicePuntajeParcial(String enunciado,List<Binaria> opciones){
         List<Opcion> opcionesAChequearCantidad = List.copyOf(opciones);
         if (!(comprobarCantidadDeOpciones(opcionesAChequearCantidad,2,5))){
             //TIRAR EXCEPCION//
         }
-        MultipleChoice multipleChoicePuntajeParcial = new MultipleChoice(enunciado, opciones, new PuntajeParcial());
-        this.preguntas.add(multipleChoicePuntajeParcial);
+        return new MultipleChoice(enunciado, opciones, new PuntajeParcial());
 
     }
 
-    public void crearMultipleChoicePenalizable(String enunciado,List<Binaria> opciones){
+    public static MultipleChoice crearMultipleChoicePenalizable(String enunciado,List<Binaria> opciones){
         List<Opcion> opcionesAChequearCantidad = List.copyOf(opciones);
         if (!(comprobarCantidadDeOpciones(opcionesAChequearCantidad,2,5))){
             //TIRAR EXCEPCION//
         }
-        MultipleChoice multipleChoicePenalizable = new MultipleChoice(enunciado, opciones, new Penalizable());
-        this.preguntas.add(multipleChoicePenalizable);
+        return new MultipleChoice(enunciado, opciones, new Penalizable());
 
     }
 
-    public void crearGroupChoice(String enunciado, List<Grupal> opciones){
+    public static GroupChoice crearGroupChoice(String enunciado, List<Grupal> opciones){
         List<Opcion> opcionesAChequearCantidad = List.copyOf(opciones);
         if (!(comprobarCantidadDeOpciones(opcionesAChequearCantidad, 2,6))){
             //TIRAR EXCEPCION//
         }
-        GroupChoice groupChoice = new GroupChoice(enunciado, opciones, new Clasica());
-        this.preguntas.add(groupChoice);
+        return new GroupChoice(enunciado, opciones, new Clasica());
     }
 
-    public void crearOrderedChoice(String enunciado, List<Posicionable> opciones){
+    public static OrderedChoice crearOrderedChoice(String enunciado, List<Posicionable> opciones){
         List<Opcion> opcionesAChequearCantidad = List.copyOf(opciones);
         if (!(comprobarCantidadDeOpciones(opcionesAChequearCantidad, 2, 5))){
             //TIRAR EXCEPCION//
         }
-        OrderedChoice orderedChoice = new OrderedChoice (enunciado, opciones, new Clasica());
-       this.preguntas.add(orderedChoice);
+        return new OrderedChoice (enunciado, opciones, new Clasica());
 
     }
 
-    public List<Pregunta> getPreguntas(){
-        return preguntas;
-    }
-
-    public boolean comprobarCantidadDeOpciones(List<Opcion> opciones, int desde, int hasta) {
+    private static boolean comprobarCantidadDeOpciones(List<Opcion> opciones, int desde, int hasta) {
         return (opciones.size() >= desde && opciones.size() <= hasta);
 
     }

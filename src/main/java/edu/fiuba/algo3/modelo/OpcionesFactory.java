@@ -4,23 +4,23 @@ import edu.fiuba.algo3.modelo.opciones.*;
 
 public class OpcionesFactory {
 
-    public Binaria crearOpcionCorrecta(String opcionCorrecta) {
+    public static Binaria crearOpcionCorrecta(String opcionCorrecta) {
         return new Correcta(opcionCorrecta);
     }
 
-    public Binaria crearOpcionIncorrecta(String opcionIncorrecta) {
+    public static Binaria crearOpcionIncorrecta(String opcionIncorrecta) {
         return new Incorrecta(opcionIncorrecta);
     }
 
-    public Posicionable crearOpcionConPosicion(String textoOpcion, Integer contador) {
+    public static Posicionable crearOpcionConPosicion(String textoOpcion, Integer contador) {
         return new OpcionPosicion(textoOpcion, contador);
     }
 
-    public Grupal crearOpcionDeGupoA(String opcionGrupoA) {
+    public static Grupal crearOpcionDeGupoA(String opcionGrupoA) {
         return new OpcionDeGrupo(opcionGrupoA, "A");
     }
 
-    public Grupal crearOpcionDeGrupoB(String opcionGrupoB) {
+    public static Grupal crearOpcionDeGrupoB(String opcionGrupoB) {
         return new OpcionDeGrupo(opcionGrupoB, "B");
     }
 }
