@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorFinal">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" snapToPixel="false">
+         <bottom>
+            <AnchorPane prefHeight="72.0" prefWidth="1449.0" style="-fx-background-color: #202225;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="8.0" layoutY="12.0" prefHeight="48.0" prefWidth="88.0" text="Puntos" textFill="#f2f2f2">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="puntajeJugador1" layoutX="236.0" layoutY="12.0" prefHeight="41.0" prefWidth="83.0" text="NN" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nombreJugador2" layoutX="1059.0" layoutY="12.0" prefHeight="48.0" prefWidth="115.0" text="jugador2" textFill="#f2f2f2" AnchorPane.rightAnchor="106.0">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="puntajeJugador2" layoutX="1202.0" layoutY="15.0" prefHeight="41.0" prefWidth="57.0" text="NN" textFill="WHITE" AnchorPane.rightAnchor="21.0">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="963.0" layoutY="12.0" prefHeight="48.0" prefWidth="88.0" text="Puntos" textFill="#f2f2f2">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nombreJugador1" layoutX="104.0" layoutY="12.0" prefHeight="48.0" prefWidth="135.0" text="Jugador1" textFill="#f2f2f2">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="208.0" layoutY="7.0" prefHeight="48.0" prefWidth="28.0" text=":" textFill="#f2f2f2">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1160.0" layoutY="7.0" prefHeight="48.0" prefWidth="28.0" text=":" textFill="#f2f2f2">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="652.0" prefWidth="1280.0" style="-fx-background-color: #36393F;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="salir" layoutX="360.0" layoutY="231.0" mnemonicParsing="false" onAction="#seleccionadoSalir" prefHeight="204.0" prefWidth="560.0" text="Salir">
+                     <font>
+                        <Font size="51.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

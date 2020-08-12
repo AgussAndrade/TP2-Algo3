@@ -134,20 +134,23 @@ public class ColeccionDePreguntas {
 
     public void guardarPreguntasOrderedChoice(JSONArray preguntasOrderedChoice) {
             for(Object preguntaJSON : preguntasOrderedChoice){
-                JSONObject pregunta = (JSONObject) preguntaJSON;
-                String enunciado = (String) pregunta.get("enunciado");
-                JSONObject opciones = (JSONObject) pregunta.get("opciones");
-                JSONArray listaDeOpcionesALeer = (JSONArray) opciones.get("opciones");
-                List<Posicionable> listaDeOpciones = new ArrayList<>();
-                int contador = 0;
-                for(Object objetoOpcion : listaDeOpcionesALeer){
-                    JSONObject opcion = (JSONObject) objetoOpcion;
-                    contador += 1;
-                    String textoOpcion = (String)opcion.get(((Integer)contador).toString());
-                    listaDeOpciones.add(OpcionesFactory.crearOpcionConPosicion(textoOpcion, contador));
-                }
-                this.coleccionDePreguntasOrderedChoice.add(PreguntaFactory.crearOrderedChoice(enunciado, listaDeOpciones));
+                    JSONObject pregunta = (JSONObject) preguntaJSON;
+                    String enunciado = (String) pregunta.get("enunciado");
+                    JSONObject opciones = (JSONObject) pregunta.get("opciones");
+                    JSONArray listaDeOpcionesALeer = (JSONArray) opciones.get("opciones");
+                    List<Posicionable> listaDeOpciones = new ArrayList<>();
+                    int contador = 0;
+                    for(Object objetoOpcion : listaDeOpcionesALeer){
+                        JSONObject opcion = (JSONObject) objetoOpcion;
+                        contador += 1;
+                        String textoOpcion = (String)opcion.get(((Integer)contador).toString());
+                        listaDeOpciones.add(OpcionesFactory.crearOpcionConPosicion(textoOpcion, contador));
+                    }
+                    this.coleccionDePreguntasOrderedChoice.add(PreguntaFactory.crearOrderedChoice(enunciado, listaDeOpciones));
+        }
     }
-}
 
+    public VerdaderoFalso get(int i){
+        return coleccionDePreguntasVerdaderoFalsoClasica.get(i);
+    }
 }

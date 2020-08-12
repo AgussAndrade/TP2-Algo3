@@ -22,7 +22,6 @@ public class ControladorRegistroDeJugadores extends ControladorPrincipal {
     public void registrarJugadores(ActionEvent actionEvent) throws IOException {
         jugadores.add(new Jugador(nombreJugador1.getText()));
         jugadores.add(new Jugador(nombreJugador2.getText()));
-        AnchorPane nuevoAnchorPane = FXMLLoader.load(getClass().getResource("/InterfazPreguntaVerdaderoYFalso.fxml"));
-        anchorPrincipal.getChildren().setAll(nuevoAnchorPane);
+        flujoDePrograma.siguienteEscena();
     }
 }
