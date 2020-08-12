@@ -47,7 +47,10 @@ public class FlujoDePrograma {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else stage.close();
+        } else {
+            stage.close();
+            System.exit(0);
+        }
     }
 
 }
