@@ -11,7 +11,6 @@ public class ControladorFinal extends ControladorPrincipal{
     public Label nombreJugador1;
 
     public void initialize(){
-        System.out.print("ControladorFinal--------------------------\n");
         puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
         nombreJugador2.setText(jugadores.get(1).nombre());
         puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));

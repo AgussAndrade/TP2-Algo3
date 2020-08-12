@@ -42,8 +42,6 @@ public class FlujoDePrograma {
 
     public void siguienteEscena() throws IOException {
         if (escenaActual.hasNext()) {
-            System.out.print(ordenDeAparicionDeEscenas.get(escenaActual.nextIndex()));
-            System.out.print("siguienteEscena--------------------------\n");
             loader = new FXMLLoader(getClass().getResource(escenaActual.next()));
             root = loader.load();
             scene = new Scene(root);

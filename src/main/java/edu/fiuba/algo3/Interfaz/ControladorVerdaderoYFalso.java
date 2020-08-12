@@ -54,10 +54,8 @@ public class ControladorVerdaderoYFalso extends ControladorPrincipal{
     private void continuar() throws IOException {
         System.out.print(jugadores.size());
         if (jugadorActual < jugadores.size() - 1){
-            System.out.print("hasNext--------------------------\n");
             nombreJugador.setText(jugadores.get(jugadorActual++).nombre());
         }else{
-            System.out.print("NoNext-----------------------------\n");
             preguntas.get(0).comprobarRespuestas(respuestas,new AplicadorSimple());
             puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
             puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));

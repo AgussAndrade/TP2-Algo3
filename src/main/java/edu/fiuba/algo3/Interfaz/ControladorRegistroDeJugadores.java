@@ -1,27 +1,47 @@
 package edu.fiuba.algo3.Interfaz;
 
 import edu.fiuba.algo3.modelo.Jugador;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
 public class ControladorRegistroDeJugadores extends ControladorPrincipal {
-    @FXML
     public TextField nombreJugador1;
-    public Button enviar;
     public TextField nombreJugador2;
-    @FXML
-    public AnchorPane anchorPrincipal;
+    public Button enviar;
+
+    public void initialize(){
+        Platform.runLater(()->nombreJugador1.requestFocus());
+    }
 
     public void registrarJugadores(ActionEvent actionEvent) throws IOException {
         jugadores.add(new Jugador(nombreJugador1.getText()));
         jugadores.add(new Jugador(nombreJugador2.getText()));
         flujoDePrograma.siguienteEscena();
+    }
+
+    public void enterCampoJugador1(ActionEvent actionEvent) throws IOException {
+        if (nombreJugador2.getText().isBlank()){
+            nombreJugador2.requestFocus();
+        } else {
+            registrarJugadores(new ActionEvent());
+        }
+    }
+
+    public void enterCampoJugador2(ActionEvent actionEvent) throws IOException {
+        if (nombreJugador1.getText().isBlank()){
+            nombreJugador1.requestFocus();
+        } else {
+            registrarJugadores(new ActionEvent());
+        }
     }
 }
