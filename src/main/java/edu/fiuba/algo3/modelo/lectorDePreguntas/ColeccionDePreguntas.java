@@ -1,17 +1,15 @@
 package edu.fiuba.algo3.modelo.lectorDePreguntas;
 
-import edu.fiuba.algo3.modelo.Errores.CantidadDEOpcionesErroneaException;
+import edu.fiuba.algo3.modelo.Errores.CantidadDeOpcionesErroneaException;
 import edu.fiuba.algo3.modelo.OpcionesFactory;
 import edu.fiuba.algo3.modelo.PreguntaFactory;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.opciones.Grupal;
-import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.opciones.Posicionable;
 import edu.fiuba.algo3.modelo.preguntas.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +26,7 @@ public class ColeccionDePreguntas {
     public ColeccionDePreguntas(){
 
     }
-    public void guardarPreguntasVerdaderoFalsoClasica(JSONArray preguntasVerdaderoFalsoClasica) throws CantidadDEOpcionesErroneaException {
+    public void guardarPreguntasVerdaderoFalsoClasica(JSONArray preguntasVerdaderoFalsoClasica) throws CantidadDeOpcionesErroneaException {
         for (Object preguntaJSON : preguntasVerdaderoFalsoClasica) {
             String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
             List<Binaria> opciones = this.leerOpcionesVerdaderoFalso((JSONObject) preguntaJSON);
@@ -37,7 +35,7 @@ public class ColeccionDePreguntas {
     }
 
 
-    public void guardarPreguntasVerdaderoFalsoPenalizable(JSONArray preguntasVerdaderoFalsoPenalizable) throws CantidadDEOpcionesErroneaException {
+    public void guardarPreguntasVerdaderoFalsoPenalizable(JSONArray preguntasVerdaderoFalsoPenalizable) throws CantidadDeOpcionesErroneaException {
         for (Object preguntaJSON : preguntasVerdaderoFalsoPenalizable) {
             String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
             List<Binaria> opciones = this.leerOpcionesVerdaderoFalso((JSONObject) preguntaJSON);
@@ -45,7 +43,7 @@ public class ColeccionDePreguntas {
         }
     }
 
-    public void guardarPreguntasMultipleChoiceClasica(JSONArray preguntasMultipleChoiceClasica) throws CantidadDEOpcionesErroneaException {
+    public void guardarPreguntasMultipleChoiceClasica(JSONArray preguntasMultipleChoiceClasica) throws CantidadDeOpcionesErroneaException {
 
         for(Object preguntaJSON : preguntasMultipleChoiceClasica){
             String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
@@ -54,7 +52,7 @@ public class ColeccionDePreguntas {
         }
     }
 
-    public void guardarPreguntasMultipleChoicePenalizable(JSONArray preguntasMultipleChoicePenalizable) throws CantidadDEOpcionesErroneaException {
+    public void guardarPreguntasMultipleChoicePenalizable(JSONArray preguntasMultipleChoicePenalizable) throws CantidadDeOpcionesErroneaException {
         for(Object preguntaJSON : preguntasMultipleChoicePenalizable){
             String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
             List<Binaria> opciones = this.leerOpcionesMultipleChoice((JSONObject) preguntaJSON);
@@ -63,7 +61,7 @@ public class ColeccionDePreguntas {
         }
     }
 
-    public void guardarPreguntasMultipleChoicePuntajeParcial(JSONArray preguntasMultipleChoicePuntajeParcial) throws CantidadDEOpcionesErroneaException {
+    public void guardarPreguntasMultipleChoicePuntajeParcial(JSONArray preguntasMultipleChoicePuntajeParcial) throws CantidadDeOpcionesErroneaException {
         for(Object preguntaJSON : preguntasMultipleChoicePuntajeParcial){
             String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
             List<Binaria> opciones = this.leerOpcionesMultipleChoice((JSONObject) preguntaJSON);
@@ -72,7 +70,7 @@ public class ColeccionDePreguntas {
         }
     }
 
-    public void guardarPreguntasGroupChoice(JSONArray preguntasGroupChoice) throws CantidadDEOpcionesErroneaException {
+    public void guardarPreguntasGroupChoice(JSONArray preguntasGroupChoice) throws CantidadDeOpcionesErroneaException {
         for(Object preguntaJSON : preguntasGroupChoice){
             String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
             JSONObject opciones = (JSONObject) ((JSONObject) preguntaJSON).get("opciones");
@@ -91,7 +89,7 @@ public class ColeccionDePreguntas {
         }
     }
 
-    public void guardarPreguntasOrderedChoice(JSONArray preguntasOrderedChoice) throws CantidadDEOpcionesErroneaException {
+    public void guardarPreguntasOrderedChoice(JSONArray preguntasOrderedChoice) throws CantidadDeOpcionesErroneaException {
         for(Object preguntaJSON : preguntasOrderedChoice) {
             JSONObject pregunta = (JSONObject) preguntaJSON;
             String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);

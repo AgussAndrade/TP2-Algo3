@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.modelo.lectorDePreguntas;
 
 
-import edu.fiuba.algo3.modelo.Errores.CantidadDEOpcionesErroneaException;
+import edu.fiuba.algo3.modelo.Errores.CantidadDeOpcionesErroneaException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -52,7 +52,7 @@ public class LectorDePreguntas {
              exception.printStackTrace();
          } catch (IOException e) {
              e.printStackTrace();
-         } catch (CantidadDEOpcionesErroneaException e) {
+         } catch (CantidadDeOpcionesErroneaException e) {
              e.printStackTrace();
          }
          return coleccionDePreguntas;
