@@ -1,7 +1,5 @@
 package edu.fiuba.algo3.modelo.estrategias;
 
-import edu.fiuba.algo3.modelo.Multiplicador;
-import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.Respuesta;
 
 import java.util.List;

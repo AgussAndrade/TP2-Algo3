@@ -1,5 +1,9 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.TipoDeMultiplicadorTest;
 
+import edu.fiuba.algo3.modelo.multiplicadores.AplicadorConExclusividad;
+import edu.fiuba.algo3.modelo.Jugador;
+import edu.fiuba.algo3.modelo.Respuesta;
+import edu.fiuba.algo3.modelo.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.opciones.Correcta;
 import edu.fiuba.algo3.modelo.opciones.Incorrecta;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
