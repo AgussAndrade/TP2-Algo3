@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.TipoDePreguntaTest;
+package edu.fiuba.algo3.modelo.PreguntaTest;
 
 import edu.fiuba.algo3.modelo.*;
 import edu.fiuba.algo3.modelo.estrategias.Clasica;

@@ -126,7 +126,6 @@ public class EnunciadoTest {
 
         pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
 
-
         assertEquals(1, jugador.puntos());
         assertEquals(-1, jugadora.puntos());
     }
