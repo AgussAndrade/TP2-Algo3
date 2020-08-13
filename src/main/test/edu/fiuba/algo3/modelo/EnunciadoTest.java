@@ -1,5 +1,7 @@
 package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.modelo.aplicador.AplicadorConExclusividad;
+import edu.fiuba.algo3.modelo.aplicador.AplicadorSimple;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
 import edu.fiuba.algo3.modelo.estrategias.Penalizable;

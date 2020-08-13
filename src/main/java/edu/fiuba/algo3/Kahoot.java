@@ -1,17 +1,11 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3;
 
-import edu.fiuba.algo3.Interfaz.ControladorInicio;
-import edu.fiuba.algo3.Interfaz.ControladorPrincipal;
-import edu.fiuba.algo3.modelo.lectorDePreguntas.ColeccionDePreguntas;
-import edu.fiuba.algo3.modelo.lectorDePreguntas.LectorDePreguntas;
-import edu.fiuba.algo3.modelo.preguntas.Pregunta;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import edu.fiuba.algo3.controlador.ControladorPrincipal;
+import edu.fiuba.algo3.lectorDePreguntas.ColeccionDePreguntas;
+import edu.fiuba.algo3.lectorDePreguntas.LectorDePreguntas;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.List;
 
 public class Kahoot {
     ColeccionDePreguntas preguntas;
