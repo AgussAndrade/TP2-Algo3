@@ -1,6 +1,9 @@
-package edu.fiuba.algo3.modelo;
+package edu.fiuba.algo3.modelo.PreguntaTest;
 
+import edu.fiuba.algo3.modelo.*;
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
+import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
+import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.opciones.Correcta;
 import edu.fiuba.algo3.modelo.opciones.Incorrecta;

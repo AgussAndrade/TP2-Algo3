@@ -3,8 +3,8 @@ package edu.fiuba.algo3.modelo.opciones;
 public class Incorrecta implements Binaria {
     String enunciado;
     boolean fueSeleccionada=false;
-    public Incorrecta(String nombre) {
-        this.enunciado = nombre;
+    public Incorrecta(String enunciado) {
+        this.enunciado = enunciado;
     }
 
     @Override
