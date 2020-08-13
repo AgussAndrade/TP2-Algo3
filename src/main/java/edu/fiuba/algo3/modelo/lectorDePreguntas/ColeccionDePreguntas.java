@@ -30,94 +30,52 @@ public class ColeccionDePreguntas {
     }
     public void guardarPreguntasVerdaderoFalsoClasica(JSONArray preguntasVerdaderoFalsoClasica) throws CantidadDEOpcionesErroneaException {
         for (Object preguntaJSON : preguntasVerdaderoFalsoClasica) {
-            JSONObject pregunta = (JSONObject) preguntaJSON;
-            String enunciado = (String) pregunta.get("enunciado");
-            JSONObject opciones = (JSONObject) pregunta.get("opciones");
-            Binaria OpcionCorrecta = OpcionesFactory.crearOpcionCorrecta((String) opciones.get("Correcta"));
-            Binaria OpcionIncorrecta = OpcionesFactory.crearOpcionIncorrecta((String) opciones.get("Incorrecta"));
-            List<Binaria> listaDeOpciones = List.of(OpcionCorrecta, OpcionIncorrecta);
-            this.coleccionDePreguntasVerdaderoFalsoClasica.add(PreguntaFactory.crearVerdaderoFalsoClasica(enunciado, listaDeOpciones));
+            String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
+            List<Binaria> opciones = this.leerOpcionesVerdaderoFalso((JSONObject) preguntaJSON);
+            this.coleccionDePreguntasVerdaderoFalsoClasica.add(PreguntaFactory.crearVerdaderoFalsoClasica(enunciado, opciones));
         }
     }
+
+
     public void guardarPreguntasVerdaderoFalsoPenalizable(JSONArray preguntasVerdaderoFalsoPenalizable) throws CantidadDEOpcionesErroneaException {
-            for (Object preguntaJSON : coleccionDePreguntasVerdaderoFalsoPenalizable) {
-                JSONObject pregunta = (JSONObject) preguntaJSON;
-                String enunciado = (String) pregunta.get("enunciado");
-                JSONObject opciones = (JSONObject) pregunta.get("opciones");
-                Binaria OpcionCorrecta = OpcionesFactory.crearOpcionCorrecta((String) opciones.get("Correcta"));
-                Binaria OpcionIncorrecta = OpcionesFactory.crearOpcionIncorrecta((String) opciones.get("Incorrecta"));
-                List<Binaria> listaDeOpciones = List.of(OpcionCorrecta, OpcionIncorrecta);
-                this.coleccionDePreguntasVerdaderoFalsoPenalizable.add(PreguntaFactory.crearVerdaderoFalsoPenalizable(enunciado, listaDeOpciones));
-            }
+        for (Object preguntaJSON : preguntasVerdaderoFalsoPenalizable) {
+            String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
+            List<Binaria> opciones = this.leerOpcionesVerdaderoFalso((JSONObject) preguntaJSON);
+            this.coleccionDePreguntasVerdaderoFalsoPenalizable.add(PreguntaFactory.crearVerdaderoFalsoPenalizable(enunciado, opciones));
+        }
     }
 
     public void guardarPreguntasMultipleChoiceClasica(JSONArray preguntasMultipleChoiceClasica) throws CantidadDEOpcionesErroneaException {
 
         for(Object preguntaJSON : preguntasMultipleChoiceClasica){
-                JSONObject pregunta = (JSONObject) preguntaJSON;
-                String enunciado = (String) pregunta.get("enunciado");
-                JSONObject opciones = (JSONObject) pregunta.get("opciones");
-                JSONArray listaDeOpcionesCorrectas = (JSONArray) opciones.get("Correcta");
-                JSONArray listaDeOpcionesIncorrectas = (JSONArray) opciones.get("Incorrecta");
-                List<Binaria> listaDeOpciones = new ArrayList<>();
-                for(Object objetoOpcion : listaDeOpcionesCorrectas){
-                    String opcionCorrecta = (String) objetoOpcion;
-                    listaDeOpciones.add(OpcionesFactory.crearOpcionCorrecta(opcionCorrecta));
-                }
-                for(Object objetoOpcion : listaDeOpcionesIncorrectas){
-                    String opcionIncorrecta = (String) objetoOpcion;
-                    listaDeOpciones.add(OpcionesFactory.crearOpcionIncorrecta(opcionIncorrecta));
-                }
-                this.coleccionDePreguntasMultipleChoiceClasica.add(PreguntaFactory.crearMultipleChoiceClasica(enunciado, listaDeOpciones));
-            }
-
+            String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
+            List<Binaria> opciones = this.leerOpcionesMultipleChoice((JSONObject) preguntaJSON);
+            this.coleccionDePreguntasMultipleChoiceClasica.add(PreguntaFactory.crearMultipleChoiceClasica(enunciado, opciones));
+        }
     }
 
     public void guardarPreguntasMultipleChoicePenalizable(JSONArray preguntasMultipleChoicePenalizable) throws CantidadDEOpcionesErroneaException {
-        for(Object preguntaJSON : coleccionDePreguntasMultipleChoicePenalizable){
-            JSONObject pregunta = (JSONObject) preguntaJSON;
-            String enunciado = (String) pregunta.get("enunciado");
-            JSONObject opciones = (JSONObject) pregunta.get("opciones");
-            JSONArray listaDeOpcionesCorrectas = (JSONArray) opciones.get("Correcta");
-            JSONArray listaDeOpcionesIncorrectas = (JSONArray) opciones.get("Incorrecta");
-            List<Binaria> listaDeOpciones = new ArrayList<>();
-            for(Object objetoOpcion : listaDeOpcionesCorrectas){
-                String opcionCorrecta = (String) objetoOpcion;
-                listaDeOpciones.add(OpcionesFactory.crearOpcionCorrecta(opcionCorrecta));
-            }
-            for(Object objetoOpcion : listaDeOpcionesIncorrectas){
-                String opcionIncorrecta = (String) objetoOpcion;
-                listaDeOpciones.add(OpcionesFactory.crearOpcionIncorrecta(opcionIncorrecta));
-            }
-            this.coleccionDePreguntasMultipleChoicePenalizable.add(PreguntaFactory.crearMultipleChoicePenalizable(enunciado, listaDeOpciones));
+        for(Object preguntaJSON : preguntasMultipleChoicePenalizable){
+            String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
+            List<Binaria> opciones = this.leerOpcionesMultipleChoice((JSONObject) preguntaJSON);
+            this.coleccionDePreguntasMultipleChoiceClasica.add(PreguntaFactory.crearMultipleChoiceClasica(enunciado, opciones));
+            this.coleccionDePreguntasMultipleChoicePenalizable.add(PreguntaFactory.crearMultipleChoicePenalizable(enunciado, opciones));
         }
     }
 
     public void guardarPreguntasMultipleChoicePuntajeParcial(JSONArray preguntasMultipleChoicePuntajeParcial) throws CantidadDEOpcionesErroneaException {
-        for(Object preguntaJSON : coleccionDePreguntasMultipleChoicePuntajeParcial){
-            JSONObject pregunta = (JSONObject) preguntaJSON;
-            String enunciado = (String) pregunta.get("enunciado");
-            JSONObject opciones = (JSONObject) pregunta.get("opciones");
-            JSONArray listaDeOpcionesCorrectas = (JSONArray) opciones.get("Correcta");
-            JSONArray listaDeOpcionesIncorrectas = (JSONArray) opciones.get("Incorrecta");
-            List<Binaria> listaDeOpciones = new ArrayList<>();
-            for(Object objetoOpcion : listaDeOpcionesCorrectas){
-                String opcionCorrecta = (String) objetoOpcion;
-                listaDeOpciones.add(OpcionesFactory.crearOpcionCorrecta(opcionCorrecta));
-            }
-            for(Object objetoOpcion : listaDeOpcionesIncorrectas){
-                String opcionIncorrecta = (String) objetoOpcion;
-                listaDeOpciones.add(OpcionesFactory.crearOpcionIncorrecta(opcionIncorrecta));
-            }
-            this.coleccionDePreguntasMultipleChoicePuntajeParcial.add(PreguntaFactory.crearMultipleChoicePuntajeParcial(enunciado, listaDeOpciones));
+        for(Object preguntaJSON : preguntasMultipleChoicePuntajeParcial){
+            String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
+            List<Binaria> opciones = this.leerOpcionesMultipleChoice((JSONObject) preguntaJSON);
+            this.coleccionDePreguntasMultipleChoiceClasica.add(PreguntaFactory.crearMultipleChoiceClasica(enunciado, opciones));
+            this.coleccionDePreguntasMultipleChoicePuntajeParcial.add(PreguntaFactory.crearMultipleChoicePuntajeParcial(enunciado, opciones));
         }
     }
 
     public void guardarPreguntasGroupChoice(JSONArray preguntasGroupChoice) throws CantidadDEOpcionesErroneaException {
         for(Object preguntaJSON : preguntasGroupChoice){
-            JSONObject pregunta = (JSONObject) preguntaJSON;
-            String enunciado = (String) pregunta.get("enunciado");
-            JSONObject opciones = (JSONObject) pregunta.get("opciones");
+            String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
+            JSONObject opciones = (JSONObject) ((JSONObject) preguntaJSON).get("opciones");
             JSONArray listaDeOpcionesGrupoA = (JSONArray) opciones.get("A");
             JSONArray listaDeOpcionesGrupoB = (JSONArray) opciones.get("B");
             List<Grupal> listaDeOpciones = new ArrayList<>();
@@ -134,21 +92,45 @@ public class ColeccionDePreguntas {
     }
 
     public void guardarPreguntasOrderedChoice(JSONArray preguntasOrderedChoice) throws CantidadDEOpcionesErroneaException {
-            for(Object preguntaJSON : preguntasOrderedChoice){
-                    JSONObject pregunta = (JSONObject) preguntaJSON;
-                    String enunciado = (String) pregunta.get("enunciado");
-                    JSONObject opciones = (JSONObject) pregunta.get("opciones");
-                    JSONArray listaDeOpcionesALeer = (JSONArray) opciones.get("opciones");
-                    List<Posicionable> listaDeOpciones = new ArrayList<>();
-                    int contador = 0;
-                    for(Object objetoOpcion : listaDeOpcionesALeer){
-                        JSONObject opcion = (JSONObject) objetoOpcion;
-                        contador += 1;
-                        String textoOpcion = (String)opcion.get(((Integer)contador).toString());
-                        listaDeOpciones.add(OpcionesFactory.crearOpcionConPosicion(textoOpcion, contador));
-                    }
-                    this.coleccionDePreguntasOrderedChoice.add(PreguntaFactory.crearOrderedChoice(enunciado, listaDeOpciones));
+        for(Object preguntaJSON : preguntasOrderedChoice) {
+            JSONObject pregunta = (JSONObject) preguntaJSON;
+            String enunciado = this.leerEnunciado((JSONObject) preguntaJSON);
+            JSONObject opciones = (JSONObject) pregunta.get("opciones");
+            JSONArray listaDeOpcionesALeer = (JSONArray) opciones.get("opciones");
+            List<Posicionable> listaDeOpciones = new ArrayList<>();
+            int contador = 0;
+            for (Object objetoOpcion : listaDeOpcionesALeer) {
+                JSONObject opcion = (JSONObject) objetoOpcion;
+                contador += 1;
+                String textoOpcion = (String) opcion.get(((Integer) contador).toString());
+                listaDeOpciones.add(OpcionesFactory.crearOpcionConPosicion(textoOpcion, contador));
+            }
+            this.coleccionDePreguntasOrderedChoice.add(PreguntaFactory.crearOrderedChoice(enunciado, listaDeOpciones));
         }
+    }
+    private String leerEnunciado(JSONObject preguntaALeer){
+        return (String) preguntaALeer.get("enunciado");
+    }
+    private List<Binaria> leerOpcionesVerdaderoFalso(JSONObject pregunta) {
+        JSONObject opciones = (JSONObject) pregunta.get("opciones");
+        Binaria OpcionCorrecta = OpcionesFactory.crearOpcionCorrecta((String) opciones.get("Correcta"));
+        Binaria OpcionIncorrecta = OpcionesFactory.crearOpcionIncorrecta((String) opciones.get("Incorrecta"));
+        return List.of(OpcionCorrecta, OpcionIncorrecta);
+    }
+    private List<Binaria> leerOpcionesMultipleChoice(JSONObject pregunta) {
+        JSONObject opciones = (JSONObject) pregunta.get("opciones");
+        JSONArray listaDeOpcionesCorrectas = (JSONArray) opciones.get("Correcta");
+        JSONArray listaDeOpcionesIncorrectas = (JSONArray) opciones.get("Incorrecta");
+        List<Binaria> listaDeOpciones = new ArrayList<>();
+        for(Object objetoOpcion : listaDeOpcionesCorrectas){
+            String opcionCorrecta = (String) objetoOpcion;
+            listaDeOpciones.add(OpcionesFactory.crearOpcionCorrecta(opcionCorrecta));
+        }
+        for(Object objetoOpcion : listaDeOpcionesIncorrectas){
+            String opcionIncorrecta = (String) objetoOpcion;
+            listaDeOpciones.add(OpcionesFactory.crearOpcionIncorrecta(opcionIncorrecta));
+        }
+        return listaDeOpciones;
     }
 
     public VerdaderoFalso get(int i){
