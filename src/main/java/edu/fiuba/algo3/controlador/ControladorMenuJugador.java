@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.Interfaz;
+package edu.fiuba.algo3.controlador;
 
 import javafx.scene.control.Label;
 

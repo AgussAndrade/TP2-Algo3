@@ -6,7 +6,7 @@ module edu.fiuba.algo3 {
     requires json.simple;
     requires com.jfoenix;
     exports edu.fiuba.algo3;
-    exports edu.fiuba.algo3.Interfaz;
+    exports edu.fiuba.algo3.controlador;
 
 
 }

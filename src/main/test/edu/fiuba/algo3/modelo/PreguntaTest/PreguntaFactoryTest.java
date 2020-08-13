@@ -4,7 +4,7 @@ import edu.fiuba.algo3.modelo.Errores.CantidadDeOpcionesErroneaException;
 import edu.fiuba.algo3.modelo.opciones.*;
 import org.junit.jupiter.api.Test;
 
-import static edu.fiuba.algo3.modelo.PreguntaFactory.*;
+import static edu.fiuba.algo3.modelo.preguntas.PreguntaFactory.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;

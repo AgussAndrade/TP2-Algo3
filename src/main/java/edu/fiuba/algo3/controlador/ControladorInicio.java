@@ -1,9 +1,9 @@
-package edu.fiuba.algo3.Interfaz;
+package edu.fiuba.algo3.controlador;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 public class ControladorInicio extends ControladorPrincipal {
 
