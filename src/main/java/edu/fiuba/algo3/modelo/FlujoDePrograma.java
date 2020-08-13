@@ -1,5 +1,6 @@
-package edu.fiuba.algo3;
+package edu.fiuba.algo3.modelo;
 
+import edu.fiuba.algo3.Interfaz.ControladorPrincipal;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,10 +22,10 @@ public class FlujoDePrograma {
     public FlujoDePrograma(Stage stage){
         this.stage = stage;
         ordenDeAparicionDeEscenas = new ArrayList<String>();
-        ordenDeAparicionDeEscenas.add("/vista/MenuDeInicio.fxml");
-        ordenDeAparicionDeEscenas.add("/vista/InterfazRegistroJugadores.fxml");
-        ordenDeAparicionDeEscenas.add("/vista/InterfazPreguntaVerdaderoYFalso.fxml");
-        ordenDeAparicionDeEscenas.add("/vista/Final.fxml");
+        ordenDeAparicionDeEscenas.add("/MenuDeInicio.fxml");
+        ordenDeAparicionDeEscenas.add("/InterfazRegistroJugadores.fxml");
+        ordenDeAparicionDeEscenas.add("/InterfazPreguntaVerdaderoYFalso.fxml");
+        ordenDeAparicionDeEscenas.add("/Final.fxml");
         escenaActual = ordenDeAparicionDeEscenas.listIterator();
     }
 

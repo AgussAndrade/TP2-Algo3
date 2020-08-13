@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.lectorDePreguntas;
+package edu.fiuba.algo3.modelo.lectorDePreguntas;
 
 
 import edu.fiuba.algo3.modelo.Errores.CantidadDeOpcionesErroneaException;

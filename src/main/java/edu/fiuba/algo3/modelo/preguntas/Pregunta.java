@@ -1,9 +1,11 @@
 package edu.fiuba.algo3.modelo.preguntas;
 
-import edu.fiuba.algo3.modelo.aplicador.AplicadorDePuntos;
+import edu.fiuba.algo3.modelo.AplicadorDePuntos;
 import edu.fiuba.algo3.modelo.Respuesta;
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Pregunta {

@@ -1,8 +1,8 @@
-package edu.fiuba.algo3.lectorDePreguntas;
+package edu.fiuba.algo3.modelo.lectorDePreguntas;
 
 import edu.fiuba.algo3.modelo.Errores.CantidadDeOpcionesErroneaException;
-import edu.fiuba.algo3.modelo.opciones.OpcionesFactory;
-import edu.fiuba.algo3.modelo.preguntas.PreguntaFactory;
+import edu.fiuba.algo3.modelo.OpcionesFactory;
+import edu.fiuba.algo3.modelo.PreguntaFactory;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.opciones.Grupal;
 import edu.fiuba.algo3.modelo.opciones.Posicionable;

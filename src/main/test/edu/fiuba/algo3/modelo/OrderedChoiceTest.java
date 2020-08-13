@@ -1,11 +1,11 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.aplicador.AplicadorSimple;
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.opciones.OpcionPosicion;
 import edu.fiuba.algo3.modelo.opciones.Posicionable;
 import edu.fiuba.algo3.modelo.preguntas.OrderedChoice;
+import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

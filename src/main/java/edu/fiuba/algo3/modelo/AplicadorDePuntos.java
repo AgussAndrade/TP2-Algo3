@@ -1,6 +1,4 @@
-package edu.fiuba.algo3.modelo.aplicador;
-
-import edu.fiuba.algo3.modelo.Respuesta;
+package edu.fiuba.algo3.modelo;
 
 import java.util.List;
 

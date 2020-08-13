@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.aplicador.AplicadorConExclusividad;
 import edu.fiuba.algo3.modelo.opciones.Correcta;
 import edu.fiuba.algo3.modelo.opciones.Incorrecta;
 import edu.fiuba.algo3.modelo.opciones.Opcion;

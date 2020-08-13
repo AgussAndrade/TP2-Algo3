@@ -1,10 +1,9 @@
-package edu.fiuba.algo3.modelo.aplicador;
+package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.Respuesta;
-
+import java.util.ArrayList;
 import java.util.List;
 
-public class AplicadorConExclusividad implements AplicadorDePuntos {
+public class AplicadorConExclusividad implements AplicadorDePuntos{
     int factorDeExclusividad;
     public AplicadorConExclusividad(int cantidadDeLlamados){
         factorDeExclusividad = 2 * cantidadDeLlamados;

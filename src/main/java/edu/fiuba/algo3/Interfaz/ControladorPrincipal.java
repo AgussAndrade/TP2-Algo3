@@ -1,8 +1,8 @@
-package edu.fiuba.algo3.controlador;
+package edu.fiuba.algo3.Interfaz;
 
-import edu.fiuba.algo3.FlujoDePrograma;
+import edu.fiuba.algo3.modelo.FlujoDePrograma;
 import edu.fiuba.algo3.modelo.Jugador;
-import edu.fiuba.algo3.lectorDePreguntas.ColeccionDePreguntas;
+import edu.fiuba.algo3.modelo.lectorDePreguntas.ColeccionDePreguntas;
 import javafx.stage.Stage;
 
 import java.io.IOException;
