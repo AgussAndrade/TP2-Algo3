@@ -20,4 +20,10 @@ public class VerdaderoFalso extends Pregunta {
         }
         return opcionesCopiadas;
     }
+
+    @Override
+    public String nombreDeLaEstrategia() {
+        return estrategia.nombreDeLaClase();
+    }
+
 }

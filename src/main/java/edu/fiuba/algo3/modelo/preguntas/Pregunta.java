@@ -17,5 +17,6 @@ public abstract class Pregunta {
     public void comprobarRespuestas(List<Respuesta> respuestas, AplicadorDePuntos aplicador){
         aplicador.sumarPuntos(estrategia.validarRespuestas(respuestas));
     }
+    public abstract String nombreDeLaEstrategia();
 
 }
