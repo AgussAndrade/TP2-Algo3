@@ -15,7 +15,7 @@ public class ControladorInicio extends ControladorPrincipal {
 
     @FXML
     public void iniciarJuego() throws IOException {
-        flujoDePrograma.siguienteEscena();
+        flujoDePrograma.escenaRegistroDeJugadores();
     }
 }
 //ControladorMenuDeInicio controladorPrincipal = (ControladorMenuDeInicio)loader.getController();

@@ -18,6 +18,6 @@ public class ControladorFinal extends ControladorPrincipal{
     }
 
     public void seleccionadoSalir(ActionEvent actionEvent) throws IOException {
-        flujoDePrograma.siguienteEscena();
+        flujoDePrograma.salir();
     }
 }
