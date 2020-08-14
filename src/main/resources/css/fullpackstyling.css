@@ -1,58 +1,52 @@
-.greenButton
-{
+.greenButton {
     -fx-background-color :   #43B581;
     -fx-background-radius :  20 20 20 20;
 }
-.greenButton:hover
-{
+.greenButton:hover {
     -fx-background-color : #69C49A ;
     -fx-background-radius :  20 20 20 20;
 }
-/*.buttonTrue:pressed*/
-/*{*/
-/*    -fx-background-color : #7E3E14 ;*/
-/*    -fx-background-radius :  20 20 20 20;*/
-/*}*/
+.greenButton:selected {
+    -fx-background-color: #2C7856 ;
+    /*-fx-border-color: #2C7856 ;*/
+    -fx-border-radius: 20 20 20 20;
+    -fx-border-width: 5;
+    -fx-background-radius :  20 20 20 20;
+}
 
-.redButton
-{
+.redButton {
     -fx-background-color :  #F04747;
     -fx-background-radius :  20 20 20 20;
 }
-.redButton:hover
-{
+.redButton:hover {
     -fx-background-color : #F26666;
     -fx-background-radius :  20 20 20 20;
 }
-/*.buttonFalse:pressed*/
-/*{*/
-/*    -fx-background-color : #7E3E14 ;*/
-/*    -fx-background-radius :  20 20 20 20;*/
-/*}*/
+.redButton:selected {
+    -fx-background-color: #A02F2F ;
+    -fx-border-radius: 20 20 20 20;
+    -fx-border-width: 5;
+    -fx-background-radius :  20 20 20 20;
+}
 
-.blueButton
-{
+.blueButton {
     -fx-background-color :  #8697D4;
     -fx-background-radius :  20 20 20 20;
 }
-.blueButton:hover
-{
+.blueButton:hover {
     -fx-background-color : #a4b1df;
     -fx-background-radius :  20 20 20 20;
 }
 
-.optionButton
-{
+.optionButton {
     -fx-background-color :   #36393F;
 }
-.optionButton:hover
-{
+.optionButton:hover {
     -fx-background-color :  #40444B;
     -fx-background-radius :  10 10 10 10;
 }
 
-.textField
-{
+.textField {
     -fx-background-color :  #303338;
     -fx-border-radius :  5 5 5 5;
     -fx-border-color: #040405 ;
