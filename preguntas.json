@@ -1,66 +1,64 @@
-{
-  "VerdaderoFalsoClasica" :
-    [
-      {
-        "enunciado": "Argentina es un país",
-        "opciones": {
-          "Correcta": "Verdadero",
-          "Incorrecta": "Falso"
-        }
-      }
-    ],
-  "VerdaderoFalsoPenalizable" :
-    [
-      {
-        "enunciado" : "Argentina es un país",
-        "opciones" : {"Correcta" : "Verdadero",
-                      "Incorrecta" : "Falso"
-                      }
-      }
-    ],
-  "MultipleChoiceClasica" :
-    [
-      {
-        "enunciado" : "Cuales de los siguientes son paises",
-        "opciones" : {
-                      "Correcta" : ["Argentina","Chile"],
-                      "Incorrecta" :  ["Madrid"]
-                     }
-      }
-    ],
-  "MultipleChoicePenalizable" :
-    [
-      {
-        "enunciado" : "Cuales de los siguientes son paises",
-        "opciones" : {
-                      "Correcta" : ["Argentina","Chile"],
-                      "Incorrecta" :  ["Madrid"]
-                      }
-      }
-    ],
-  "MultipleChoicePuntajeParcial" :
-    [
-      {
-        "enunciado" : "Cuales de los siguientes son paises",
-        "opciones" : {
-                        "Correcta" : ["Argentina", "Chile"],
-                        "Incorrecta" : ["Madrid"]
-                      }
-      }
-    ],
-  "OrderedChoice" :
-    [
-      {
-        "enunciado" : "Ordenar los siguientes valores de forma descendente",
-        "opciones" : {"opciones" : [{"1" : "10"},{"2" : "7"}, {"3" : "1"}]}
-      }
-    ],
-
-  "GroupChoice" :
-    [
-      {
-        "enunciado" : "Separar los paises de las ciudades",
-        "opciones" : {"A" : ["Argentina","Francia"], "B" : ["Lima"]}
-      }
-    ]
-}
+[
+  {
+    "tipoDePregunta" : "VerdaderoFalso",
+    "estrategia" : "Clasica",
+    "enunciado" : "Argentina es un país",
+    "opciones" : {
+                    "Correcta" :  "Verdadero",
+                    "Incorrecta" : "Falso"
+                  }
+  },
+  {
+    "tipoDePregunta" : "OrderedChoice",
+    "enunciado" : "¿Ordenar de menor a mayor poblacion de paises?",
+    "opciones" : {
+                    "1" : "Argentina",
+                    "2": "Brasil",
+                    "3" : "Estados Unidos",
+                    "4" : "India"
+                  }
+  },
+  {
+    "tipoDePregunta" : "VerdaderoFalso",
+    "estrategia" : "Penalizable",
+    "enunciado" : "¿Argentina es una construccion social?",
+    "opciones" : {
+                    "Correcta" :  "Falso",
+                    "Incorrecta" :  "Verdadero"
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "Penalizable",
+    "enunciado" : "¿Cual de los siguientes jugadores de futbol tiene mas asistencias?",
+    "opciones" : {
+                    "Correcta" : ["Lewandowski"],
+                    "Incorrecta" : ["Alisson", "Piqué", "Ramos"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "GroupChoice",
+    "enunciado" : "Separar paises de ciudades",
+    "opciones" : {"A" : ["Argentina", "Eslovaquia"],
+                  "B" :  ["Buenos Aires", "Bandar Seri Begawan"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "Clasica",
+    "enunciado" : "¿Cual de los siguientes nombres son capicua?",
+    "opciones" : {
+                    "Correcta" :  ["Ana", "Otto"],
+                    "Incorrecta" : ["Marisol"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "PuntajeParcial",
+    "enunciado" : "¿Cual de les siguientes pibis juega fortnite?",
+    "opciones" : {
+                    "Correcta" : ["k1ng", "Kun Agüero"],
+                    "Incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
+                  }
+  }
+]
