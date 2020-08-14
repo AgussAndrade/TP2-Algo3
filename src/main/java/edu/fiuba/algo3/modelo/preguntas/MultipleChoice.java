@@ -21,8 +21,5 @@ public class MultipleChoice extends Pregunta {
         return opcionesCopiadas;
     }
 
-    @Override
-    public String nombreDeLaEstrategia() {
-        return estrategia.nombreDeLaClase();
-    }
+
 }

@@ -11,5 +11,5 @@ public interface Estrategia {
          */
     public List<Respuesta> validarRespuestas(List<Respuesta> respuestas);
 
-    String nombreDeLaClase();
+
 }

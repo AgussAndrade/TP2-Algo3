@@ -21,8 +21,5 @@ public class OrderedChoice extends Pregunta {
         return opcionesCopiadas;
     }
 
-    @Override
-    public String nombreDeLaEstrategia() {
-        return estrategia.nombreDeLaClase();
-    }
+
 }

@@ -22,8 +22,6 @@ public class Clasica implements Estrategia {
         return respondieronCorrectamente;
     }
 
-    @Override
-    public String nombreDeLaClase() {
-        return "clasica";
-    }
+
+
 }

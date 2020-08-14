@@ -18,8 +18,5 @@ public class PuntajeParcial implements Estrategia {
         return respondieronCorrectamente;
     }
 
-    @Override
-    public String nombreDeLaClase() {
-        return "puntaje parcial";
-    }
+
 }

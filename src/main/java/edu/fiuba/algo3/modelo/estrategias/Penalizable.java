@@ -14,8 +14,6 @@ public class Penalizable implements Estrategia {
 
     }
 
-    @Override
-    public String nombreDeLaClase() {
-        return "penalizable";
-    }
+
+
 }
