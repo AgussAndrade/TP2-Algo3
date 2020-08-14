@@ -59,7 +59,7 @@ public class FlujoDePrograma {
     }
 
     public void escenaRegistroDeJugadores() throws IOException {
-        loader = new FXMLLoader(getClass().getResource("InterfazRegistroJugadores.fxml"));
+        loader = new FXMLLoader(getClass().getResource("/vista/InterfazRegistroJugadores.fxml"));
         root = loader.load();
         scene = new Scene(root);
         stage.setScene(scene);

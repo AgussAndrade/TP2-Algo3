@@ -81,13 +81,13 @@ public class ControladorVerdaderoYFalsoClasica extends ControladorPrincipal{
 
     }
 
-//    public void activarMultiplicadorX2(ActionEvent actionEvent) {
-//        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
-//    }
-//
-//    public void activarMultiplicadorX3(ActionEvent actionEvent) {
-//        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
-//    }
+    public void activarMultiplicadorX2(ActionEvent actionEvent) {
+        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
+    }
+
+    public void activarMultiplicadorX3(ActionEvent actionEvent) {
+        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
+    }
 
     private void iniciarTemporizador(){
         temporizador = new Timer();
