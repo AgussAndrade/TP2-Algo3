@@ -4,8 +4,8 @@
     "estrategia" : "clasica",
     "enunciado" : "Argentina es un país",
     "opciones" : {
-                    "Correcta" :  "Verdadero",
-                    "Incorrecta" : "Falso"
+                    "correcta" :  "Verdadero",
+                    "incorrecta" : "Falso"
                   }
   },
   {
@@ -23,8 +23,8 @@
     "estrategia" : "penalizable",
     "enunciado" : "¿Argentina es una construccion social?",
     "opciones" : {
-                    "Correcta" :  "Falso",
-                    "Incorrecta" :  "Verdadero"
+                    "correcta" :  "Falso",
+                    "incorrecta" :  "Verdadero"
                   }
   },
   {
@@ -32,8 +32,8 @@
     "estrategia" : "penalizable",
     "enunciado" : "¿Cual de los siguientes jugadores de futbol tiene mas asistencias?",
     "opciones" : {
-                    "Correcta" : ["Lewandowski"],
-                    "Incorrecta" : ["Alisson", "Piqué", "Ramos"]
+                    "correcta" : ["Lewandowski"],
+                    "incorrecta" : ["Alisson", "Piqué", "Ramos"]
                   }
   },
   {
@@ -49,8 +49,8 @@
     "estrategia" : "clasica",
     "enunciado" : "¿Cual de los siguientes nombres son capicua?",
     "opciones" : {
-                    "Correcta" :  ["Ana", "Otto"],
-                    "Incorrecta" : ["Marisol"]
+                    "correcta" :  ["Ana", "Otto"],
+                    "incorrecta" : ["Marisol"]
                   }
   },
   {
@@ -58,8 +58,8 @@
     "estrategia" : "puntajeParcial",
     "enunciado" : "¿Cual de les siguientes pibis juega fortnite?",
     "opciones" : {
-                    "Correcta" : ["k1ng", "Kun Agüero"],
-                    "Incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
+                    "correcta" : ["k1ng", "Kun Agüero"],
+                    "incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
                   }
   },
   {
@@ -67,8 +67,8 @@
     "estrategia" : "clasica",
     "enunciado" : "La capital de Austria es Amsterdam",
     "opciones" : {
-                    "Correcta" :  "Falso",
-                    "Incorrecta" : "Verdadero"
+                    "correcta" :  "Falso",
+                    "incorrecta" : "Verdadero"
                   }
   },
   {
@@ -86,8 +86,8 @@
     "estrategia" : "penalizable",
     "enunciado" : "Un pulpo tiene 5 corazones",
     "opciones" : {
-                    "Correcta" :  "Falso",
-                    "Incorrecta" :  "Verdadero"
+                    "correcta" :  "Falso",
+                    "incorrecta" :  "Verdadero"
                   }
   },
   {
@@ -95,8 +95,8 @@
     "estrategia" : "penalizable",
     "enunciado" : "¿Quien pinto el cuadro Las meninas?",
     "opciones" : {
-                    "Correcta" : ["Diego Velazquez"],
-                    "Incorrecta" : ["Dali", "Da Vinci"]
+                    "correcta" : ["Diego Velazquez"],
+                    "incorrecta" : ["Dali", "Da Vinci"]
                   }
   },
   {
@@ -112,8 +112,8 @@
     "estrategia" : "clasica",
     "enunciado" : "¿Que ciudades pertenecen a Francia?",
     "opciones" : {
-                    "Correcta" :  ["Paris", "Marsella"],
-                    "Incorrecta" : ["Praga","Viena", "Estambul"]
+                    "correcta" :  ["Paris", "Marsella"],
+                    "incorrecta" : ["Praga","Viena", "Estambul"]
                   }
   },
   {
@@ -121,8 +121,8 @@
     "estrategia" : "puntajeParcial",
     "enunciado" : "¿Cual de estos sabores son primarios?",
     "opciones" : {
-                    "Correcta" : ["Acido", "Amargo","Dulce"],
-                    "Incorrecta" : ["Agridulce", "Agrio"]
+                    "correcta" : ["Acido", "Amargo","Dulce"],
+                    "incorrecta" : ["Agridulce", "Agrio"]
                   }
   },
   {
@@ -130,8 +130,8 @@
     "estrategia" : "clasica",
     "enunciado" : "Stephen Hawking rechazó el título de caballero de la Reina",
     "opciones" : {
-                    "Correcta" :  "Verdadero",
-                    "Incorrecta" : "Falso"
+                    "correcta" :  "Verdadero",
+                    "incorrecta" : "Falso"
                   }
   },
   {
@@ -149,8 +149,8 @@
     "estrategia" : "penalizable",
     "enunciado" : "La estatua de la libertad fue un regalo de Francia",
     "opciones" : {
-                    "Correcta" :  "Verdadero",
-                    "Incorrecta" :  "Falso"
+                    "correcta" :  "Verdadero",
+                    "incorrecta" :  "Falso"
                   }
   },
   {
@@ -158,8 +158,8 @@
     "estrategia" : "penalizable",
     "enunciado" : "¿Cual de las siguientes personas ganaron un Nobel?",
     "opciones" : {
-                    "Correcta" : ["Obama","Marie Curie"],
-                    "Incorrecta" : ["Susana Gimenez", "Newton", "Gandhi"]
+                    "correcta" : ["Obama","Marie Curie"],
+                    "incorrecta" : ["Susana Gimenez", "Newton", "Gandhi"]
                   }
   },
   {
@@ -175,8 +175,8 @@
     "estrategia" : "clasica",
     "enunciado" : "¿En que continente se encuentra el pais Eritrea?",
     "opciones" : {
-                    "Correcta" :  ["Africa"],
-                    "Incorrecta" : ["Asia","Oceania","Europa"]
+                    "correcta" :  ["Africa"],
+                    "incorrecta" : ["Asia","Oceania","Europa"]
                   }
   },
   {
@@ -184,8 +184,8 @@
     "estrategia" : "puntajeParcial",
     "enunciado" : "¿Cual de estos son lenguajes compilados?",
     "opciones" : {
-                    "Correcta" : ["C","Java","Go"],
-                    "Incorrecta" : ["Python"]
+                    "correcta" : ["C","Java","Go"],
+                    "incorrecta" : ["Python"]
                   }
   }
 
