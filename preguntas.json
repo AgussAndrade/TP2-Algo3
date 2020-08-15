@@ -10,7 +10,7 @@
   },
   {
     "tipoDePregunta" : "OrderedChoice",
-    "enunciado" : "¿Ordenar de menor a mayor poblacion de paises?",
+    "enunciado" : "Ordenar de menor a mayor poblacion de paises",
     "opciones" : {
                     "1" : "Argentina",
                     "2": "Brasil",
@@ -39,8 +39,9 @@
   {
     "tipoDePregunta" : "GroupChoice",
     "enunciado" : "Separar paises de ciudades",
-    "opciones" : {"A" : ["Argentina", "Eslovaquia"],
-                  "B" :  ["Buenos Aires", "Bandar Seri Begawan"]
+    "opciones" : {
+                    "A" : ["Argentina", "Eslovaquia","Monaco"],
+                    "B" :  ["Buenos Aires", "Tokio", "Praga"]
                   }
   },
   {
@@ -60,5 +61,133 @@
                     "Correcta" : ["k1ng", "Kun Agüero"],
                     "Incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
                   }
+  },
+  {
+    "tipoDePregunta" : "VerdaderoFalso",
+    "estrategia" : "Clasica",
+    "enunciado" : "La capital de Austria es Amsterdam",
+    "opciones" : {
+                    "Correcta" :  "Falso",
+                    "Incorrecta" : "Verdadero"
+                  }
+  },
+  {
+    "tipoDePregunta" : "OrderedChoice",
+    "enunciado" : "Ordenar de mayor a menor las superficies de los paises",
+    "opciones" : {
+                    "1" : "Rusia",
+                    "2" : "China",
+                    "3" : "Estados Unidos",
+                    "4" : "Brasil"
+                  }
+  },
+  {
+    "tipoDePregunta" : "VerdaderoFalso",
+    "estrategia" : "Penalizable",
+    "enunciado" : "Un pulpo tiene 5 corazones",
+    "opciones" : {
+                    "Correcta" :  "Falso",
+                    "Incorrecta" :  "Verdadero"
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "Penalizable",
+    "enunciado" : "¿Quien pinto el cuadro Las meninas?",
+    "opciones" : {
+                    "Correcta" : ["Diego Velazquez"],
+                    "Incorrecta" : ["Dali", "Da Vinci"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "GroupChoice",
+    "enunciado" : "Separar futbolistas de basquetbolistas",
+    "opciones" : {
+                    "A" : ["Dybala", "Lenglet","Neuer"],
+                    "B" :  ["LeBron James", "Scola", "Durant"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "Clasica",
+    "enunciado" : "¿Que ciudades pertenecen a Francia?",
+    "opciones" : {
+                    "Correcta" :  ["Paris", "Marsella"],
+                    "Incorrecta" : ["Praga","Viena", "Estambul"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "PuntajeParcial",
+    "enunciado" : "¿Cual de estos sabores son primarios?",
+    "opciones" : {
+                    "Correcta" : ["Acido", "Amargo","Dulce"],
+                    "Incorrecta" : ["Agridulce", "Agrio"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "VerdaderoFalso",
+    "estrategia" : "Clasica",
+    "enunciado" : "Stephen Hawking rechazó el título de caballero de la Reina",
+    "opciones" : {
+                    "Correcta" :  "Verdadero",
+                    "Incorrecta" : "Falso"
+                  }
+  },
+  {
+    "tipoDePregunta" : "OrderedChoice",
+    "enunciado" : "Ordenar de menor a mayor las superficies de los países",
+    "opciones" : {
+                    "1" : "Vaticano",
+                    "2" : "Monaco",
+                    "3" : "Puerto Rico",
+                    "4" : "Albania"
+                  }
+  },
+  {
+    "tipoDePregunta" : "VerdaderoFalso",
+    "estrategia" : "Penalizable",
+    "enunciado" : "La estatua de la libertad fue un regalo de Francia",
+    "opciones" : {
+                    "Correcta" :  "Verdadero",
+                    "Incorrecta" :  "Falso"
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "Penalizable",
+    "enunciado" : "¿Cual de las siguientes personas ganaron un Nobel?",
+    "opciones" : {
+                    "Correcta" : ["Obama","Marie Curie"],
+                    "Incorrecta" : ["Susana Gimenez", "Newton", "Gandhi"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "GroupChoice",
+    "enunciado" : "Separar lenguajes de tipado estatico y dinamico",
+    "opciones" : {
+                    "A" : ["Java", "C","Pascal"],
+                    "B" :  ["Python", "JavaScript", "PHP"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "Clasica",
+    "enunciado" : "¿En que continente se encuentra el pais Eritrea?",
+    "opciones" : {
+                    "Correcta" :  ["Africa"],
+                    "Incorrecta" : ["Asia","Oceania","Europa"]
+                  }
+  },
+  {
+    "tipoDePregunta" : "MultipleChoice",
+    "estrategia" : "PuntajeParcial",
+    "enunciado" : "¿Cual de estos son lenguajes compilados?",
+    "opciones" : {
+                    "Correcta" : ["C","Java","Go"],
+                    "Incorrecta" : ["Python"]
+                  }
   }
+
+
 ]
