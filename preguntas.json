@@ -1,7 +1,7 @@
 [
   {
-    "tipoDePregunta" : "VerdaderoFalso",
-    "estrategia" : "Clasica",
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "clasica",
     "enunciado" : "Argentina es un país",
     "opciones" : {
                     "Correcta" :  "Verdadero",
@@ -9,7 +9,7 @@
                   }
   },
   {
-    "tipoDePregunta" : "OrderedChoice",
+    "tipoDePregunta" : "orderedChoice",
     "enunciado" : "Ordenar de menor a mayor poblacion de paises",
     "opciones" : {
                     "1" : "Argentina",
@@ -19,8 +19,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "VerdaderoFalso",
-    "estrategia" : "Penalizable",
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "penalizable",
     "enunciado" : "¿Argentina es una construccion social?",
     "opciones" : {
                     "Correcta" :  "Falso",
@@ -28,8 +28,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "Penalizable",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "penalizable",
     "enunciado" : "¿Cual de los siguientes jugadores de futbol tiene mas asistencias?",
     "opciones" : {
                     "Correcta" : ["Lewandowski"],
@@ -37,7 +37,7 @@
                   }
   },
   {
-    "tipoDePregunta" : "GroupChoice",
+    "tipoDePregunta" : "groupChoice",
     "enunciado" : "Separar paises de ciudades",
     "opciones" : {
                     "A" : ["Argentina", "Eslovaquia","Monaco"],
@@ -45,8 +45,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "Clasica",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "clasica",
     "enunciado" : "¿Cual de los siguientes nombres son capicua?",
     "opciones" : {
                     "Correcta" :  ["Ana", "Otto"],
@@ -54,8 +54,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "PuntajeParcial",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "puntajeParcial",
     "enunciado" : "¿Cual de les siguientes pibis juega fortnite?",
     "opciones" : {
                     "Correcta" : ["k1ng", "Kun Agüero"],
@@ -63,8 +63,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "VerdaderoFalso",
-    "estrategia" : "Clasica",
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "clasica",
     "enunciado" : "La capital de Austria es Amsterdam",
     "opciones" : {
                     "Correcta" :  "Falso",
@@ -72,7 +72,7 @@
                   }
   },
   {
-    "tipoDePregunta" : "OrderedChoice",
+    "tipoDePregunta" : "orderedChoice",
     "enunciado" : "Ordenar de mayor a menor las superficies de los paises",
     "opciones" : {
                     "1" : "Rusia",
@@ -82,8 +82,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "VerdaderoFalso",
-    "estrategia" : "Penalizable",
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "penalizable",
     "enunciado" : "Un pulpo tiene 5 corazones",
     "opciones" : {
                     "Correcta" :  "Falso",
@@ -91,8 +91,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "Penalizable",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "penalizable",
     "enunciado" : "¿Quien pinto el cuadro Las meninas?",
     "opciones" : {
                     "Correcta" : ["Diego Velazquez"],
@@ -100,7 +100,7 @@
                   }
   },
   {
-    "tipoDePregunta" : "GroupChoice",
+    "tipoDePregunta" : "groupChoice",
     "enunciado" : "Separar futbolistas de basquetbolistas",
     "opciones" : {
                     "A" : ["Dybala", "Lenglet","Neuer"],
@@ -108,8 +108,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "Clasica",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "clasica",
     "enunciado" : "¿Que ciudades pertenecen a Francia?",
     "opciones" : {
                     "Correcta" :  ["Paris", "Marsella"],
@@ -117,8 +117,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "PuntajeParcial",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "puntajeParcial",
     "enunciado" : "¿Cual de estos sabores son primarios?",
     "opciones" : {
                     "Correcta" : ["Acido", "Amargo","Dulce"],
@@ -126,8 +126,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "VerdaderoFalso",
-    "estrategia" : "Clasica",
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "clasica",
     "enunciado" : "Stephen Hawking rechazó el título de caballero de la Reina",
     "opciones" : {
                     "Correcta" :  "Verdadero",
@@ -135,7 +135,7 @@
                   }
   },
   {
-    "tipoDePregunta" : "OrderedChoice",
+    "tipoDePregunta" : "orderedChoice",
     "enunciado" : "Ordenar de menor a mayor las superficies de los países",
     "opciones" : {
                     "1" : "Vaticano",
@@ -145,8 +145,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "VerdaderoFalso",
-    "estrategia" : "Penalizable",
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "penalizable",
     "enunciado" : "La estatua de la libertad fue un regalo de Francia",
     "opciones" : {
                     "Correcta" :  "Verdadero",
@@ -154,8 +154,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "Penalizable",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "penalizable",
     "enunciado" : "¿Cual de las siguientes personas ganaron un Nobel?",
     "opciones" : {
                     "Correcta" : ["Obama","Marie Curie"],
@@ -163,7 +163,7 @@
                   }
   },
   {
-    "tipoDePregunta" : "GroupChoice",
+    "tipoDePregunta" : "groupChoice",
     "enunciado" : "Separar lenguajes de tipado estatico y dinamico",
     "opciones" : {
                     "A" : ["Java", "C","Pascal"],
@@ -171,8 +171,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "Clasica",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "clasica",
     "enunciado" : "¿En que continente se encuentra el pais Eritrea?",
     "opciones" : {
                     "Correcta" :  ["Africa"],
@@ -180,8 +180,8 @@
                   }
   },
   {
-    "tipoDePregunta" : "MultipleChoice",
-    "estrategia" : "PuntajeParcial",
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "puntajeParcial",
     "enunciado" : "¿Cual de estos son lenguajes compilados?",
     "opciones" : {
                     "Correcta" : ["C","Java","Go"],
