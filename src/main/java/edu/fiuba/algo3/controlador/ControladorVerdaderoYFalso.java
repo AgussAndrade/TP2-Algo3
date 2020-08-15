@@ -1,3 +1,4 @@
+/*
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.*;
@@ -101,4 +102,4 @@ public class ControladorVerdaderoYFalso extends ControladorPrincipal{
 
         }, 0,1000);
     }
-}
+}*/
