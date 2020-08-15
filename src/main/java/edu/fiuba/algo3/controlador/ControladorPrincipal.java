@@ -19,6 +19,6 @@ public abstract class ControladorPrincipal {
         jugadores = new ArrayList<>();
         preguntas = _preguntas;
         flujoDePrograma = new FlujoDePrograma(stage);
-        flujoDePrograma.primeraEscena();
+        flujoDePrograma.siguienteEscena();
     }
 }

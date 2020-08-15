@@ -1,10 +1,11 @@
-/*
+
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.*;
 import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
+import edu.fiuba.algo3.modelo.preguntas.VerdaderoFalso;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +13,7 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 import java.util.*;
 
-public class ControladorVerdaderoYFalso extends ControladorPrincipal{
+public class ControladorVerdaderoYFalso extends ControladorPregunta{
 
     public Label nombreJugador;
     public Label enunciadoPregunta;
@@ -41,7 +42,7 @@ public class ControladorVerdaderoYFalso extends ControladorPrincipal{
 
     public void seleccionadoVerdadero(ActionEvent actionEvent) throws IOException {
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
-        List<Binaria> selecciones = preguntas.get(0).obtenerOpciones();
+        List<Binaria> selecciones =((VerdaderoFalso)preguntaActual).obtenerOpciones();
         selecciones.get(0).seleccionar();
         constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
         respuestas.add(constructorDeRespuestaActual.build());
@@ -50,24 +51,11 @@ public class ControladorVerdaderoYFalso extends ControladorPrincipal{
 
     public void seleccionadoFalso(ActionEvent actionEvent) throws IOException {
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
-        List<Binaria> selecciones = preguntas.get(0).obtenerOpciones();
+        List<Binaria> selecciones = ((VerdaderoFalso)preguntaActual).obtenerOpciones();
         selecciones.get(1).seleccionar();
         constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
         respuestas.add(constructorDeRespuestaActual.build());
         continuar();
-    }
-
-    private void continuar() throws IOException {
-        if (jugadorActual < jugadores.size() - 1){
-            System.out.print("continuar()\n");
-            temporizador.cancel();
-            nombreJugador.setText(jugadores.get(++jugadorActual).nombre());
-            iniciarTemporizador();
-        }else{
-            preguntas.get(0).comprobarRespuestas(respuestas,new AplicadorSimple());
-            flujoDePrograma.siguienteEscena();
-            temporizador.cancel();
-        }
     }
 
     public void activarExclusividad(ActionEvent actionEvent) {
@@ -81,25 +69,4 @@ public class ControladorVerdaderoYFalso extends ControladorPrincipal{
         constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
     }
 
-    private void iniciarTemporizador(){
-        temporizador = new Timer();
-        tiempoRestante = 10;
-        temporizador.schedule(new TimerTask(){
-            @Override
-            public void run() {
-                Platform.runLater(()-> {
-                    if (tiempoRestante>0){
-                        tiempo.setText(Integer.toString(tiempoRestante));
-                        tiempoRestante--;
-                    }
-                    else try {
-                        continuar();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-            }
-
-        }, 0,1000);
-    }
-}*/
+}
