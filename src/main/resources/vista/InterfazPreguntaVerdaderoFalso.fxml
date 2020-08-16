@@ -22,7 +22,7 @@
                      </Label>
                   </children>
                </Pane>
-               <Button fx:id="botonExclusividad" layoutX="15.0" layoutY="128.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="163.0" prefWidth="293.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE">
+               <Button fx:id="botonExclusividadJugador1" layoutX="15.0" layoutY="128.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="163.0" prefWidth="293.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE">
                   <font>
                      <Font name="System Bold" size="26.0" />
                   </font>
@@ -30,7 +30,7 @@
                      <Cursor fx:constant="HAND" />
                   </cursor>
                </Button>
-               <Button fx:id="botonMultiplicadorX2" layoutX="18.0" layoutY="307.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="160.0" prefWidth="288.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX2" textAlignment="CENTER" textFill="WHITE">
+               <Button fx:id="botonMultiplicadorX2Jugador1" layoutX="18.0" layoutY="307.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="160.0" prefWidth="288.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX2" textAlignment="CENTER" textFill="WHITE">
                   <font>
                      <Font name="System Bold" size="26.0" />
                   </font>
@@ -38,7 +38,31 @@
                      <Cursor fx:constant="HAND" />
                   </cursor>
                </Button>
-               <Button fx:id="botonMultiplicadorX3" layoutX="16.0" layoutY="483.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="145.0" prefWidth="295.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX3" textAlignment="CENTER" textFill="WHITE">
+               <Button fx:id="botonMultiplicadorX3Jugador1" layoutX="16.0" layoutY="483.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="145.0" prefWidth="295.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX3" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonExclusividadJugador2" layoutX="17.0" layoutY="128.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="163.0" prefWidth="293.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonMultiplicadorX2Jugador2" layoutX="28.0" layoutY="317.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="160.0" prefWidth="288.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX2" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonMultiplicadorX3Jugador2" layoutX="16.0" layoutY="483.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="145.0" prefWidth="295.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX3" textAlignment="CENTER" textFill="WHITE">
                   <font>
                      <Font name="System Bold" size="26.0" />
                   </font>

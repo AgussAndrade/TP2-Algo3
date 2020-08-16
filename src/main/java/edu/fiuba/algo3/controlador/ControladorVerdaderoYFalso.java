@@ -2,11 +2,11 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.*;
-import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
+
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.preguntas.VerdaderoFalso;
-import javafx.application.Platform;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -22,8 +22,7 @@ public class ControladorVerdaderoYFalso extends ControladorPregunta{
     public Label puntajeJugador2;
     public Label nombreJugador2;
     public Label nombreJugador1;
-    int tiempoRestante;
-    Timer temporizador;
+
 
     List<Respuesta> respuestas = new ArrayList<>();
     RespuestaBuilder constructorDeRespuestaActual = new RespuestaBuilder();
