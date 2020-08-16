@@ -4,61 +4,190 @@
     "estrategia" : "clasica",
     "enunciado" : "Argentina es un país",
     "opciones" : {
-                    "correcta" :  "Verdadero",
-                    "incorrecta" : "Falso"
-                  }
+      "correcta" :  "Verdadero",
+      "incorrecta" : "Falso"
+    }
   },
   {
     "tipoDePregunta" : "orderedChoice",
     "enunciado" : "Ordenar de menor a mayor poblacion de paises",
     "opciones" : {
-                    "1" : "Argentina",
-                    "2": "Brasil",
-                    "3" : "Estados Unidos",
-                    "4" : "India"
-                  }
+      "1" : "Argentina",
+      "2": "Brasil",
+      "3" : "Estados Unidos",
+      "4" : "India"
+    }
   },
   {
     "tipoDePregunta" : "verdaderoFalso",
     "estrategia" : "penalizable",
     "enunciado" : "¿Argentina es una construccion social?",
     "opciones" : {
-                    "correcta" :  "Falso",
-                    "incorrecta" :  "Verdadero"
-                  }
+      "correcta" :  "Falso",
+      "incorrecta" :  "Verdadero"
+    }
   },
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "penalizable",
     "enunciado" : "¿Cual de los siguientes jugadores de futbol tiene mas asistencias?",
     "opciones" : {
-                    "correcta" : ["Lewandowski"],
-                    "incorrecta" : ["Alisson", "Piqué", "Ramos"]
-                  }
+      "correcta" : ["Lewandowski"],
+      "incorrecta" : ["Alisson", "Piqué", "Ramos"]
+    }
   },
   {
     "tipoDePregunta" : "groupChoice",
     "enunciado" : "Separar paises de ciudades",
-    "opciones" : {"A" : ["Argentina", "Eslovaquia"],
-                  "B" :  ["Buenos Aires", "Bandar Seri Begawan"]
-                  }
+    "opciones" : {
+      "A" : ["Argentina", "Eslovaquia","Monaco"],
+      "B" :  ["Buenos Aires", "Tokio", "Praga"]
+    }
   },
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
     "enunciado" : "¿Cual de los siguientes nombres son capicua?",
     "opciones" : {
-                    "correcta" :  ["Ana", "Otto"],
-                    "incorrecta" : ["Marisol"]
-                  }
+      "correcta" :  ["Ana", "Otto"],
+      "incorrecta" : ["Marisol"]
+    }
   },
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "puntajeParcial",
     "enunciado" : "¿Cual de les siguientes pibis juega fortnite?",
     "opciones" : {
-                    "correcta" : ["k1ng", "Kun Agüero"],
-                    "incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
-                  }
+      "correcta" : ["k1ng", "Kun Agüero"],
+      "incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
+    }
+  },
+  {
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "clasica",
+    "enunciado" : "La capital de Austria es Amsterdam",
+    "opciones" : {
+      "correcta" :  "Falso",
+      "incorrecta" : "Verdadero"
+    }
+  },
+  {
+    "tipoDePregunta" : "orderedChoice",
+    "enunciado" : "Ordenar de mayor a menor las superficies de los paises",
+    "opciones" : {
+      "1" : "Rusia",
+      "2" : "China",
+      "3" : "Estados Unidos",
+      "4" : "Brasil"
+    }
+  },
+  {
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "penalizable",
+    "enunciado" : "Un pulpo tiene 5 corazones",
+    "opciones" : {
+      "correcta" :  "Falso",
+      "incorrecta" :  "Verdadero"
+    }
+  },
+  {
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "penalizable",
+    "enunciado" : "¿Quien pinto el cuadro Las meninas?",
+    "opciones" : {
+      "correcta" : ["Diego Velazquez"],
+      "incorrecta" : ["Dali", "Da Vinci"]
+    }
+  },
+  {
+    "tipoDePregunta" : "groupChoice",
+    "enunciado" : "Separar futbolistas de basquetbolistas",
+    "opciones" : {
+      "A" : ["Dybala", "Lenglet","Neuer"],
+      "B" :  ["LeBron James", "Scola", "Durant"]
+    }
+  },
+  {
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "clasica",
+    "enunciado" : "¿Que ciudades pertenecen a Francia?",
+    "opciones" : {
+      "correcta" :  ["Paris", "Marsella"],
+      "incorrecta" : ["Praga","Viena", "Estambul"]
+    }
+  },
+  {
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "puntajeParcial",
+    "enunciado" : "¿Cual de estos sabores son primarios?",
+    "opciones" : {
+      "correcta" : ["Acido", "Amargo","Dulce"],
+      "incorrecta" : ["Agridulce", "Agrio"]
+    }
+  },
+  {
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "clasica",
+    "enunciado" : "Stephen Hawking rechazó el título de caballero de la Reina",
+    "opciones" : {
+      "correcta" :  "Verdadero",
+      "incorrecta" : "Falso"
+    }
+  },
+  {
+    "tipoDePregunta" : "orderedChoice",
+    "enunciado" : "Ordenar de menor a mayor las superficies de los países",
+    "opciones" : {
+      "1" : "Vaticano",
+      "2" : "Monaco",
+      "3" : "Puerto Rico",
+      "4" : "Albania"
+    }
+  },
+  {
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "penalizable",
+    "enunciado" : "La estatua de la libertad fue un regalo de Francia",
+    "opciones" : {
+      "correcta" :  "Verdadero",
+      "incorrecta" :  "Falso"
+    }
+  },
+  {
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "penalizable",
+    "enunciado" : "¿Cual de las siguientes personas ganaron un Nobel?",
+    "opciones" : {
+      "correcta" : ["Obama","Marie Curie"],
+      "incorrecta" : ["Susana Gimenez", "Newton", "Gandhi"]
+    }
+  },
+  {
+    "tipoDePregunta" : "groupChoice",
+    "enunciado" : "Separar lenguajes de tipado estatico y dinamico",
+    "opciones" : {
+      "A" : ["Java", "C","Pascal"],
+      "B" :  ["Python", "JavaScript", "PHP"]
+    }
+  },
+  {
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "clasica",
+    "enunciado" : "¿En que continente se encuentra el pais Eritrea?",
+    "opciones" : {
+      "correcta" :  ["Africa"],
+      "incorrecta" : ["Asia","Oceania","Europa"]
+    }
+  },
+  {
+    "tipoDePregunta" : "multipleChoice",
+    "estrategia" : "puntajeParcial",
+    "enunciado" : "¿Cual de estos son lenguajes compilados?",
+    "opciones" : {
+      "correcta" : ["C","Java","Go"],
+      "incorrecta" : ["Python"]
+    }
   }
+
+
 ]
