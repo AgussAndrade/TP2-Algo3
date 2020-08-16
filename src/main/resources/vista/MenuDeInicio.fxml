@@ -29,14 +29,14 @@
         </ButtonBar>
         <Button fx:id="botonIniciar" alignment="CENTER" layoutX="411.0" layoutY="397.0" mnemonicParsing="false" onAction="#iniciarJuego" prefHeight="139.0" prefWidth="458.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Iniciar" textFill="WHITE" AnchorPane.bottomAnchor="184.0" AnchorPane.leftAnchor="411.0" AnchorPane.rightAnchor="411.0">
          <font>
-            <Font name="System Bold" size="65.0" />
+            <Font name="System Bold" size="60.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
         <Label alignment="CENTER" layoutX="449.0" layoutY="159.0" text="Kahoot 2" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="159.0">
             <font>
-                <Font name="System Bold" size="85.0" />
+                <Font name="System Bold" size="60.0" />
             </font>
         </Label>
     </children>
