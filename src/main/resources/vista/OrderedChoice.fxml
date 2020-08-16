@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorVerdaderoYFalso">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorVerdaderoYFalso">
    <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" snapToPixel="false">
       <center>
          <AnchorPane prefHeight="704.0" prefWidth="850.0" BorderPane.alignment="CENTER">
@@ -31,37 +31,37 @@
                            <Font size="25.0" />
                         </font>
                      </Label>
-                     <ToggleButton layoutX="128.0" layoutY="470.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton layoutX="128.0" layoutY="470.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <Button layoutX="357.0" layoutY="583.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="245.0" styleClass="blueButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Responder" textFill="WHITE">
+                     <Button layoutX="357.0" layoutY="583.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="245.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Responder" textFill="WHITE">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </Button>
-                     <ToggleButton layoutX="128.0" layoutY="377.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton layoutX="128.0" layoutY="377.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="128.0" layoutY="284.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton layoutX="128.0" layoutY="284.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="544.0" layoutY="284.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton layoutX="544.0" layoutY="284.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="544.0" layoutY="377.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton layoutX="544.0" layoutY="377.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="544.0" layoutY="470.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton layoutX="544.0" layoutY="470.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@/css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>

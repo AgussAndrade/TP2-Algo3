@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.Interfaz.ControladorVerdaderoYFalso">
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorVerdaderoYFalso">
    <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" snapToPixel="false">
       <center>
          <AnchorPane prefHeight="704.0" prefWidth="850.0" BorderPane.alignment="CENTER">
@@ -20,7 +20,7 @@
                            <Font name="System Bold" size="55.0" />
                         </font>
                      </Label>
-                     <Button layoutX="59.0" layoutY="484.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion 3" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="75.0">
+                     <Button layoutX="59.0" layoutY="484.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Opcion 3" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="75.0">
                         <font>
                            <Font name="System Bold" size="45.0" />
                         </font>
@@ -28,7 +28,7 @@
                            <Cursor fx:constant="HAND" />
                         </cursor>
                      </Button>
-                     <Button depthTest="ENABLE" layoutX="539.0" layoutY="484.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion 4" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.rightAnchor="75.0">
+                     <Button depthTest="ENABLE" layoutX="539.0" layoutY="484.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Opcion 4" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.rightAnchor="75.0">
                         <font>
                            <Font name="System Bold" size="45.0" />
                         </font>
@@ -46,7 +46,7 @@
                            <Font size="25.0" />
                         </font>
                      </Label>
-                     <Button layoutX="539.0" layoutY="343.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion 2" textFill="WHITE" AnchorPane.bottomAnchor="192.0" AnchorPane.rightAnchor="75.0">
+                     <Button layoutX="539.0" layoutY="343.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Opcion 2" textFill="WHITE" AnchorPane.bottomAnchor="192.0" AnchorPane.rightAnchor="75.0">
                         <font>
                            <Font name="System Bold" size="45.0" />
                         </font>
@@ -54,7 +54,7 @@
                            <Cursor fx:constant="HAND" />
                         </cursor>
                      </Button>
-                     <Button depthTest="ENABLE" layoutX="59.0" layoutY="343.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Opcion 1" textFill="WHITE" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="75.0">
+                     <Button depthTest="ENABLE" layoutX="59.0" layoutY="343.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="113.0" prefWidth="343.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Opcion 1" textFill="WHITE" AnchorPane.bottomAnchor="192.0" AnchorPane.leftAnchor="75.0">
                         <font>
                            <Font name="System Bold" size="45.0" />
                         </font>
@@ -112,7 +112,7 @@
                            </Label>
                         </children>
                      </Pane>
-                     <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="289.0" styleClass="blueButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="289.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
                         <font>
                            <Font name="System Bold" size="39.0" />
                         </font>
@@ -138,7 +138,7 @@
                            </Label>
                         </children>
                      </Pane>
-                     <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="289.0" styleClass="blueButton" stylesheets="@../../Documents/GitHub/TP2-Algo3/src/main/resources/css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="289.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
                         <font>
                            <Font name="System Bold" size="39.0" />
                         </font>
