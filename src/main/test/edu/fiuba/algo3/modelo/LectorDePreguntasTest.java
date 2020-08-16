@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.lectorDePreguntas.LectorDePreguntas;
+import edu.fiuba.algo3.lectorDePreguntas.LectorDePreguntasJson;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LectorDePreguntasTest {
     @Test
     public void test01LectorDePreguntasLeeCorrectamenteUnArchivoEspecificado(){
-        LectorDePreguntas lector = new LectorDePreguntas();
+        LectorDePreguntasJson lector = new LectorDePreguntasJson();
         List<String> enunciados = List.of(
                                         "Argentina es un país", "Ordenar de menor a mayor poblacion de paises", "¿Argentina es una construccion social?",
                                         "¿Cual de los siguientes jugadores de futbol tiene mas asistencias?", "Separar paises de ciudades",

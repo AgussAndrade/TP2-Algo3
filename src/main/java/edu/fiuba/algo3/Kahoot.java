@@ -1,7 +1,7 @@
 package edu.fiuba.algo3;
 
 import edu.fiuba.algo3.controlador.ControladorPrincipal;
-import edu.fiuba.algo3.lectorDePreguntas.LectorDePreguntas;
+import edu.fiuba.algo3.lectorDePreguntas.LectorDePreguntasJson;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.stage.Stage;
 
@@ -15,7 +15,7 @@ public class Kahoot {
     }
 
     public void cargarPreguntas(String archivoPreguntas){
-        LectorDePreguntas lectorDePreguntas = new LectorDePreguntas();
+        LectorDePreguntasJson lectorDePreguntas = new LectorDePreguntasJson();
         preguntas = lectorDePreguntas.leerPreguntas(archivoPreguntas);
     }
 
