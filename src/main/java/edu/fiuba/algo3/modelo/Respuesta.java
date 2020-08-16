@@ -28,10 +28,6 @@ public class Respuesta {
         return responsable;
     }
 
-    public List<Opcion> selecciones() {
-        return selecciones;
-    }
-
     public Multiplicador multiplicador() {
         return multiplicador;
     }
@@ -45,12 +41,15 @@ public class Respuesta {
         }
         return correctas;
     }
+
     public int cantidadDeOpciones(){
         return selecciones.size();
     }
+
     public void definirPuntosAAgregar(int puntos){
         this.puntosAAgregar = puntos;
     }
+
     public int cantidadDeOpcionesCorrectasSeleccionadasCorrectamente(){
         int correctasSeleccionadasCorrectamente = 0;
         for(Opcion opcion : selecciones){
