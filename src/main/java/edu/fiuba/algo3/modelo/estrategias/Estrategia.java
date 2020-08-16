@@ -9,7 +9,7 @@ public interface Estrategia {
         y devuelve una lista de jugadores que respondieron
         correctamente segun el criterio de la estrategia
          */
-    public List<Respuesta> validarRespuestas(List<Respuesta> respuestas);
+    List<Respuesta> validarRespuestas(List<Respuesta> respuestas);
 
 
 }
