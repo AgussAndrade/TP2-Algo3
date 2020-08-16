@@ -20,7 +20,7 @@ public class ControladorRegistroDeJugadores extends ControladorPrincipal {
     public void registrarJugadores(ActionEvent actionEvent) throws IOException {
         jugadores.add(new Jugador(nombreJugador1.getText()));
         jugadores.add(new Jugador(nombreJugador2.getText()));
-        flujoDePrograma.escenaParaPregunta(preguntas.remove(0));
+        flujoDePrograma.siguienteEscena();
     }
 
     public void enterCampoJugador1(ActionEvent actionEvent) throws IOException {

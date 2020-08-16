@@ -9,19 +9,13 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 import java.util.*;
 
 public class ControladorPregunta extends ControladorPrincipal {
-    public javafx.scene.layout.BorderPane BorderPane;
-
-    public Label enunciadoPregunta;
-    public Label puntajeJugador1;
-    public Label puntajeJugador2;
-    public Label nombreJugador1;
-    public Label nombreJugador2;
     public Label nombreJugador;
     public Label tiempo;
     public Button botonMultiplicadorX3Jugador1;
@@ -30,7 +24,6 @@ public class ControladorPregunta extends ControladorPrincipal {
     public Button botonMultiplicadorX3Jugador2;
     public Button botonMultiplicadorX2Jugador2;
     public Button botonExclusividadJugador2;
-    public javafx.scene.layout.BorderPane borderPane;
 
     Timer temporizador;
     int tiempoRestante;
@@ -39,26 +32,31 @@ public class ControladorPregunta extends ControladorPrincipal {
     List<Respuesta> respuestas = new ArrayList<>();
     RespuestaBuilder constructorDeRespuestaActual = new RespuestaBuilder();
 
-
-
-//    public void initialize() throws IOException {
-//        borderPane.setCenter(FXMLLoader.load(getClass().getResource("InterfazVerdaderoFalso")));
-//        flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
-//    }
+    public void initialize() throws IOException {
+        Platform.runLater(()-> {
+            try {
+                flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
 
     protected void continuar() throws IOException {
         if (jugadorActual < jugadores.size() - 1){
-            System.out.print("continuar()\n");
             temporizador.cancel();
             nombreJugador.setText(jugadores.get(++jugadorActual).nombre());
-            cargarBotones(preguntaActual.devolverEstrategia(),preguntaActual);
+//            cargarBotones(preguntaActual.devolverEstrategia(),preguntaActual);
             iniciarTemporizador();
         }else{
             preguntaActual.comprobarRespuestas(respuestas,new AplicadorSimple());
             temporizador.cancel();
             if (!preguntas.isEmpty()){
                 flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
-            }else flujoDePrograma.siguienteEscena();
+            }else {
+                jugadorActual=0;
+                flujoDePrograma.siguienteEscena();
+            }
         }
     }
 

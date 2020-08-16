@@ -5,6 +5,8 @@ import edu.fiuba.algo3.modelo.preguntas.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,27 +24,14 @@ public class FlujoDePrograma {
         this.stage = stage;
         stage.setTitle("Kahoot!");
 
-
-
         ordenDeAparicionDeEscenas = new ArrayList<>();
         ordenDeAparicionDeEscenas.add("/vista/MenuDeInicio.fxml");
         ordenDeAparicionDeEscenas.add("/vista/InterfazRegistroJugadores.fxml");
-
+        ordenDeAparicionDeEscenas.add("/vista/InterfazPregunta.fxml");
         ordenDeAparicionDeEscenas.add("/vista/Final.fxml");
 
         escenaActual = ordenDeAparicionDeEscenas.listIterator();
     }
-
-//    public void primeraEscena() throws IOException {
-//        stage.setTitle("Kahoot!");
-//        loader = new FXMLLoader(getClass().getResource(ordenDeAparicionDeEscenas.get(0)));
-//        root = loader.load();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.setResizable(false);
-//        stage.show();
-//        escenaActual.next();
-//    }
 
     public void siguienteEscena() throws IOException {
         if (escenaActual.hasNext()) {
@@ -58,9 +47,8 @@ public class FlujoDePrograma {
     }
 
     public void escenaParaPregunta(Pregunta pregunta) throws IOException {
-//        System.out.println("/vista/InterfazPregunta" + pregunta.getClass().getSimpleName() + ".fxml");
         loader = new FXMLLoader(getClass().getResource("/vista/InterfazPregunta" + pregunta.getClass().getSimpleName() + ".fxml" ));
-        ((ControladorPregunta)loader.getController()).cargarBotones(pregunta.devolverEstrategia(),pregunta);
+//        ((ControladorPregunta)loader.getController()).cargarBotones(pregunta.devolverEstrategia(),pregunta);
         root = loader.load();
         scene = new Scene(root);
         stage.setScene(scene);
