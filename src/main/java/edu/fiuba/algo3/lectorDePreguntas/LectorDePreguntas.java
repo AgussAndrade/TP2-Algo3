@@ -11,7 +11,6 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -59,7 +58,7 @@ public class LectorDePreguntas {
         List<Grupal> listaDeOpciones = new ArrayList<>();
         for(Object objetoOpcion : listaDeOpcionesGrupoA){
             String opcionGrupoA = (String) objetoOpcion;
-            listaDeOpciones.add(OpcionesFactory.crearOpcionDeGupoA(opcionGrupoA));
+            listaDeOpciones.add(OpcionesFactory.crearOpcionDeGrupoA(opcionGrupoA));
         }
         for(Object objetoOpcion : listaDeOpcionesGrupoB){
             String opcionGrupoB = (String) objetoOpcion;

@@ -16,7 +16,7 @@ public class OpcionesFactory {
         return new OpcionPosicion(textoOpcion, contador);
     }
 
-    public static Grupal crearOpcionDeGupoA(String opcionGrupoA) {
+    public static Grupal crearOpcionDeGrupoA(String opcionGrupoA) {
         return new OpcionDeGrupo(opcionGrupoA, "A");
     }
 
