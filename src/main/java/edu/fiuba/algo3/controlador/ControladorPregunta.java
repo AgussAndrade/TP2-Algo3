@@ -3,6 +3,8 @@ package edu.fiuba.algo3.controlador;
 import edu.fiuba.algo3.modelo.Respuesta;
 import edu.fiuba.algo3.modelo.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
+import edu.fiuba.algo3.modelo.multiplicadores.AplicadorDePuntos;
+import edu.fiuba.algo3.modelo.multiplicadores.AplicadorFactory;
 import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
@@ -26,13 +28,13 @@ public class ControladorPregunta extends ControladorPrincipal {
     Timer temporizador;
     int tiempoRestante;
     static int jugadorActual = 0;
-    static List<Opcion> opcionesActuales;
+    static int llamadosAAplicadorDePuntos = 0;
     static Pregunta preguntaActual;
     static List<Respuesta> respuestas = new ArrayList<>();
     RespuestaBuilder constructorDeRespuestaActual = new RespuestaBuilder();
 
     public void initialize() throws IOException {
-        System.out.print("seCreoControladorPregunta\n");
+        //System.out.print("seCreoControladorPregunta\n");
         Platform.runLater(()-> {
             try {
                 flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
@@ -46,12 +48,12 @@ public class ControladorPregunta extends ControladorPrincipal {
         temporizador.cancel();
         if (jugadorActual < jugadores.size() - 1){
             temporizador.cancel();
-            System.out.print(jugadorActual + "\n");
+      //      System.out.print(jugadorActual + "\n");
             nombreJugador.setText(jugadores.get(++jugadorActual).nombre());
-            cargarBotones();
             flujoDePrograma.escenaIntermedia();
         }else{
-            preguntaActual.comprobarRespuestas(respuestas,new AplicadorSimple());
+            preguntaActual.comprobarRespuestas(respuestas, AplicadorFactory.creacAplicadorSegunLosLlamados(llamadosAAplicadorDePuntos));
+            llamadosAAplicadorDePuntos = 0;
             if (!preguntas.isEmpty()){
                 jugadorActual=0;
                 respuestas.clear();
@@ -87,6 +89,7 @@ public class ControladorPregunta extends ControladorPrincipal {
 
     public void cargarBotones() {
         String estrategia = preguntaActual.devolverEstrategia().getClass().getSimpleName();
+        //System.out.println(jugadorActual);
         if(jugadorActual == 0){
             if(estrategia.equals("Penalizable")){
                 botonExclusividadJugador1.setVisible(false);

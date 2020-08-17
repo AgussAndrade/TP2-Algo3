@@ -8,7 +8,8 @@ public class Penalizable implements Estrategia {
     @Override
     public List<Respuesta> validarRespuestas(List<Respuesta> respuestas){
         for(Respuesta respuesta : respuestas) {
-            respuesta.definirPuntosAAgregar(respuesta.cantidadDeOpcionesCorrectasSeleccionadasCorrectamente() - respuesta.cantidadDeOpcionesIncorrectasSeleccionadasincorrectamente());
+            int puntosAAgregar = respuesta.multiplicador().multiplicarPuntos(respuesta.cantidadDeOpcionesCorrectasSeleccionadasCorrectamente() - respuesta.cantidadDeOpcionesIncorrectasSeleccionadasincorrectamente());
+            respuesta.definirPuntosAAgregar(puntosAAgregar);
         }
         return respuestas;
 

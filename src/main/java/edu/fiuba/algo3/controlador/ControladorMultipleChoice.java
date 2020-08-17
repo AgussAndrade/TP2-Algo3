@@ -25,8 +25,14 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public Button opcion2;
     public Button opcion3;
     public Button opcion4;
+    public Button botonExclusividadJugador1;
+    public Button botonExclusividadJugador2;
+    public Button botonMultiplicadorX2Jugador1;
+    public Button botonMultiplicadorX2Jugador2;
+    public Button botonMultiplicadorX3Jugador1;
+    public Button botonMultiplicadorX3Jugador2;
     private  List<Binaria> opciones;
-
+    private int multiplicador = 1;
     @FXML
     public void initialize() {
         cargarBotones();
@@ -77,7 +83,10 @@ public class ControladorMultipleChoice extends ControladorPregunta{
         toggleButton.isSelected();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
+        System.out.println(multiplicador);
+        constructorDeRespuestaActual.conMultiplicador( new Multiplicador(multiplicador) );
         respuestas.add(constructorDeRespuestaActual.build());
+        multiplicador = 1;
         continuar();
     }
 
@@ -98,13 +107,41 @@ public class ControladorMultipleChoice extends ControladorPregunta{
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
     }
     public void activarExclusividad(ActionEvent actionEvent) {
+        if(jugadorActual == 0){
+            botonExclusividadJugador1.setVisible(false);
+            llamadosAAplicadorDePuntos +=1;
+        }
+        else {
+            botonExclusividadJugador2.setVisible(false);
+            llamadosAAplicadorDePuntos +=1;
+        }
     }
 
     public void activarMultiplicadorX2(ActionEvent actionEvent) {
-        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
+ //       System.out.println(jugadorActual);
+        if(jugadorActual == 0){
+            botonMultiplicadorX2Jugador1.setVisible(false);
+            botonMultiplicadorX3Jugador1.setVisible(false);
+            multiplicador =2;
+        }
+        else {
+            botonMultiplicadorX2Jugador2.setVisible(false);
+            botonMultiplicadorX3Jugador2.setVisible(false);
+            multiplicador = 2;
+        }
     }
 
     public void activarMultiplicadorX3(ActionEvent actionEvent) {
-        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
+        if(jugadorActual == 0){
+            botonMultiplicadorX2Jugador1.setVisible(false);
+            botonMultiplicadorX3Jugador1.setVisible(false);
+            multiplicador = 3;
+        }
+
+        else {
+            botonMultiplicadorX2Jugador2.setVisible(false);
+            botonMultiplicadorX3Jugador2.setVisible(false);
+            multiplicador = 3;
+        }
     }
 }
