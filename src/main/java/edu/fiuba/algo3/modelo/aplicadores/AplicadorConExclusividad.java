@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.multiplicadores;
+package edu.fiuba.algo3.modelo.aplicadores;
 
 import edu.fiuba.algo3.modelo.Respuesta;
 

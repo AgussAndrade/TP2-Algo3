@@ -2,11 +2,7 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.Respuesta;
 import edu.fiuba.algo3.modelo.RespuestaBuilder;
-import edu.fiuba.algo3.modelo.estrategias.Estrategia;
-import edu.fiuba.algo3.modelo.multiplicadores.AplicadorDePuntos;
-import edu.fiuba.algo3.modelo.multiplicadores.AplicadorFactory;
-import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
-import edu.fiuba.algo3.modelo.opciones.Opcion;
+import edu.fiuba.algo3.modelo.aplicadores.AplicadorFactory;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.application.Platform;
 import javafx.scene.control.Button;

@@ -1,4 +1,4 @@
-package edu.fiuba.algo3.modelo.multiplicadores;
+package edu.fiuba.algo3.modelo.aplicadores;
 
 public class AplicadorFactory {
     public static AplicadorDePuntos creacAplicadorSegunLosLlamados(int llamados){

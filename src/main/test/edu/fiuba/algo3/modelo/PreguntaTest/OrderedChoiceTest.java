@@ -2,7 +2,7 @@ package edu.fiuba.algo3.modelo.PreguntaTest;
 
 import edu.fiuba.algo3.modelo.*;
 import edu.fiuba.algo3.modelo.estrategias.Clasica;
-import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
+import edu.fiuba.algo3.modelo.aplicadores.AplicadorSimple;
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.opciones.OpcionPosicion;

@@ -1,6 +1,6 @@
 package edu.fiuba.algo3.modelo.preguntas;
 
-import edu.fiuba.algo3.modelo.multiplicadores.AplicadorDePuntos;
+import edu.fiuba.algo3.modelo.aplicadores.AplicadorDePuntos;
 import edu.fiuba.algo3.modelo.Respuesta;
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
 
