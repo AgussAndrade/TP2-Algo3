@@ -91,8 +91,7 @@ public class LectorDePreguntasJson implements LectorDePreguntas {
 
     private Pregunta guardarPreguntasOrderedChoice(String enunciado, JSONObject opciones) throws CantidadDeOpcionesErroneaException {
         List<Posicionable> listaDeOpciones = new ArrayList<>();
-        for (int contador = 0; contador <= opciones.keySet().size(); contador ++) {
-            contador += 1;
+        for (int contador = 1; contador <= opciones.keySet().size(); contador ++) {
             String textoOpcion = (String) opciones.get(((Integer) contador).toString());
             listaDeOpciones.add(OpcionesFactory.crearOpcionConPosicion(textoOpcion, contador));
         }
