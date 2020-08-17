@@ -43,22 +43,20 @@ public class ControladorPregunta extends ControladorPrincipal {
     }
 
     protected void continuar() throws IOException {
+        temporizador.cancel();
         if (jugadorActual < jugadores.size() - 1){
             temporizador.cancel();
             System.out.print(jugadorActual + "\n");
             nombreJugador.setText(jugadores.get(++jugadorActual).nombre());
             cargarBotones();
-            iniciarTemporizador();
             flujoDePrograma.escenaParaPregunta(preguntaActual);
         }else{
             preguntaActual.comprobarRespuestas(respuestas,new AplicadorSimple());
-            temporizador.cancel();
             if (!preguntas.isEmpty()){
                 jugadorActual=0;
                 respuestas.clear();
                 flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
             }else {
-                jugadorActual=0;
                 flujoDePrograma.siguienteEscena();
             }
         }
