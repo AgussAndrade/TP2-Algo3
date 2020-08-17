@@ -10,45 +10,6 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorVerdaderoFalso">
    <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" snapToPixel="false">
-      <left>
-         <AnchorPane prefHeight="632.0" prefWidth="326.0" style="-fx-background-color: #2F3136;" BorderPane.alignment="CENTER">
-            <children>
-               <Pane layoutX="63.0" layoutY="33.0" prefHeight="63.0" prefWidth="200.0" style="-fx-background-color: #393C42; -fx-background-radius: 20 20 20 20;" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="33.0">
-                  <children>
-                     <Label fx:id="nombreJugador" alignment="CENTER" layoutX="1.0" layoutY="1.0" prefHeight="62.0" prefWidth="198.0" text="nombreJugador" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
-                        <font>
-                           <Font name="Arial Black" size="24.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </Pane>
-               <Button layoutX="15.0" layoutY="128.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="163.0" prefWidth="293.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE">
-                  <font>
-                     <Font name="System Bold" size="26.0" />
-                  </font>
-                  <cursor>
-                     <Cursor fx:constant="HAND" />
-                  </cursor>
-               </Button>
-               <Button layoutX="18.0" layoutY="307.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="160.0" prefWidth="288.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX2" textAlignment="CENTER" textFill="WHITE">
-                  <font>
-                     <Font name="System Bold" size="26.0" />
-                  </font>
-                  <cursor>
-                     <Cursor fx:constant="HAND" />
-                  </cursor>
-               </Button>
-               <Button layoutX="16.0" layoutY="483.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="145.0" prefWidth="295.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;MultiplicadorX3" textAlignment="CENTER" textFill="WHITE">
-                  <font>
-                     <Font name="System Bold" size="26.0" />
-                  </font>
-                  <cursor>
-                     <Cursor fx:constant="HAND" />
-                  </cursor>
-               </Button>
-            </children>
-         </AnchorPane>
-      </left>
       <center>
          <AnchorPane prefHeight="704.0" prefWidth="850.0" style="-fx-background-color: #36393F;" BorderPane.alignment="CENTER">
             <children>
@@ -132,5 +93,73 @@
             </children>
          </AnchorPane>
       </bottom>
+      <left>
+         <AnchorPane prefHeight="632.0" prefWidth="326.0" style="-fx-background-color: #2F3136;" BorderPane.alignment="CENTER">
+            <children>
+               <Button fx:id="botonExclusividadJugador2" layoutX="49.0" layoutY="377.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="100.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="377.0">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonExclusividadJugador1" layoutX="48.0" layoutY="168.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="100.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="377.0">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonMultiplicadorX2Jugador1" layoutX="48.0" layoutY="307.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="130.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Multiplicador&#10;X2" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="307.0">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonMultiplicadorX3Jugador1" layoutX="16.0" layoutY="483.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="130.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Multiplicador&#10;X3" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="483.0">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonMultiplicadorX2Jugador2" layoutX="49.0" layoutY="307.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="130.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Multiplicador&#10;X2" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="307.0">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Button fx:id="botonMultiplicadorX3Jugador2" layoutX="66.0" layoutY="483.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="130.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Multiplicador&#10;X3" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="483.0">
+                  <font>
+                     <Font name="System Bold" size="26.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="HAND" />
+                  </cursor>
+               </Button>
+               <Pane layoutX="66.0" layoutY="27.0" prefHeight="111.0" prefWidth="196.0" style="-fx-background-color: #393C42; -fx-background-radius: 20 20 20 20;" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="30.0">
+                  <children>
+                     <Label alignment="CENTER" layoutX="-1.0" layoutY="-6.0" prefHeight="62.0" prefWidth="198.0" text="Turno" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+                        <font>
+                           <Font name="Arial Black" size="24.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="nombreJugador" alignment="CENTER" layoutX="-1.0" layoutY="49.0" prefHeight="62.0" prefWidth="198.0" text="nombreJugador" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+                        <font>
+                           <Font name="Arial Black" size="24.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </Pane>
+            </children>
+         </AnchorPane>
+      </left>
    </BorderPane>
 </AnchorPane>
