@@ -87,4 +87,40 @@ public class OrderedChoiceTest {
 
         assertEquals(0, jugador.puntos());
     }
+
+    @Test
+    public void test03SiUnaPreguntaOrderedChoiceCompruebaUnaRespuestaConMenosOpcionesSeleccionadasNoDeberiaSumarPuntos() {
+        String nombre = "Ordenar Alfabeticamente las siguientes provincias";
+
+        List<Posicionable> opciones = new ArrayList<>();
+        opciones.add(new OpcionPosicion("Buenos Aires", 1));
+        opciones.add(new OpcionPosicion("La pampa",2));
+        opciones.add(new OpcionPosicion("Salta",3));
+        opciones.add(new OpcionPosicion("Tierra del Fuego",4));
+        opciones.add(new OpcionPosicion("Tucuman",5));
+
+        OrderedChoice pregunta = new OrderedChoice(nombre, opciones, new Clasica());
+
+        Jugador jugador = new Jugador("Juan");
+
+
+        opciones.get(0).seleccionar(1);
+        opciones.get(1).seleccionar(2);
+        opciones.get(3).seleccionar(4);
+
+
+        List<Respuesta> respuestas = new ArrayList<>();
+        RespuestaBuilder respuestaBuilder = new RespuestaBuilder();
+        respuestaBuilder.conResponsable(jugador);
+        List<Opcion> opcionesAAgregarJugador = List.copyOf(opciones);
+        respuestaBuilder.conSelecciones(opcionesAAgregarJugador);
+        respuestaBuilder.conMultiplicador(new Multiplicador(1));
+
+        respuestas.add(respuestaBuilder.build());
+        pregunta.comprobarRespuestas(respuestas, new AplicadorSimple());
+
+
+        assertEquals(0, jugador.puntos());
+    }
+
 }
