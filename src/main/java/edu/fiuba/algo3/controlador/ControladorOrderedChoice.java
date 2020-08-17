@@ -1,6 +1,5 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Posicionable;
 import edu.fiuba.algo3.modelo.preguntas.OrderedChoice;
 import javafx.event.ActionEvent;
@@ -38,13 +37,5 @@ public class ControladorOrderedChoice extends ControladorPregunta{
     }
 
     public void activarExclusividad(ActionEvent actionEvent) {
-    }
-
-    public void activarMultiplicadorX2(ActionEvent actionEvent) {
-//        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
-    }
-
-    public void activarMultiplicadorX3(ActionEvent actionEvent) {
-//        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
     }
 }

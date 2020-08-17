@@ -1,12 +1,9 @@
 package edu.fiuba.algo3;
 
-import edu.fiuba.algo3.controlador.ControladorPregunta;
 import edu.fiuba.algo3.modelo.preguntas.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;

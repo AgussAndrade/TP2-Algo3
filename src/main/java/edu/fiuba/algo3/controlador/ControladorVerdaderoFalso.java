@@ -10,7 +10,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ControladorVerdaderoFalso extends ControladorPregunta{

@@ -6,11 +6,8 @@ import edu.fiuba.algo3.modelo.estrategias.Estrategia;
 import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 import java.util.*;
@@ -82,8 +79,7 @@ public class ControladorPregunta extends ControladorPrincipal {
         }, 0,1000);
     }
 
-    public void cargarBotones(Estrategia estrategia,Pregunta pregunta) {
-        preguntaActual = pregunta;
+    public void cargarBotones(Estrategia estrategia) {
         if(jugadorActual == 0){
             if(estrategia.getClass().getSimpleName() == "Penalizable"){
                 botonExclusividadJugador1.setVisible(false);

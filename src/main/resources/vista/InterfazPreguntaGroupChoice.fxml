@@ -176,7 +176,7 @@
                            </Label>
                         </children>
                      </Pane>
-                     <Button fx:id="activarExclusividad" layoutX="15.0" layoutY="270.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="289.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <Button layoutX="15.0" layoutY="270.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="144.0" prefWidth="289.0" styleClass="blueButton" stylesheets="@/css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
                         <font>
                            <Font name="System Bold" size="39.0" />
                         </font>
