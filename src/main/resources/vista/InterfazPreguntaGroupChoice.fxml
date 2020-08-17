@@ -9,7 +9,15 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<?import java.util.ArrayList?>
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorGroupChoice">
+   <fx:define>
+      <ArrayList fx:id="buttonsArray">
+         <Button fx:id="firstButton" />
+         <Button fx:id="secondButton" />
+         <Button fx:id="thirdButton" />
+      </ArrayList>
+   </fx:define>
    <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" snapToPixel="false">
       <center>
          <AnchorPane prefHeight="704.0" prefWidth="850.0" BorderPane.alignment="CENTER">

@@ -5,6 +5,7 @@ import edu.fiuba.algo3.modelo.opciones.Grupal;
 import edu.fiuba.algo3.modelo.preguntas.GroupChoice;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 
 import java.io.IOException;
 import java.util.List;

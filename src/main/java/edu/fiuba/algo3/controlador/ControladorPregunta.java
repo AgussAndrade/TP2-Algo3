@@ -4,6 +4,7 @@ import edu.fiuba.algo3.modelo.Respuesta;
 import edu.fiuba.algo3.modelo.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
 import edu.fiuba.algo3.modelo.multiplicadores.AplicadorSimple;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
@@ -24,11 +25,14 @@ public class ControladorPregunta extends ControladorPrincipal {
 
     Timer temporizador;
     int tiempoRestante;
-    int jugadorActual = 0;
+    static int jugadorActual = 0;
+    static List<Opcion> opcionesActuales;
     static Pregunta preguntaActual;
-    List<Respuesta> respuestas = new ArrayList<>();
+    static List<Respuesta> respuestas = new ArrayList<>();
     RespuestaBuilder constructorDeRespuestaActual = new RespuestaBuilder();
+
     public void initialize() throws IOException {
+        System.out.print("seCreoControladorPregunta\n");
         Platform.runLater(()-> {
             try {
                 flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
@@ -41,13 +45,17 @@ public class ControladorPregunta extends ControladorPrincipal {
     protected void continuar() throws IOException {
         if (jugadorActual < jugadores.size() - 1){
             temporizador.cancel();
+            System.out.print(jugadorActual + "\n");
             nombreJugador.setText(jugadores.get(++jugadorActual).nombre());
             cargarBotones();
             iniciarTemporizador();
+            flujoDePrograma.escenaParaPregunta(preguntaActual);
         }else{
             preguntaActual.comprobarRespuestas(respuestas,new AplicadorSimple());
             temporizador.cancel();
             if (!preguntas.isEmpty()){
+                jugadorActual=0;
+                respuestas.clear();
                 flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
             }else {
                 jugadorActual=0;
