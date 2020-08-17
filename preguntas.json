@@ -10,7 +10,7 @@
   },
   {
     "tipoDePregunta" : "orderedChoice",
-    "enunciado" : "Ordenar de menor a mayor poblacion de paises"
+    "enunciado" : "Ordenar de menor a mayor poblacion de paises",
     "opciones" : {
       "1" : "Argentina",
       "2": "Brasil",
