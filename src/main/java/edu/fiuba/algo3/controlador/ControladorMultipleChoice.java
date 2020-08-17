@@ -2,13 +2,17 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.preguntas.MultipleChoice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class ControladorMultipleChoice extends ControladorPregunta{
@@ -19,7 +23,11 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public Label puntajeJugador2;
     public Label nombreJugador2;
     public Label nombreJugador1;
-
+    public Button opcion1;
+    public Button opcion2;
+    public Button opcion3;
+    public Button opcion4;
+    private  List<Binaria> selecciones;
 
     @FXML
     public void initialize() {
@@ -29,6 +37,15 @@ public class ControladorMultipleChoice extends ControladorPregunta{
         puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
         puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
         enunciadoPregunta.setText(preguntaActual.enunciado());
+        selecciones = ((MultipleChoice)preguntaActual).obtenerOpciones();
+        Collections.shuffle(selecciones);
+        opcion1.setText(selecciones.get(0).texto());
+        opcion2.setText(selecciones.get(1).texto());
+        opcion3.setText(selecciones.get(2).texto());
+        opcion4.setText(selecciones.get(3).texto());
+
+        List<Binaria> opciones =((MultipleChoice)preguntaActual).obtenerOpciones();
+
         iniciarTemporizador();
     }
 
@@ -36,13 +53,27 @@ public class ControladorMultipleChoice extends ControladorPregunta{
         ToggleButton toggleButton = new ToggleButton();
         toggleButton.isSelected();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
-        List<Binaria> selecciones = ((MultipleChoice)preguntaActual).obtenerOpciones();
-//        selecciones.get(1).seleccionar("");
         constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
         respuestas.add(constructorDeRespuestaActual.build());
         continuar();
     }
 
+    public void activarOpcion1(ActionEvent actionEvent){
+        selecciones.get(0).seleccionar();
+        constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
+    }
+    public void activarOpcion2(ActionEvent actionEvent){
+        selecciones.get(1).seleccionar();
+        constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
+    }
+    public void activarOpcion3(ActionEvent actionEvent){
+        selecciones.get(2).seleccionar();
+        constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
+    }
+    public void activarOpcion4(ActionEvent actionEvent){
+        selecciones.get(3).seleccionar();
+        constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
+    }
     public void activarExclusividad(ActionEvent actionEvent) {
     }
 
