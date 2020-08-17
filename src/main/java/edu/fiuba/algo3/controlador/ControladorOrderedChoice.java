@@ -39,6 +39,7 @@ public class ControladorOrderedChoice extends ControladorPregunta{
 
     public void activarExclusividad(ActionEvent actionEvent) {
     }
+
     public void activarMultiplicadorX2(ActionEvent actionEvent) {
        // constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
     }

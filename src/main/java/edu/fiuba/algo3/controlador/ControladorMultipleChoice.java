@@ -1,10 +1,12 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.preguntas.MultipleChoice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 
 import java.io.IOException;
 import java.util.List;
@@ -31,6 +33,8 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     }
 
     public void responder(ActionEvent actionEvent) throws IOException {
+        ToggleButton toggleButton = new ToggleButton();
+        toggleButton.isSelected();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         List<Binaria> selecciones = ((MultipleChoice)preguntaActual).obtenerOpciones();
 //        selecciones.get(1).seleccionar("");
@@ -42,4 +46,11 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public void activarExclusividad(ActionEvent actionEvent) {
     }
 
+    public void activarMultiplicadorX2(ActionEvent actionEvent) {
+        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
+    }
+
+    public void activarMultiplicadorX3(ActionEvent actionEvent) {
+        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
+    }
 }
