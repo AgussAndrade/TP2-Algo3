@@ -51,4 +51,13 @@ public class FlujoDePrograma {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void escenaIntermedia() throws IOException {
+        loader = new FXMLLoader(getClass().getResource("/vista/PantallaIntermedia.fxml" ));
+//        ((ControladorPregunta)loader.getController()).cargarBotones(pregunta.devolverEstrategia(),pregunta);
+        root = loader.load();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

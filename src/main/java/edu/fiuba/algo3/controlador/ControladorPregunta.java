@@ -49,13 +49,14 @@ public class ControladorPregunta extends ControladorPrincipal {
             System.out.print(jugadorActual + "\n");
             nombreJugador.setText(jugadores.get(++jugadorActual).nombre());
             cargarBotones();
-            flujoDePrograma.escenaParaPregunta(preguntaActual);
+            flujoDePrograma.escenaIntermedia();
         }else{
             preguntaActual.comprobarRespuestas(respuestas,new AplicadorSimple());
             if (!preguntas.isEmpty()){
                 jugadorActual=0;
                 respuestas.clear();
-                flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
+                preguntaActual=preguntas.remove(0);
+                flujoDePrograma.escenaIntermedia();
             }else {
                 flujoDePrograma.siguienteEscena();
             }
@@ -87,7 +88,7 @@ public class ControladorPregunta extends ControladorPrincipal {
     public void cargarBotones() {
         String estrategia = preguntaActual.devolverEstrategia().getClass().getSimpleName();
         if(jugadorActual == 0){
-            if(estrategia == "Penalizable"){
+            if(estrategia.equals("Penalizable")){
                 botonExclusividadJugador1.setVisible(false);
                 botonExclusividadJugador2.setVisible(false);
                 botonMultiplicadorX2Jugador2.setVisible(false);
@@ -97,7 +98,7 @@ public class ControladorPregunta extends ControladorPrincipal {
 
             }
             else{
-                botonExclusividadJugador1.setVisible(false);
+                botonExclusividadJugador1.setVisible(true);
                 botonExclusividadJugador2.setVisible(false);
                 botonMultiplicadorX2Jugador1.setVisible(false);
                 botonMultiplicadorX2Jugador2.setVisible(false);
@@ -106,7 +107,7 @@ public class ControladorPregunta extends ControladorPrincipal {
             }
         }
         else{
-            if(estrategia == "Penalizable"){
+            if(estrategia.equals("Penalizable")){
                 botonExclusividadJugador2.setVisible(false);
                 botonExclusividadJugador1.setVisible(false);
                 botonMultiplicadorX2Jugador1.setVisible(false);
@@ -116,7 +117,7 @@ public class ControladorPregunta extends ControladorPrincipal {
 
             }
             else{
-                botonExclusividadJugador2.setVisible(false);
+                botonExclusividadJugador2.setVisible(true);
                 botonExclusividadJugador1.setVisible(false);
                 botonMultiplicadorX2Jugador2.setVisible(false);
                 botonMultiplicadorX2Jugador1.setVisible(false);

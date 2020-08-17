@@ -25,6 +25,7 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
 
     @FXML
     public void initialize() {
+        cargarBotones();
         nombreJugador.setText(jugadores.get(jugadorActual).nombre());
         nombreJugador1.setText(jugadores.get(0).nombre());
         nombreJugador2.setText(jugadores.get(1).nombre());
