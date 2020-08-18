@@ -8,9 +8,6 @@
 }
 .greenButton:selected {
     -fx-background-color: #2C7856 ;
-    /*-fx-border-color: #2C7856 ;*/
-    -fx-border-radius: 20 20 20 20;
-    -fx-border-width: 5;
     -fx-background-radius :  20 20 20 20;
 }
 
@@ -24,8 +21,6 @@
 }
 .redButton:selected {
     -fx-background-color: #A02F2F ;
-    -fx-border-radius: 20 20 20 20;
-    -fx-border-width: 5;
     -fx-background-radius :  20 20 20 20;
 }
 
@@ -35,6 +30,10 @@
 }
 .blueButton:hover {
     -fx-background-color : #a4b1df;
+    -fx-background-radius :  20 20 20 20;
+}
+.blueButton:selected{
+    -fx-background-color: #59648D ;
     -fx-background-radius :  20 20 20 20;
 }
 
@@ -50,5 +49,5 @@
     -fx-background-color :  #303338;
     -fx-border-radius :  5 5 5 5;
     -fx-border-color: #040405 ;
-    -fx-text-fill:  #8c9095;
+    -fx-text-fill:  WHITE;
 }

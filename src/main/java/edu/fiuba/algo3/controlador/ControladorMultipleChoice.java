@@ -21,10 +21,10 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public Label puntajeJugador2;
     public Label nombreJugador2;
     public Label nombreJugador1;
-    public Button opcion1;
-    public Button opcion2;
-    public Button opcion3;
-    public Button opcion4;
+    public ToggleButton opcion1;
+    public ToggleButton opcion2;
+    public ToggleButton opcion3;
+    public ToggleButton opcion4;
     public Button botonExclusividadJugador1;
     public Button botonExclusividadJugador2;
     public Button botonMultiplicadorX2Jugador1;

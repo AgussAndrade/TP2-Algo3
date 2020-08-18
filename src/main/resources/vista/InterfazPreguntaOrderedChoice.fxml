@@ -31,7 +31,7 @@
                            <Font size="25.0" />
                         </font>
                      </Label>
-                     <ToggleButton layoutX="128.0" layoutY="470.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton fx:id="opcion5" layoutX="128.0" layoutY="470.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
@@ -41,27 +41,27 @@
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </Button>
-                     <ToggleButton layoutX="128.0" layoutY="377.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton fx:id="opcion3" layoutX="128.0" layoutY="377.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="128.0" layoutY="284.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton fx:id="opcion1" layoutX="128.0" layoutY="284.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="544.0" layoutY="284.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton fx:id="opcion2" layoutX="544.0" layoutY="284.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="544.0" layoutY="377.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton fx:id="opcion4" layoutX="544.0" layoutY="377.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton layoutX="544.0" layoutY="470.0" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton fx:id="opcion6" layoutX="544.0" layoutY="470.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
