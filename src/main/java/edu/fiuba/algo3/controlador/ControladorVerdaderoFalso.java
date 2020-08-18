@@ -1,7 +1,5 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.Respuesta;
-import edu.fiuba.algo3.modelo.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.preguntas.VerdaderoFalso;
