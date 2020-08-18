@@ -54,7 +54,7 @@ public class ControladorPregunta extends ControladorPrincipal {
                 jugadorActual=0;
                 respuestas.clear();
                 preguntaActual=preguntas.remove(0);
-                flujoDePrograma.escenaIntermedia();
+                flujoDePrograma.escenaResumenDePuntos();
             }else {
                 flujoDePrograma.siguienteEscena();
             }
