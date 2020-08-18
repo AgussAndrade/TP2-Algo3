@@ -4,4 +4,6 @@ public interface Grupal extends Opcion {
 
     void seleccionar(String parametro);
     Grupal copiarOpcion();
+    String grupoSeleccionado();
+    String grupo();
 }
