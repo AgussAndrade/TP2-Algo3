@@ -8,7 +8,6 @@ import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.opciones.Grupal;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.opciones.Posicionable;
-import edu.fiuba.algo3.modelo.preguntas.*;
 
 import java.util.List;
 
