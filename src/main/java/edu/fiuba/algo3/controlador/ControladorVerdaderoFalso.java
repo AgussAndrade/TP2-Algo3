@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,12 +21,12 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
     public Label puntajeJugador2;
     public Label nombreJugador2;
     public Label nombreJugador1;
-    public Button botonExclusividadJugador1;
-    public Button botonExclusividadJugador2;
-    public Button botonMultiplicadorX2Jugador1;
-    public Button botonMultiplicadorX2Jugador2;
-    public Button botonMultiplicadorX3Jugador1;
-    public Button botonMultiplicadorX3Jugador2;
+//    public ToggleButton botonExclusividadJugador1;
+//    public ToggleButton botonExclusividadJugador2;
+//    public ToggleButton botonMultiplicadorX2Jugador1;
+//    public ToggleButton botonMultiplicadorX2Jugador2;
+//    public ToggleButton botonMultiplicadorX3Jugador1;
+//    public ToggleButton botonMultiplicadorX3Jugador2;
     private int multiplicador = 1;
 
     @FXML
@@ -45,6 +46,9 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         List<Binaria> selecciones =((VerdaderoFalso)preguntaActual).obtenerOpciones();
         selecciones.get(0).seleccionar();
+        accionMultiplicadorX2();
+        accionMultiplicadorX2();
+        accionExclusividad();
         constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
         constructorDeRespuestaActual.conMultiplicador(new Multiplicador(multiplicador));
         respuestas.add(constructorDeRespuestaActual.build());
@@ -55,25 +59,27 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         List<Binaria> selecciones = ((VerdaderoFalso)preguntaActual).obtenerOpciones();
         selecciones.get(1).seleccionar();
+        accionMultiplicadorX2();
+        accionMultiplicadorX3();
+        accionExclusividad();
         constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
         constructorDeRespuestaActual.conMultiplicador(new Multiplicador(multiplicador));
         respuestas.add(constructorDeRespuestaActual.build());
         continuar();
     }
 
-    public void activarExclusividad(ActionEvent actionEvent) {
-        if(jugadorActual == 0){
-            botonExclusividadJugador1.setVisible(false);
+    public void accionExclusividad() {
+        if(jugadorActual == 0 && botonExclusividadJugador1.isSelected()){
+            botonExclusividadJugador1.setDisable(true);
             llamadosAAplicadorDePuntos +=1;
         }
-        else {
-            botonExclusividadJugador2.setVisible(false);
+        else if (jugadorActual == 1 && botonExclusividadJugador2.isSelected()) {
+            botonExclusividadJugador2.setDisable(true);
             llamadosAAplicadorDePuntos +=1;
         }
     }
 
-    public void activarMultiplicadorX2(ActionEvent actionEvent) {
-        //       System.out.println(jugadorActual);
+    public void accionMultiplicadorX2() {
         if(jugadorActual == 0){
             botonMultiplicadorX2Jugador1.setVisible(false);
             botonMultiplicadorX3Jugador1.setVisible(false);
@@ -86,7 +92,7 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
         }
     }
 
-    public void activarMultiplicadorX3(ActionEvent actionEvent) {
+    public void accionMultiplicadorX3() {
         if(jugadorActual == 0){
             botonMultiplicadorX2Jugador1.setVisible(false);
             botonMultiplicadorX3Jugador1.setVisible(false);

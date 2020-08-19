@@ -7,6 +7,7 @@ import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 
 import java.io.IOException;
 import java.util.*;
@@ -14,12 +15,12 @@ import java.util.*;
 public class ControladorPregunta extends ControladorPrincipal {
     public Label nombreJugador;
     public Label tiempo;
-    public Button botonMultiplicadorX3Jugador1;
-    public Button botonMultiplicadorX2Jugador1;
-    public Button botonExclusividadJugador1;
-    public Button botonMultiplicadorX3Jugador2;
-    public Button botonMultiplicadorX2Jugador2;
-    public Button botonExclusividadJugador2;
+    public ToggleButton botonMultiplicadorX3Jugador1;
+    public ToggleButton botonMultiplicadorX2Jugador1;
+    public ToggleButton botonExclusividadJugador1;
+    public ToggleButton botonMultiplicadorX3Jugador2;
+    public ToggleButton botonMultiplicadorX2Jugador2;
+    public ToggleButton botonExclusividadJugador2;
 
     Timer temporizador;
     int tiempoRestante;

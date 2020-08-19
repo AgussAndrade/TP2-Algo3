@@ -126,7 +126,7 @@
       <left>
          <AnchorPane prefHeight="632.0" prefWidth="326.0" style="-fx-background-color: #2F3136;" BorderPane.alignment="CENTER">
             <children>
-               <Button fx:id="botonExclusividadJugador2" layoutX="49.0" layoutY="377.0" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="100.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="377.0">
+               <Button fx:id="botonExclusividadJugador2" layoutX="49.0" layoutY="377.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="230.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="377.0">
                   <font>
                      <Font name="System Bold" size="26.0" />
                   </font>
