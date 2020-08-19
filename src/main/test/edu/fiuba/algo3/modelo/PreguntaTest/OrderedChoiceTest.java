@@ -8,8 +8,6 @@ import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.opciones.OpcionPosicion;
 import edu.fiuba.algo3.modelo.opciones.Posicionable;
 import edu.fiuba.algo3.modelo.preguntas.OrderedChoice;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaBuilder;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -2,8 +2,8 @@ package edu.fiuba.algo3.modelo.EstrategiaTest;
 
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaBuilder;
+import edu.fiuba.algo3.modelo.Respuesta;
+import edu.fiuba.algo3.modelo.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.estrategias.Estrategia;
 import edu.fiuba.algo3.modelo.estrategias.Penalizable;
 import edu.fiuba.algo3.modelo.opciones.Binaria;

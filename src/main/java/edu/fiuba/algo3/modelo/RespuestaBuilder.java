@@ -1,13 +1,12 @@
-package edu.fiuba.algo3.modelo.respuesta;
+package edu.fiuba.algo3.modelo;
 
-import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RespuestaBuilder implements IBuilder {
+public class RespuestaBuilder implements IBuilder{
     private Jugador responsable = new Jugador("Jugador que no existe");
     private List<Opcion> selecciones = new ArrayList<>();
     private Multiplicador multiplicador = new Multiplicador(1);

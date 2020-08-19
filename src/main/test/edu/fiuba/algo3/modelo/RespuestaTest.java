@@ -4,8 +4,6 @@ import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Correcta;
 import edu.fiuba.algo3.modelo.opciones.Incorrecta;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
-import edu.fiuba.algo3.modelo.respuesta.Respuesta;
-import edu.fiuba.algo3.modelo.respuesta.RespuestaBuilder;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
