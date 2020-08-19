@@ -36,6 +36,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
     public Hashtable<String,VBox> mapaDeGrupos = new Hashtable<>();
 
     public void initialize() {
+        cargarBotones();
         nombreJugador.setText(jugadores.get(jugadorActual).nombre());
         nombreJugador1.setText(jugadores.get(0).nombre());
         nombreJugador2.setText(jugadores.get(1).nombre());
@@ -45,7 +46,6 @@ public class ControladorGroupChoice extends ControladorPregunta{
         ajustarLabel(enunciadoPregunta);
         selecciones = ((GroupChoice)preguntaActual).obtenerOpciones();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
-        cargarBotones();
         opciones = new Label[]{opcion1, opcion2, opcion3, opcion4, opcion5, opcion6};
         boxGrupos = new VBox[]{BoxSinGrupo,BoxGrupoA,BoxGrupoB};
         grupos = new Label[]{nombreGrupoA,nombreGrupoB};
