@@ -80,8 +80,6 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     }
 
     public void responder(ActionEvent actionEvent) throws IOException {
-        ToggleButton toggleButton = new ToggleButton();
-        toggleButton.isSelected();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
         System.out.println(multiplicador);
