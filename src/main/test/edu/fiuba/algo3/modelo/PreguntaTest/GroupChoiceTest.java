@@ -8,6 +8,8 @@ import edu.fiuba.algo3.modelo.opciones.Grupal;
 import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.opciones.OpcionDeGrupo;
 import edu.fiuba.algo3.modelo.preguntas.GroupChoice;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaBuilder;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

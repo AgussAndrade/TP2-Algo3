@@ -1,7 +1,7 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.Respuesta;
-import edu.fiuba.algo3.modelo.RespuestaBuilder;
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.aplicadores.AplicadorFactory;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.application.Platform;
@@ -54,7 +54,7 @@ public class ControladorPregunta extends ControladorPrincipal {
                 jugadorActual=0;
                 respuestas.clear();
                 preguntaActual=preguntas.remove(0);
-                flujoDePrograma.escenaIntermedia();
+                flujoDePrograma.escenaResumenDePuntos();
             }else {
                 flujoDePrograma.siguienteEscena();
             }

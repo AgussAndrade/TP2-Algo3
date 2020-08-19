@@ -1,7 +1,5 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.Respuesta;
-import edu.fiuba.algo3.modelo.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.preguntas.VerdaderoFalso;
@@ -39,6 +37,7 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
         puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
         puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
         enunciadoPregunta.setText(preguntaActual.enunciado());
+        ajustarLabel(enunciadoPregunta);
         iniciarTemporizador();
     }
 

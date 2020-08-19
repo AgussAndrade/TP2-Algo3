@@ -60,4 +60,13 @@ public class FlujoDePrograma {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void escenaResumenDePuntos() throws IOException {
+        loader = new FXMLLoader(getClass().getResource("/vista/ResumenDePuntos.fxml" ));
+        root = loader.load();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
