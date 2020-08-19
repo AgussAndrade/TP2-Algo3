@@ -7,6 +7,7 @@ import edu.fiuba.algo3.modelo.preguntas.GroupChoice;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ToggleButton;
@@ -91,7 +92,11 @@ public class ControladorGroupChoice extends ControladorPregunta{
     public void dragDoneOpcion(DragEvent dragEvent) { //SOURCE -  soltas el click y terminas de arrastrar
 //        System.out.print(dragEvent.getDragboard().getString() + "dragDoneOpcion |||||||| \n");
         if (dragEvent.getTransferMode() == TransferMode.COPY) {
-
+                    System.out.print("if\n");
+                    System.out.print(dragEvent.getGestureTarget().getClass() + "\n");
+                    System.out.print(((Label)dragEvent.getGestureSource()).getParent().getClass() + "\n");
+                    System.out.print(((Label)dragEvent.getSource()).getText() + "\n");
+                    System.out.print(((Label)dragEvent.getTarget()).getText() + "\n");
         }
         dragEvent.consume();
         actualizarVistaDeListas();
@@ -102,18 +107,14 @@ public class ControladorGroupChoice extends ControladorPregunta{
         Dragboard db = dragEvent.getDragboard();
         boolean success = false;
         if (db.hasString()) {
-            success = true;
-            for (Grupal opcion : selecciones){
-                if (opcion.texto().equals(dragEvent.getDragboard().getString())){
-                    opcion.seleccionar(((VBox)(dragEvent.getTarget())).getId());
-//                    ((VBox)(dragEvent.getGestureTarget())).getId()
-//                    System.out.print("if\n");
-//                    System.out.print(dragEvent.getGestureTarget().getClass() + "\n");
-//                    System.out.print(dragEvent.getGestureSource().getClass() + "\n");
-//                    System.out.print(((Label)dragEvent.getSource()).getText() + "\n");
-//                    System.out.print(((Label)dragEvent.getTarget()).getText() + "\n");
+                success = true;
+                for (Grupal opcion : selecciones) {
+                    if (opcion.texto().equals(dragEvent.getDragboard().getString())) {
+                        if (dragEvent.getTarget().getClass() == VBox.class) opcion.seleccionar(((VBox) (dragEvent.getTarget())).getId());
+                        else if (dragEvent.getTarget().getClass() == Label.class) opcion.seleccionar(((VBox)(((Label)dragEvent.getTarget()).getParent())).getId());
+                        else opcion.seleccionar(((VBox)(((Node)dragEvent.getTarget()).getParent().getParent())).getId());
+                    }
                 }
-            }
         }
         dragEvent.setDropCompleted(success);
 
@@ -165,5 +166,4 @@ public class ControladorGroupChoice extends ControladorPregunta{
     public void activarMultiplicadorX3(ActionEvent actionEvent) {
         constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
     }
-
 }
