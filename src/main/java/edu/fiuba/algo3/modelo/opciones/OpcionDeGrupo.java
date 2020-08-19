@@ -5,7 +5,7 @@ package edu.fiuba.algo3.modelo.opciones;
 public class OpcionDeGrupo implements Grupal {
     String enunciado;
     String grupo;
-    String grupoSeleccionado = "";
+    String grupoSeleccionado = "sinGrupo";
 
     public OpcionDeGrupo(String enunciado, String grupo){
         this.grupo = grupo;

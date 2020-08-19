@@ -51,7 +51,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
         opciones = new Label[]{opcion1, opcion2, opcion3, opcion4, opcion5, opcion6};
         BoxGrupos = new VBox[]{BoxSinGrupo,BoxGrupoA,BoxGrupoB};
         int i=0,j=0;
-        mapaDeGrupos.put("",BoxGrupos[j++]);
+        mapaDeGrupos.put("sinGrupo",BoxGrupos[j++]);
         for (Grupal opcion : selecciones){
             System.out.print(i+":"+ opcion.texto() + "\n");
             mapaDeOpciones.put(opcion.texto(),opciones[i]);
@@ -66,7 +66,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     private void actualizarVistaDeListas(){
-        System.out.print("actualizarListas:" + "\n");
+//        System.out.print("actualizarListas:" + "\n");
         for (Grupal opcion : selecciones){
             System.out.print("opcion.grupoSeleccionado():" + opcion.grupoSeleccionado() + "\n");
             System.out.print("mapaDeGrupos.get(opcion.grupoSeleccionado()):" + mapaDeGrupos.get(opcion.grupoSeleccionado()) + "\n");
@@ -89,7 +89,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     public void dragDoneOpcion(DragEvent dragEvent) { //SOURCE -  soltas el click y terminas de arrastrar
-        System.out.print(dragEvent.getDragboard().getString() + "dragDoneOpcion |||||||| \n");
+//        System.out.print(dragEvent.getDragboard().getString() + "dragDoneOpcion |||||||| \n");
         if (dragEvent.getTransferMode() == TransferMode.COPY) {
 
         }
@@ -98,14 +98,13 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     public void dragDroppedBox(DragEvent dragEvent) { //TARGET soltas el click y terminas de arrastrar
-        System.out.print("dragDroppedGrupoA-------------------------------------\n");
+//        System.out.print("dragDroppedGrupoA-------------------------------------\n");
         Dragboard db = dragEvent.getDragboard();
         boolean success = false;
         if (db.hasString()) {
             success = true;
             for (Grupal opcion : selecciones){
                 if (opcion.texto().equals(dragEvent.getDragboard().getString())){
-//                    System.out.print(((Label)dragEvent.getGestureSource()).getText() + "\n");
                     opcion.seleccionar(((VBox)(dragEvent.getTarget())).getId());
 //                    ((VBox)(dragEvent.getGestureTarget())).getId()
 //                    System.out.print("if\n");
