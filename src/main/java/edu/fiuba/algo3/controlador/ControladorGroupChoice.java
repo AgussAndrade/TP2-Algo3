@@ -63,6 +63,10 @@ public class ControladorGroupChoice extends ControladorPregunta{
             }
             i++;
         }
+        j++;
+        for (;j< opciones.length;j++){
+            opciones[j].setText("");
+        }
         iniciarTemporizador();
     }
 
