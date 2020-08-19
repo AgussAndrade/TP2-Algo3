@@ -25,12 +25,6 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public ToggleButton opcion2;
     public ToggleButton opcion3;
     public ToggleButton opcion4;
-    public Button botonExclusividadJugador1;
-    public Button botonExclusividadJugador2;
-    public Button botonMultiplicadorX2Jugador1;
-    public Button botonMultiplicadorX2Jugador2;
-    public Button botonMultiplicadorX3Jugador1;
-    public Button botonMultiplicadorX3Jugador2;
     private  List<Binaria> opciones;
     private int multiplicador = 1;
     @FXML
@@ -104,43 +98,5 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public void activarOpcion4(ActionEvent actionEvent){
         opciones.get(3).seleccionar();
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
-    }
-    public void activarExclusividad(ActionEvent actionEvent) {
-        if(jugadorActual == 0){
-            botonExclusividadJugador1.setVisible(false);
-            llamadosAAplicadorDePuntos +=1;
-        }
-        else {
-            botonExclusividadJugador2.setVisible(false);
-            llamadosAAplicadorDePuntos +=1;
-        }
-    }
-
-    public void activarMultiplicadorX2(ActionEvent actionEvent) {
- //       System.out.println(jugadorActual);
-        if(jugadorActual == 0){
-            botonMultiplicadorX2Jugador1.setVisible(false);
-            botonMultiplicadorX3Jugador1.setVisible(false);
-            multiplicador =2;
-        }
-        else {
-            botonMultiplicadorX2Jugador2.setVisible(false);
-            botonMultiplicadorX3Jugador2.setVisible(false);
-            multiplicador = 2;
-        }
-    }
-
-    public void activarMultiplicadorX3(ActionEvent actionEvent) {
-        if(jugadorActual == 0){
-            botonMultiplicadorX2Jugador1.setVisible(false);
-            botonMultiplicadorX3Jugador1.setVisible(false);
-            multiplicador = 3;
-        }
-
-        else {
-            botonMultiplicadorX2Jugador2.setVisible(false);
-            botonMultiplicadorX3Jugador2.setVisible(false);
-            multiplicador = 3;
-        }
     }
 }

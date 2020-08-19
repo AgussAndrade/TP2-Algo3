@@ -1,10 +1,12 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.respuesta.Respuesta;
 import edu.fiuba.algo3.modelo.respuesta.RespuestaBuilder;
 import edu.fiuba.algo3.modelo.aplicadores.AplicadorFactory;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
@@ -15,12 +17,9 @@ import java.util.*;
 public class ControladorPregunta extends ControladorPrincipal {
     public Label nombreJugador;
     public Label tiempo;
-    public ToggleButton botonMultiplicadorX3Jugador1;
-    public ToggleButton botonMultiplicadorX2Jugador1;
-    public ToggleButton botonExclusividadJugador1;
-    public ToggleButton botonMultiplicadorX3Jugador2;
-    public ToggleButton botonMultiplicadorX2Jugador2;
-    public ToggleButton botonExclusividadJugador2;
+    public ToggleButton botonExclusividad;
+    public ToggleButton botonMultiplicadorX2;
+    public ToggleButton botonMultiplicadorX3;
 
     Timer temporizador;
     int tiempoRestante;
@@ -44,8 +43,7 @@ public class ControladorPregunta extends ControladorPrincipal {
     protected void continuar() throws IOException {
         temporizador.cancel();
         if (jugadorActual < jugadores.size() - 1){
-            temporizador.cancel();
-      //      System.out.print(jugadorActual + "\n");
+//            temporizador.cancel();
             nombreJugador.setText(jugadores.get(++jugadorActual).nombre());
             flujoDePrograma.escenaIntermedia();
         }else{
@@ -63,7 +61,7 @@ public class ControladorPregunta extends ControladorPrincipal {
     }
 
     protected void iniciarTemporizador(){
-        temporizador = new Timer();
+        temporizador = new Timer(true);//Avisa que es un thread secundario y debe finalizar al finalizar el programa
         tiempoRestante = 10;
         temporizador.schedule(new TimerTask(){
             @Override
@@ -86,44 +84,45 @@ public class ControladorPregunta extends ControladorPrincipal {
 
     public void cargarBotones() {
         String estrategia = preguntaActual.devolverEstrategia().getClass().getSimpleName();
-        //System.out.println(jugadorActual);
-        if(jugadorActual == 0){
-            if(estrategia.equals("Penalizable")){
-                botonExclusividadJugador1.setVisible(false);
-                botonExclusividadJugador2.setVisible(false);
-                botonMultiplicadorX2Jugador2.setVisible(false);
-                botonMultiplicadorX2Jugador1.setVisible(true);
-                botonMultiplicadorX3Jugador2.setVisible(false);
-                botonMultiplicadorX3Jugador1.setVisible(true);
-
-            }
-            else{
-                botonExclusividadJugador1.setVisible(true);
-                botonExclusividadJugador2.setVisible(false);
-                botonMultiplicadorX2Jugador1.setVisible(false);
-                botonMultiplicadorX2Jugador2.setVisible(false);
-                botonMultiplicadorX3Jugador1.setVisible(false);
-                botonMultiplicadorX3Jugador2.setVisible(false);
-            }
+        System.out.println(jugadorActual);
+        if(estrategia.equals("Penalizable")){
+            botonExclusividad.setVisible(false);
+            botonMultiplicadorX2.setVisible(true);
+            botonMultiplicadorX3.setVisible(true);
+        }else{
+            botonExclusividad.setVisible(true);
+            botonMultiplicadorX2.setVisible(false);
+            botonMultiplicadorX3.setVisible(false);
         }
-        else{
-            if(estrategia.equals("Penalizable")){
-                botonExclusividadJugador2.setVisible(false);
-                botonExclusividadJugador1.setVisible(false);
-                botonMultiplicadorX2Jugador1.setVisible(false);
-                botonMultiplicadorX2Jugador2.setVisible(true);
-                botonMultiplicadorX3Jugador1.setVisible(false);
-                botonMultiplicadorX3Jugador2.setVisible(true);
+    }
 
-            }
-            else{
-                botonExclusividadJugador2.setVisible(true);
-                botonExclusividadJugador1.setVisible(false);
-                botonMultiplicadorX2Jugador2.setVisible(false);
-                botonMultiplicadorX2Jugador1.setVisible(false);
-                botonMultiplicadorX3Jugador2.setVisible(false);
-                botonMultiplicadorX3Jugador1.setVisible(false);
-            }
+    public void activarExclusividad(ActionEvent actionEvent) {
+        if(botonExclusividad.isSelected()){
+            llamadosAAplicadorDePuntos +=1;
+        }else llamadosAAplicadorDePuntos -=1;
+    }
+
+    public void activarMultiplicadorX2(ActionEvent actionEvent) {
+        System.out.print("X2\n");
+        if (botonMultiplicadorX2.isSelected()){
+            System.out.print("X2isSelected\n");
+            botonMultiplicadorX3.setSelected(false);
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
+        }else {
+            System.out.print("X2else\n");
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(1));
+        }
+    }
+
+    public void activarMultiplicadorX3(ActionEvent actionEvent) {
+        System.out.print("X3\n");
+        if (botonMultiplicadorX3.isSelected()){
+            System.out.print("X3isSelected\n");
+            botonMultiplicadorX2.setSelected(false);
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
+        }else {
+            System.out.print("X3else\n");
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(1));
         }
     }
 }

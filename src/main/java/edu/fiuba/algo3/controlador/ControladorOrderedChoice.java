@@ -95,9 +95,6 @@ public class ControladorOrderedChoice extends ControladorPregunta{
         continuar();
     }
 
-    public void activarExclusividad(ActionEvent actionEvent) {
-    }
-
     public void seleccionarOpcion(ActionEvent actionEvent){
         if (opcion1.isSelected() && !(opcion1.isDisabled())){
             (opciones.get(0)).seleccionar(posicion);
@@ -129,13 +126,5 @@ public class ControladorOrderedChoice extends ControladorPregunta{
             opcion6.setDisable(true);
             posicion += 1;
         }
-    }
-
-    public void activarMultiplicadorX2(ActionEvent actionEvent) {
-       // constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
-    }
-
-    public void activarMultiplicadorX3(ActionEvent actionEvent) {
-     //   constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
     }
 }

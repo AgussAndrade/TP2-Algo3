@@ -2,10 +2,12 @@ package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Grupal;
+import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.preguntas.GroupChoice;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.input.*;
 import javafx.scene.layout.VBox;
 
@@ -21,11 +23,14 @@ public class ControladorGroupChoice extends ControladorPregunta{
     public Label puntajeJugador2;
     public Label nombreJugador2;
     public Label nombreJugador1;
+    public Label nombreGrupoA;
+    public Label nombreGrupoB;
     private int multiplicador = 1;
     public Label opcion1,opcion2,opcion3,opcion4,opcion5,opcion6;
     public VBox BoxGrupoB,BoxGrupoA,BoxSinGrupo;
     private List<Grupal> selecciones;
     public Label[] opciones;
+    public Label[] grupos;
     public VBox[] boxGrupos;
     public Hashtable<String,Label> mapaDeOpciones = new Hashtable<>();
     public Hashtable<String,VBox> mapaDeGrupos = new Hashtable<>();
@@ -40,18 +45,19 @@ public class ControladorGroupChoice extends ControladorPregunta{
         ajustarLabel(enunciadoPregunta);
         selecciones = ((GroupChoice)preguntaActual).obtenerOpciones();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
-
+        cargarBotones();
         opciones = new Label[]{opcion1, opcion2, opcion3, opcion4, opcion5, opcion6};
         boxGrupos = new VBox[]{BoxSinGrupo,BoxGrupoA,BoxGrupoB};
+        grupos = new Label[]{nombreGrupoA,nombreGrupoB};
         int i=0,j=0;
         mapaDeGrupos.put("sinGrupo", boxGrupos[j++]);
         boxGrupos[j].setId("sinGrupo");
         for (Grupal opcion : selecciones){
-            System.out.println(opcion.grupo());
             mapaDeOpciones.put(opcion.texto(),opciones[i]);
             opciones[i].setText(opcion.texto());
             if(!mapaDeGrupos.containsKey(opcion.grupo())){
                 mapaDeGrupos.put(opcion.grupo(), boxGrupos[j]);
+                grupos[j-1].setText(opcion.grupo());
                 boxGrupos[j].setId(opcion.grupo());
                 j++;
             }
@@ -62,17 +68,13 @@ public class ControladorGroupChoice extends ControladorPregunta{
 
     private void actualizarVistaDeListas(){
         for (Grupal opcion : selecciones){
-            System.out.print("opcion.grupoSeleccionado():" + opcion.grupoSeleccionado() + "\n");
-            System.out.print("mapaDeGrupos.get(opcion.grupoSeleccionado()):" + mapaDeGrupos.get(opcion.grupoSeleccionado()) + "\n");
-            System.out.print("contains:" + mapaDeGrupos.get(opcion.grupoSeleccionado()).getChildren().contains(mapaDeOpciones.get(opcion.texto())) + "\n");
             if (!mapaDeGrupos.get(opcion.grupoSeleccionado()).getChildren().contains(mapaDeOpciones.get(opcion.texto()))){
-                System.out.print("recargo:" + "\n");
                 mapaDeGrupos.get(opcion.grupoSeleccionado()).getChildren().add(mapaDeOpciones.get(opcion.texto()));
             }
         }
     }
 
-    public void dragDetectedOpcion(MouseEvent mouseEvent) { //SOURCE - cuando empezás a arrastrar
+    public void dragDetectedOpcion(MouseEvent mouseEvent) { //SOURCE - Se detecta que comenzo a arrastrarse el label
         Dragboard db = ((Label)mouseEvent.getSource()).startDragAndDrop(TransferMode.ANY);
         ClipboardContent content = new ClipboardContent();
         content.putString(((Label)mouseEvent.getSource()).getText());
@@ -81,25 +83,13 @@ public class ControladorGroupChoice extends ControladorPregunta{
         mouseEvent.consume();
     }
 
-    public void dragDoneOpcion(DragEvent dragEvent) { //SOURCE -  soltas el click y terminas de arrastrar
-        if (dragEvent.getTransferMode() == TransferMode.COPY) {
-                    System.out.print("if\n");
-                    System.out.print(dragEvent.getGestureTarget().getClass() + "\n");
-                    System.out.print(((Label)dragEvent.getGestureSource()).getParent().getClass() + "\n");
-                    System.out.print(((Label)dragEvent.getSource()).getText() + "\n");
-                    System.out.print(((Label)dragEvent.getTarget()).getText() + "\n");
-        }
-        dragEvent.consume();
-        actualizarVistaDeListas();
-    }
-
-    public void dragDroppedBox(DragEvent dragEvent) { //TARGET soltas el click y terminas de arrastrar
+    public void dragDroppedBox(DragEvent dragEvent) { //TARGET - Se detecta que se solto la opcion sobre el VBox objetvo
         Dragboard db = dragEvent.getDragboard();
         boolean success = false;
         if (db.hasString()) {
                 success = true;
                 for (Grupal opcion : selecciones) {
-                    if (opcion.texto().equals(dragEvent.getDragboard().getString())) {
+                    if (opcion.texto().equals(dragEvent.getDragboard().getString())) { //El else-if busca si es que uno esta dropeando sobre el objetivo o uno de sus hijos
                         if (dragEvent.getTarget().getClass() == VBox.class) opcion.seleccionar(((VBox) (dragEvent.getTarget())).getId());
                         else if (dragEvent.getTarget().getClass() == Label.class) opcion.seleccionar(((VBox)(((Label)dragEvent.getTarget()).getParent())).getId());
                         else opcion.seleccionar(((VBox)(((Node)dragEvent.getTarget()).getParent().getParent())).getId());
@@ -107,60 +97,33 @@ public class ControladorGroupChoice extends ControladorPregunta{
                 }
         }
         dragEvent.setDropCompleted(success);
-
+        actualizarVistaDeListas();
         dragEvent.consume();
     }
 
-    public void dragOverBox(DragEvent dragEvent) { //TARGET haces que acepte un drop
-        if (dragEvent.getGestureSource().getClass() == opcion1.getClass() && dragEvent.getDragboard().hasString()) {
+    public void dragOverBox(DragEvent dragEvent) { //TARGET - Si lo que se arrastra sobre el VBox objetivo es un Label, se acepta el drop
+        if (dragEvent.getGestureSource().getClass() == Label.class && dragEvent.getDragboard().hasString()) {
             dragEvent.acceptTransferModes(TransferMode.COPY_OR_MOVE);
         }
 
         dragEvent.consume();
     }
 
-    public void dragEnteredBox(DragEvent dragEvent) { //TARGET cuando estas arrastrando por encima del target
+    public void dragEnteredBox(DragEvent dragEvent) { //TARGET - Ayuda visual: Cuando se esta arrastrando sobre el objetivo cambia de color
+        ((VBox)dragEvent.getTarget()).setStyle("-fx-background-color: #43B581; -fx-background-radius: 20 20 20 20");
     }
 
-    public void dragExitedBox(DragEvent dragEvent) { //TARGET cuando dejas de arrastrar por encima del target
+    public void dragExitedBox(DragEvent dragEvent) { //TARGET - Ayuda visual: Cuando se sale del objetivo, este cambia de color
+        ((VBox)dragEvent.getTarget()).setStyle("-fx-background-color: #69C49A; -fx-background-radius: 20 20 20 20");
     }
 
     public void responder(ActionEvent actionEvent) throws IOException {
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         constructorDeRespuestaActual.conMultiplicador( new Multiplicador(multiplicador) );
+        constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
         respuestas.add(constructorDeRespuestaActual.build());
         multiplicador = 1;
         continuar();
     }
 
-    public void activarExclusividad(ActionEvent actionEvent) {
-    }
-
-    public void activarMultiplicadorX2(ActionEvent actionEvent) {
-        //       System.out.println(jugadorActual);
-        if(jugadorActual == 0){
-            botonMultiplicadorX2Jugador1.setVisible(false);
-            botonMultiplicadorX3Jugador1.setVisible(false);
-            multiplicador =2;
-        }
-        else {
-            botonMultiplicadorX2Jugador2.setVisible(false);
-            botonMultiplicadorX3Jugador2.setVisible(false);
-            multiplicador = 2;
-        }
-    }
-
-    public void activarMultiplicadorX3(ActionEvent actionEvent) {
-        if(jugadorActual == 0){
-            botonMultiplicadorX2Jugador1.setVisible(false);
-            botonMultiplicadorX3Jugador1.setVisible(false);
-            multiplicador = 3;
-        }
-
-        else {
-            botonMultiplicadorX2Jugador2.setVisible(false);
-            botonMultiplicadorX3Jugador2.setVisible(false);
-            multiplicador = 3;
-        }
-    }
 }

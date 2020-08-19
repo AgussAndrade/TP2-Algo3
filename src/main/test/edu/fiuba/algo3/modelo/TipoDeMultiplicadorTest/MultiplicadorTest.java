@@ -13,5 +13,4 @@ public class MultiplicadorTest {
 
         assertEquals(6,multiplicador.multiplicarPuntos(puntos));
     }
-
 }
