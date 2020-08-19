@@ -26,6 +26,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
         puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
         puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
         enunciadoPregunta.setText(preguntaActual.enunciado());
+        ajustarLabel(enunciadoPregunta);
         iniciarTemporizador();
     }
 
