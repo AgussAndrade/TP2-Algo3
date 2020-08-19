@@ -114,18 +114,6 @@
     }
   },
   {
-    "tipoDePregunta" : "groupChoice",
-    "enunciado" : "Separar futbolistas de basquetbolistas",
-    "opciones" :
-      {
-          "nombreGrupo1" : "futbolistas",
-          "opciones1" : ["Dybala", "Lenglet","Neuer"],
-          "nombreGrupo2" : "basquetbolistas",
-          "opciones2" : ["LeBron James", "Scola", "Durant"]
-      }
-
-  },
-  {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
     "enunciado" : "¿Que ciudades pertenecen a Francia?",
