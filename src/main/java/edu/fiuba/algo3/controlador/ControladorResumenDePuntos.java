@@ -19,8 +19,8 @@ public class ControladorResumenDePuntos extends ControladorPregunta {
         nombreJugador2.setText(jugadores.get(1).nombre());
         puntosJugador1.setText(String.valueOf(jugadores.get(0).puntos()));
         puntosJugador2.setText(String.valueOf(jugadores.get(1).puntos()));
-        diferenciaActualJ1 += jugadores.get(0).puntos();
-        diferenciaActualJ2 += jugadores.get(1).puntos();
+        diferenciaActualJ1 = jugadores.get(0).puntos() - diferenciaActualJ1;
+        diferenciaActualJ2 = jugadores.get(1).puntos() - diferenciaActualJ2;
         if(diferenciaActualJ1 > 0){
             difJugador1.setText("+" + String.valueOf(jugadores.get(0).puntos()));
         }
