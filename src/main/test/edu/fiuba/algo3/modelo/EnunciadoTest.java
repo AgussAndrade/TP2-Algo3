@@ -10,6 +10,8 @@ import edu.fiuba.algo3.modelo.estrategias.PuntajeParcial;
 import edu.fiuba.algo3.modelo.opciones.*;
 import edu.fiuba.algo3.modelo.preguntas.*;
 
+import edu.fiuba.algo3.modelo.respuesta.Respuesta;
+import edu.fiuba.algo3.modelo.respuesta.RespuestaBuilder;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
