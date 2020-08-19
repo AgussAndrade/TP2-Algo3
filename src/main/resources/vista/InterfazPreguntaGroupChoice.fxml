@@ -50,9 +50,6 @@
                                     <font>
                                        <Font name="System Bold" size="20.0" />
                                     </font>
-                                    <padding>
-                                       <Insets top="5.0" />
-                                    </padding>
                                  </Label>
                                  <Label fx:id="opcion2" alignment="CENTER" onDragDetected="#dragDetectedOpcion" text="textoOpcion" textFill="WHITE">
                                     <font>
@@ -80,6 +77,9 @@
                                     </font>
                                  </Label>
                               </children>
+                              <padding>
+                                 <Insets top="5.0" />
+                              </padding>
                            </VBox>
                            <VBox id="B" fx:id="BoxGrupoB" alignment="TOP_CENTER" onDragDropped="#dragDroppedBox" onDragEntered="#dragEnteredBox" onDragExited="#dragExitedBox" onDragOver="#dragOverBox" prefHeight="200.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #69C49A; -fx-background-radius: 20 20 20 20;" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css">
                               <padding>

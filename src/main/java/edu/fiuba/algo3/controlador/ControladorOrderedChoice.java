@@ -89,8 +89,6 @@ public class ControladorOrderedChoice extends ControladorPregunta{
 
     public void responder(ActionEvent actionEvent) throws IOException {
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
-//        List<Posicionable> selecciones = ((OrderedChoice)preguntaActual).obtenerOpciones();
-//        selecciones.get(1).seleccionar("");
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
         respuestas.add(constructorDeRespuestaActual.build());
         continuar();
