@@ -16,11 +16,15 @@
             <children>
                <AnchorPane prefHeight="650.0" prefWidth="958.0" style="-fx-background-color: #36393F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <children>
-                     <Label fx:id="enunciadoPregunta" alignment="CENTER" layoutX="114.0" layoutY="37.0" prefHeight="97.0" prefWidth="728.0" style="-fx-background-color: #40444B; -fx-background-radius: 20 20 20 20;" text="Pregunta OrderedChoice" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="37.0">
-                        <font>
-                           <Font name="System Bold" size="55.0" />
-                        </font>
-                     </Label>
+                     <AnchorPane layoutX="114.0" layoutY="36.0" prefHeight="98.0" prefWidth="728.0" style="-fx-background-color: #40444B; -fx-background-radius: 20 20 20 20;">
+                        <children>
+                           <Label fx:id="enunciadoPregunta" alignment="CENTER" layoutX="6.0" prefHeight="134.0" prefWidth="725.0" text="Pregunta OrderedChoice" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <font>
+                                 <Font name="System Bold" size="55.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </AnchorPane>
                      <Label alignment="CENTER" layoutX="339.0" layoutY="141.0" prefHeight="71.0" prefWidth="276.0" text="Tiempo restante :" textFill="WHITE" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="339.0" AnchorPane.topAnchor="141.0">
                         <font>
                            <Font name="System Bold" size="27.0" />

@@ -35,9 +35,11 @@ public abstract class ControladorPrincipal {
 
         if (textWidth <= MAX_TEXT_WIDTH){
             label.setFont(defaultFont);
+            label.setStyle("-fx-font-weight: bold");
         }else{
             double newFontSize = defaultFontSize * MAX_TEXT_WIDTH / textWidth;
             label.setFont(Font.font(defaultFont.getFamily(), newFontSize));
+            label.setStyle("-fx-font-weight: bold");
         }
     }
 }

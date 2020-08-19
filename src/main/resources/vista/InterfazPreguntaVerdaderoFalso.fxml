@@ -13,11 +13,15 @@
       <center>
          <AnchorPane prefHeight="704.0" prefWidth="850.0" style="-fx-background-color: #36393F;" BorderPane.alignment="CENTER">
             <children>
-               <Label fx:id="enunciadoPregunta" alignment="CENTER" layoutX="114.0" layoutY="37.0" prefHeight="138.0" prefWidth="857.0" style="-fx-background-color: #40444B; -fx-background-radius: 20 20 20 20;" text="enunciadoPregunta" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="37.0">
-                  <font>
-                     <Font name="System Bold" size="63.0" />
-                  </font>
-               </Label>
+               <AnchorPane layoutX="114.0" layoutY="37.0" prefHeight="136.0" prefWidth="729.0" style="-fx-background-color: #40444B; -fx-background-radius: 20 20 20 20;" AnchorPane.leftAnchor="114.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="37.0">
+                  <children>
+                     <Label fx:id="enunciadoPregunta" alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="176.0" prefWidth="735.0" text="enunciadoPregunta" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <font>
+                           <Font name="System Bold" size="63.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
                <Button fx:id="botonVerdadero" layoutX="66.0" layoutY="484.0" mnemonicParsing="false" onAction="#seleccionadoVerdadero" prefHeight="113.0" prefWidth="343.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Verdadero" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="50.0">
                   <font>
                      <Font name="System Bold" size="45.0" />
