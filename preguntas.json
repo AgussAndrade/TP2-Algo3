@@ -1,4 +1,15 @@
-[
+[{
+  "tipoDePregunta" : "groupChoice",
+  "enunciado" : "Separar futbolistas de basquetbolistas",
+  "opciones" :
+  {
+    "nombreGrupo1" : "futbolistas",
+    "opciones1" : ["Dybala", "Lenglet","Neuer"],
+    "nombreGrupo2" : "basquetbolistas",
+    "opciones2" : ["LeBron James", "Scola", "Durant"]
+  }
+
+},
   {
     "tipoDePregunta" : "verdaderoFalso",
     "estrategia" : "clasica",
@@ -39,10 +50,13 @@
   {
     "tipoDePregunta" : "groupChoice",
     "enunciado" : "Separar paises de ciudades",
-    "opciones" : {
-      "A" : ["Argentina", "Eslovaquia","Monaco"],
-      "B" :  ["Buenos Aires", "Tokio", "Praga"]
-    }
+    "opciones" :
+      {
+        "nombreGrupo1" : "paises",
+        "opciones1" : ["Argentina", "Eslovaquia","Monaco"],
+        "nombreGrupo2" : "ciudades",
+        "opciones2" : ["Buenos Aires", "Tokio", "Praga"]
+      }
   },
   {
     "tipoDePregunta" : "multipleChoice",
@@ -102,10 +116,14 @@
   {
     "tipoDePregunta" : "groupChoice",
     "enunciado" : "Separar futbolistas de basquetbolistas",
-    "opciones" : {
-      "A" : ["Dybala", "Lenglet","Neuer"],
-      "B" :  ["LeBron James", "Scola", "Durant"]
-    }
+    "opciones" :
+      {
+          "nombreGrupo1" : "futbolistas",
+          "opciones1" : ["Dybala", "Lenglet","Neuer"],
+          "nombreGrupo2" : "basquetbolistas",
+          "opciones2" : ["LeBron James", "Scola", "Durant"]
+      }
+
   },
   {
     "tipoDePregunta" : "multipleChoice",
@@ -165,10 +183,13 @@
   {
     "tipoDePregunta" : "groupChoice",
     "enunciado" : "Separar lenguajes de tipado estatico y dinamico",
-    "opciones" : {
-      "A" : ["Java", "C","Pascal"],
-      "B" :  ["Python", "JavaScript", "PHP"]
-    }
+    "opciones" :
+      {
+        "nombreGrupo1" : "tipadoEstatico",
+        "opciones1" : ["Java", "C","Pascal"],
+        "nombreGrupo2" : "tipadoDinamico",
+        "opciones2" : ["Python", "JavaScript", "PHP"]
+      }
   },
   {
     "tipoDePregunta" : "multipleChoice",

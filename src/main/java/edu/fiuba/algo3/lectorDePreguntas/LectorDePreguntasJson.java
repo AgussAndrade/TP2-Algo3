@@ -54,16 +54,16 @@ public class LectorDePreguntasJson implements LectorDePreguntas {
      }
 
     private Pregunta guardarPreguntasGroupChoice(String enunciado, JSONObject opciones) throws CantidadDeOpcionesErroneaException {
-        JSONArray listaDeOpcionesGrupoA = (JSONArray) opciones.get("A");
-        JSONArray listaDeOpcionesGrupoB = (JSONArray) opciones.get("B");
+        JSONArray listaDeOpcionesGrupo1 = (JSONArray) opciones.get("opciones1");
+        JSONArray listaDeOpcionesGrupo2 = (JSONArray) opciones.get("opciones2");
         List<Grupal> listaDeOpciones = new ArrayList<>();
-        for(Object objetoOpcion : listaDeOpcionesGrupoA){
+        for(Object objetoOpcion : listaDeOpcionesGrupo1){
             String opcionGrupoA = (String) objetoOpcion;
-            listaDeOpciones.add(OpcionesFactory.crearOpcionDeGrupoA(opcionGrupoA));
+            listaDeOpciones.add(OpcionesFactory.crearOpcionDeGrupo(opcionGrupoA, (String)opciones.get("nombreGrupo1")));
         }
-        for(Object objetoOpcion : listaDeOpcionesGrupoB){
+        for(Object objetoOpcion : listaDeOpcionesGrupo2){
             String opcionGrupoB = (String) objetoOpcion;
-            listaDeOpciones.add(OpcionesFactory.crearOpcionDeGrupoB(opcionGrupoB));
+            listaDeOpciones.add(OpcionesFactory.crearOpcionDeGrupo(opcionGrupoB, (String) opciones.get("nombreGrupo2")));
         }
         return (PreguntaFactory.crearGroupChoice(enunciado, listaDeOpciones));
     }

@@ -62,10 +62,10 @@ public class GroupChoiceTest {
         GroupChoice pregunta = new GroupChoice(nombre, opciones, new Clasica());
         Jugador jugador = new Jugador("Juan");
 
-        opciones.get(0).seleccionar("fubtolista");
-        opciones.get(1).seleccionar("fubtolista");
+        opciones.get(1).seleccionar("futbolista");
+        opciones.get(3).seleccionar("futbolista");
         opciones.get(2).seleccionar("Basquetbolista");
-        opciones.get(3).seleccionar("Basquetbolista");
+        opciones.get(0).seleccionar("Basquetbolista");
         List<Respuesta> respuestas = new ArrayList<>();
 
         RespuestaBuilder respuestaBuilder = new RespuestaBuilder();

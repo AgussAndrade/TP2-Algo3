@@ -26,7 +26,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
     public VBox BoxGrupoB,BoxGrupoA,BoxSinGrupo;
     private List<Grupal> selecciones;
     public Label[] opciones;
-    public VBox[] BoxGrupos;
+    public VBox[] boxGrupos;
     public Hashtable<String,Label> mapaDeOpciones = new Hashtable<>();
     public Hashtable<String,VBox> mapaDeGrupos = new Hashtable<>();
 
@@ -42,14 +42,17 @@ public class ControladorGroupChoice extends ControladorPregunta{
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
 
         opciones = new Label[]{opcion1, opcion2, opcion3, opcion4, opcion5, opcion6};
-        BoxGrupos = new VBox[]{BoxSinGrupo,BoxGrupoA,BoxGrupoB};
+        boxGrupos = new VBox[]{BoxSinGrupo,BoxGrupoA,BoxGrupoB};
         int i=0,j=0;
-        mapaDeGrupos.put("sinGrupo",BoxGrupos[j++]);
+        mapaDeGrupos.put("sinGrupo", boxGrupos[j++]);
+        boxGrupos[j].setId("sinGrupo");
         for (Grupal opcion : selecciones){
+            System.out.println(opcion.grupo());
             mapaDeOpciones.put(opcion.texto(),opciones[i]);
             opciones[i].setText(opcion.texto());
             if(!mapaDeGrupos.containsKey(opcion.grupo())){
-                mapaDeGrupos.put(opcion.grupo(),BoxGrupos[j]);
+                mapaDeGrupos.put(opcion.grupo(), boxGrupos[j]);
+                boxGrupos[j].setId(opcion.grupo());
                 j++;
             }
             i++;
