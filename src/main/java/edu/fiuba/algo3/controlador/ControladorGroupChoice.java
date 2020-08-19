@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.input.*;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
@@ -30,7 +32,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
     public Label nombreJugador1;
     public Label opcion1,opcion2,opcion3,opcion4,opcion5,opcion6;
     public VBox BoxGrupoB,BoxGrupoA,BoxSinGrupo;
-    private  List<Grupal> selecciones;
+    private List<Grupal> selecciones;
     public Label[] opciones;
     public VBox[] BoxGrupos;
     public Hashtable<String,Label> mapaDeOpciones = new Hashtable<>();
@@ -76,8 +78,8 @@ public class ControladorGroupChoice extends ControladorPregunta{
         }
     }
 
-    public void dragDetectedOpcion(MouseEvent mouseEvent) { //SOURCE
-        System.out.print("dragOpcion:" + mouseEvent.getSource() + "\n");
+    public void dragDetectedOpcion(MouseEvent mouseEvent) { //SOURCE - cuando empezás a arrastrar
+//        System.out.print("dragOpcion:" + mouseEvent.getSource() + "\n");
         Dragboard db = ((Label)mouseEvent.getSource()).startDragAndDrop(TransferMode.ANY);
         ClipboardContent content = new ClipboardContent();
         content.putString(((Label)mouseEvent.getSource()).getText());
@@ -86,60 +88,66 @@ public class ControladorGroupChoice extends ControladorPregunta{
         mouseEvent.consume();
     }
 
-    public void dragDoneOpcion(DragEvent dragEvent) { //SOURCE
-        System.out.print("dragDoneOpcion\n");
+    public void dragDoneOpcion(DragEvent dragEvent) { //SOURCE -  soltas el click y terminas de arrastrar
+        System.out.print(dragEvent.getDragboard().getString() + "dragDoneOpcion |||||||| \n");
         if (dragEvent.getTransferMode() == TransferMode.COPY) {
-            for (Grupal opcion : selecciones){
-                if (opcion.texto().equals(((Label)dragEvent.getGestureSource()).getText())){
-                    System.out.print("Listo el polio\n");
-                    selecciones.get(0).seleccionar("A");
-                }
-            }
+
         }
         dragEvent.consume();
         actualizarVistaDeListas();
     }
 
-    public void dragOverBox(DragEvent dragEvent) { //TARGET
-        System.out.print("dragOverGrupoA\n");
-        if (dragEvent.getGestureSource() != BoxGrupoA &&
-                dragEvent.getDragboard().hasString()) {
-            /* allow for both copying and moving, whatever user chooses */
-            dragEvent.acceptTransferModes(TransferMode.COPY_OR_MOVE);
-        }
-
-        dragEvent.consume();
-    }
-
-    public void dragEnteredBox(DragEvent dragEvent) { //TARGET
-        System.out.print("dragEnteredGrupoA\n");
-        if (dragEvent.getGestureSource() != BoxGrupoA &&
-                dragEvent.getDragboard().hasString()) {
-//            BoxGrupoA.
-        }
-
-        dragEvent.consume();
-    }
-
-    public void dragExitedBox(DragEvent dragEvent) { //TARGET
-        System.out.print("DragExitedGrupoA\n");
-//        BoxGrupoA.setSelected(false);
-    }
-
-    public void dragDroppedBox(DragEvent dragEvent) { //TARGET
-        System.out.print("dragDroppedGrupoA\n");
+    public void dragDroppedBox(DragEvent dragEvent) { //TARGET soltas el click y terminas de arrastrar
+        System.out.print("dragDroppedGrupoA-------------------------------------\n");
         Dragboard db = dragEvent.getDragboard();
         boolean success = false;
         if (db.hasString()) {
-//            BoxGrupoA.setText(db.getString());
             success = true;
+            for (Grupal opcion : selecciones){
+                if (opcion.texto().equals(dragEvent.getDragboard().getString())){
+//                    System.out.print(((Label)dragEvent.getGestureSource()).getText() + "\n");
+                    opcion.seleccionar(((VBox)(dragEvent.getTarget())).getId());
+//                    ((VBox)(dragEvent.getGestureTarget())).getId()
+//                    System.out.print("if\n");
+//                    System.out.print(dragEvent.getGestureTarget().getClass() + "\n");
+//                    System.out.print(dragEvent.getGestureSource().getClass() + "\n");
+//                    System.out.print(((Label)dragEvent.getSource()).getText() + "\n");
+//                    System.out.print(((Label)dragEvent.getTarget()).getText() + "\n");
+                }
+            }
         }
         dragEvent.setDropCompleted(success);
 
         dragEvent.consume();
     }
 
+    public void dragOverBox(DragEvent dragEvent) { //TARGET haces que acepte un drop
+//        System.out.print("dragOverGrupoA\n");
+        if (dragEvent.getGestureSource().getClass() == opcion1.getClass() && dragEvent.getDragboard().hasString()) {
+            dragEvent.acceptTransferModes(TransferMode.COPY_OR_MOVE);
+//            System.out.print("Accept drag over\n");
+        }
 
+        dragEvent.consume();
+    }
+
+    public void dragEnteredBox(DragEvent dragEvent) { //TARGET cuando estas arrastrando por encima del target
+//        System.out.print("dragEnteredGrupoA\n");
+//        self.
+//        ((VBox)dragEvent.getTarget()).setBackground(new Background(new BackgroundFill(Color.GREEN,null,null)));
+//        if (dragEvent.getGestureSource() == BoxGrupoA && dragEvent.getDragboard().hasString()) {
+//
+//        }
+//
+//        dragEvent.consume();
+    }
+
+    public void dragExitedBox(DragEvent dragEvent) { //TARGET cuando dejas de arrastrar por encima del target
+//        System.out.print("DragExitedGrupoA\n");
+////        BoxGrupoA.setSelected(false);
+//        BoxGrupoA.setBackground(new Background(new BackgroundFill(null,null,null)));
+//        enunciadoPregunta.setText("a la izq");
+    }
 
     public void responder(ActionEvent actionEvent) throws IOException {
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
