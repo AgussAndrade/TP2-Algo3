@@ -1,25 +1,15 @@
 package edu.fiuba.algo3.controlador;
 
 import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
-import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.opciones.Grupal;
 import edu.fiuba.algo3.modelo.preguntas.GroupChoice;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.input.*;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 
 import java.io.IOException;
-import java.nio.file.attribute.BasicFileAttributeView;
-import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -46,6 +36,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
         puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
         puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
         enunciadoPregunta.setText(preguntaActual.enunciado());
+        ajustarLabel(enunciadoPregunta);
         selecciones = ((GroupChoice)preguntaActual).obtenerOpciones();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
 
@@ -67,7 +58,6 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     private void actualizarVistaDeListas(){
-//        System.out.print("actualizarListas:" + "\n");
         for (Grupal opcion : selecciones){
             System.out.print("opcion.grupoSeleccionado():" + opcion.grupoSeleccionado() + "\n");
             System.out.print("mapaDeGrupos.get(opcion.grupoSeleccionado()):" + mapaDeGrupos.get(opcion.grupoSeleccionado()) + "\n");
@@ -80,7 +70,6 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     public void dragDetectedOpcion(MouseEvent mouseEvent) { //SOURCE - cuando empezás a arrastrar
-//        System.out.print("dragOpcion:" + mouseEvent.getSource() + "\n");
         Dragboard db = ((Label)mouseEvent.getSource()).startDragAndDrop(TransferMode.ANY);
         ClipboardContent content = new ClipboardContent();
         content.putString(((Label)mouseEvent.getSource()).getText());
@@ -90,7 +79,6 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     public void dragDoneOpcion(DragEvent dragEvent) { //SOURCE -  soltas el click y terminas de arrastrar
-//        System.out.print(dragEvent.getDragboard().getString() + "dragDoneOpcion |||||||| \n");
         if (dragEvent.getTransferMode() == TransferMode.COPY) {
                     System.out.print("if\n");
                     System.out.print(dragEvent.getGestureTarget().getClass() + "\n");
@@ -103,7 +91,6 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     public void dragDroppedBox(DragEvent dragEvent) { //TARGET soltas el click y terminas de arrastrar
-//        System.out.print("dragDroppedGrupoA-------------------------------------\n");
         Dragboard db = dragEvent.getDragboard();
         boolean success = false;
         if (db.hasString()) {
@@ -122,31 +109,17 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     public void dragOverBox(DragEvent dragEvent) { //TARGET haces que acepte un drop
-//        System.out.print("dragOverGrupoA\n");
         if (dragEvent.getGestureSource().getClass() == opcion1.getClass() && dragEvent.getDragboard().hasString()) {
             dragEvent.acceptTransferModes(TransferMode.COPY_OR_MOVE);
-//            System.out.print("Accept drag over\n");
         }
 
         dragEvent.consume();
     }
 
     public void dragEnteredBox(DragEvent dragEvent) { //TARGET cuando estas arrastrando por encima del target
-//        System.out.print("dragEnteredGrupoA\n");
-//        self.
-//        ((VBox)dragEvent.getTarget()).setBackground(new Background(new BackgroundFill(Color.GREEN,null,null)));
-//        if (dragEvent.getGestureSource() == BoxGrupoA && dragEvent.getDragboard().hasString()) {
-//
-//        }
-//
-//        dragEvent.consume();
     }
 
     public void dragExitedBox(DragEvent dragEvent) { //TARGET cuando dejas de arrastrar por encima del target
-//        System.out.print("DragExitedGrupoA\n");
-////        BoxGrupoA.setSelected(false);
-//        BoxGrupoA.setBackground(new Background(new BackgroundFill(null,null,null)));
-//        enunciadoPregunta.setText("a la izq");
     }
 
     public void responder(ActionEvent actionEvent) throws IOException {
