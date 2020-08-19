@@ -69,4 +69,7 @@ public class FlujoDePrograma {
         stage.show();
     }
 
+    public Stage stage() {
+        return stage;
+    }
 }
