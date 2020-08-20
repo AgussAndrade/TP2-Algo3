@@ -10,7 +10,7 @@
    <children>
       <Label layoutX="420.0" layoutY="238.0" prefHeight="25.0" prefWidth="143.0" text="Nombre jugador Nº1" textFill="#8c9095" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="691.0">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
       <Button fx:id="enviar" layoutX="420.0" layoutY="527.0" mnemonicParsing="false" onAction="#registrarJugadores" prefHeight="51.0" prefWidth="440.0" style="-fx-background-radius: 5 5 5 5;" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Comenzar juego" textFill="WHITE" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0">
          <font>
@@ -18,11 +18,11 @@
          </font></Button>
       <Label layoutX="420.0" layoutY="360.0" prefHeight="25.0" prefWidth="143.0" text="Nombre jugador Nº2" textAlignment="CENTER" textFill="#8c9095" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="691.0">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
       <Label layoutX="404.0" layoutY="77.0" prefHeight="73.0" prefWidth="446.0" text="Registro de jugadores" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="77.0">
          <font>
-            <Font name="System Bold" size="42.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Label>
       <TextField fx:id="nombreJugador2" layoutX="420.0" layoutY="391.0" onAction="#enterCampoJugador2" prefHeight="51.0" prefWidth="440.0" styleClass="textField" stylesheets="@../css/fullpackstyling.css">

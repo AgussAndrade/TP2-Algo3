@@ -57,42 +57,42 @@
             <children>
                <Label layoutX="8.0" layoutY="12.0" prefHeight="48.0" prefWidth="88.0" text="Puntos" textFill="#f2f2f2">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
                <Label fx:id="puntajeJugador1" layoutX="236.0" layoutY="12.0" prefHeight="41.0" prefWidth="83.0" text="NN" textFill="WHITE">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
                <Label fx:id="nombreJugador2" layoutX="1059.0" layoutY="12.0" prefHeight="48.0" prefWidth="115.0" text="jugador2" textFill="#f2f2f2" AnchorPane.rightAnchor="106.0">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
                <Label fx:id="puntajeJugador2" layoutX="1202.0" layoutY="15.0" prefHeight="41.0" prefWidth="57.0" text="NN" textFill="WHITE" AnchorPane.rightAnchor="21.0">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
                <Label layoutX="963.0" layoutY="12.0" prefHeight="48.0" prefWidth="88.0" text="Puntos" textFill="#f2f2f2">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
                <Label fx:id="nombreJugador1" layoutX="104.0" layoutY="12.0" prefHeight="48.0" prefWidth="135.0" text="Jugador1" textFill="#f2f2f2">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
                <Label layoutX="208.0" layoutY="7.0" prefHeight="48.0" prefWidth="28.0" text=":" textFill="#f2f2f2">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
                <Label layoutX="1160.0" layoutY="7.0" prefHeight="48.0" prefWidth="28.0" text=":" textFill="#f2f2f2">
                   <font>
-                     <Font size="27.0" />
+                     <Font size="25.0" />
                   </font>
                </Label>
             </children>
@@ -117,22 +117,22 @@
                </Pane>
                <ToggleButton fx:id="botonExclusividadJugador1" contentDisplay="CENTER" layoutX="61.0" layoutY="380.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="380.0">
                   <font>
-                     <Font name="System Bold" size="25.0" />
+                     <Font name="System Bold" size="23.0" />
                   </font>
                </ToggleButton>
                <ToggleButton fx:id="botonExclusividadJugador2" contentDisplay="CENTER" layoutX="71.0" layoutY="390.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="380.0">
                   <font>
-                     <Font name="System Bold" size="25.0" />
+                     <Font name="System Bold" size="23.0" />
                   </font>
                </ToggleButton>
                <ToggleButton id="2" fx:id="botonMultiplicadorX2" layoutX="63.0" layoutY="303.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador &#10;X2" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0">
                   <font>
-                     <Font name="System Bold" size="25.0" />
+                     <Font name="System Bold" size="21.0" />
                   </font>
                </ToggleButton>
                <ToggleButton id="3" fx:id="botonMultiplicadorX3" layoutX="61.0" layoutY="465.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador &#10;X3" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0">
                   <font>
-                     <Font name="System Bold" size="25.0" />
+                     <Font name="System Bold" size="21.0" />
                   </font>
                </ToggleButton>
             </children>

@@ -22,11 +22,6 @@
             <Font name="System Bold" size="69.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="109.0" layoutY="35.0" prefHeight="100.0" prefWidth="363.0" text="Siguiente pregunta:" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
       <Label fx:id="tipoDePregunta" alignment="CENTER" layoutX="472.0" layoutY="35.0" prefHeight="100.0" prefWidth="756.0" text="Tipo pregunta" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
