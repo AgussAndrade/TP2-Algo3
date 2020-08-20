@@ -7,7 +7,6 @@ import edu.fiuba.algo3.modelo.aplicadores.AplicadorFactory;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 
@@ -15,12 +14,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class ControladorPregunta extends ControladorPrincipal {
-    public Label nombreJugador;
-    public Label tiempo;
-    public ToggleButton botonExclusividadJugador1;
-    public ToggleButton botonExclusividadJugador2;
-    public ToggleButton botonMultiplicadorX2;
-    public ToggleButton botonMultiplicadorX3;
+    public Label nombreJugador, enunciadoPregunta, tiempo, puntajeJugador1, puntajeJugador2, nombreJugador2, nombreJugador1;
+    public ToggleButton botonExclusividadJugador1, botonExclusividadJugador2, botonMultiplicadorX2, botonMultiplicadorX3;
     Timer temporizador;
     int tiempoRestante;
     static int jugadorActual = 0;
@@ -82,7 +77,6 @@ public class ControladorPregunta extends ControladorPrincipal {
 
     public void cargarBotones() {
         String estrategia = preguntaActual.devolverEstrategia().getClass().getSimpleName();
-        System.out.println(jugadorActual);
         if(estrategia.equals("Penalizable")){
             botonExclusividadJugador1.setVisible(false);
             botonExclusividadJugador2.setVisible(false);
@@ -120,14 +114,22 @@ public class ControladorPregunta extends ControladorPrincipal {
     }
 
     public void activarMultiplicadorX2(ActionEvent actionEvent) {
-
         botonMultiplicadorX3.setSelected(false);
         constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
     }
 
     public void activarMultiplicadorX3(ActionEvent actionEvent) {
-
         botonMultiplicadorX2.setSelected(false);
         constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
+    }
+
+    protected void inicializarLabelsPregunta(){
+        nombreJugador.setText(jugadores.get(jugadorActual).nombre());
+        nombreJugador1.setText(jugadores.get(0).nombre());
+        nombreJugador2.setText(jugadores.get(1).nombre());
+        puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
+        puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
+        enunciadoPregunta.setText(preguntaActual.enunciado());
+        ajustarLabel(enunciadoPregunta);
     }
 }

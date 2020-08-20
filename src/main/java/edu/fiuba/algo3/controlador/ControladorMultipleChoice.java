@@ -4,7 +4,6 @@ import edu.fiuba.algo3.modelo.opciones.Binaria;
 import edu.fiuba.algo3.modelo.preguntas.MultipleChoice;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.HBox;
 
@@ -13,19 +12,14 @@ import java.util.Collections;
 import java.util.List;
 
 public class ControladorMultipleChoice extends ControladorPregunta {
-    public Label nombreJugador, enunciadoPregunta, tiempo;
-    public Label puntajeJugador1, puntajeJugador2, nombreJugador2, nombreJugador1;
     public ToggleButton botonOpcion1, botonOpcion2, botonOpcion3, botonOpcion4, botonOpcion5;
     private List<Binaria> opciones;
 
     @FXML
     public void initialize() {
-        nombreJugador.setText(jugadores.get(jugadorActual).nombre());
-        nombreJugador1.setText(jugadores.get(0).nombre());
-        nombreJugador2.setText(jugadores.get(1).nombre());
-        puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
-        puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
-        enunciadoPregunta.setText(preguntaActual.enunciado());
+        cargarBotones();
+        inicializarLabelsPregunta();
+        ajustarLabel(enunciadoPregunta);
         opciones = ((MultipleChoice) preguntaActual).obtenerOpciones();
         Collections.shuffle(opciones);
         ToggleButton[] botonesOpciones = new ToggleButton[]{botonOpcion1, botonOpcion2, botonOpcion3, botonOpcion4, botonOpcion5};
@@ -38,8 +32,6 @@ public class ControladorMultipleChoice extends ControladorPregunta {
         for (; i < botonesOpciones.length; i++) {
             ((HBox)botonesOpciones[i].getParent()).getChildren().remove(botonesOpciones[i]);
         }
-        cargarBotones();
-        ajustarLabel(enunciadoPregunta);
         iniciarTemporizador();
     }
 

@@ -1,13 +1,10 @@
 package edu.fiuba.algo3.controlador;
 
-import edu.fiuba.algo3.modelo.multiplicadores.Multiplicador;
 import edu.fiuba.algo3.modelo.opciones.Grupal;
-import edu.fiuba.algo3.modelo.opciones.Opcion;
 import edu.fiuba.algo3.modelo.preguntas.GroupChoice;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.input.*;
 import javafx.scene.layout.VBox;
 
@@ -17,16 +14,8 @@ import java.util.Hashtable;
 import java.util.List;
 
 public class ControladorGroupChoice extends ControladorPregunta{
-    public Label nombreJugador;
-    public Label enunciadoPregunta;
-    public Label tiempo;
-    public Label puntajeJugador1;
-    public Label puntajeJugador2;
-    public Label nombreJugador2;
-    public Label nombreJugador1;
     public Label nombreGrupoA;
     public Label nombreGrupoB;
-    private int multiplicador = 1;
     public Label opcion1,opcion2,opcion3,opcion4,opcion5,opcion6;
     public VBox BoxGrupoB,BoxGrupoA,BoxSinGrupo;
     private List<Grupal> selecciones;
@@ -38,12 +27,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
 
     public void initialize() {
         cargarBotones();
-        nombreJugador.setText(jugadores.get(jugadorActual).nombre());
-        nombreJugador1.setText(jugadores.get(0).nombre());
-        nombreJugador2.setText(jugadores.get(1).nombre());
-        puntajeJugador1.setText(Integer.toString(jugadores.get(0).puntos()));
-        puntajeJugador2.setText(Integer.toString(jugadores.get(1).puntos()));
-        enunciadoPregunta.setText(preguntaActual.enunciado());
+        inicializarLabelsPregunta();
         ajustarLabel(enunciadoPregunta);
         selecciones = ((GroupChoice)preguntaActual).obtenerOpciones();
         Collections.shuffle(selecciones);
@@ -123,10 +107,8 @@ public class ControladorGroupChoice extends ControladorPregunta{
     public void responder(ActionEvent actionEvent) throws IOException {
         accionExclusividad();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
-        constructorDeRespuestaActual.conMultiplicador( new Multiplicador(multiplicador) );
         constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));
         respuestas.add(constructorDeRespuestaActual.build());
-        multiplicador = 1;
         continuar();
     }
 
