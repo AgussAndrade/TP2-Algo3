@@ -14,47 +14,46 @@
          <top>
             <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #36393F;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="salir" layoutX="14.0" layoutY="598.0" mnemonicParsing="false" onAction="#seleccionadoSalir" prefHeight="108.0" prefWidth="508.0" text="Salir">
+                  <Button fx:id="salir" layoutX="14.0" layoutY="598.0" mnemonicParsing="false" onAction="#seleccionadoSalir" prefHeight="108.0" prefWidth="508.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Salir" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0">
                      <font>
-                        <Font size="51.0" />
+                        <Font name="System Bold" size="50.0" />
                      </font>
                   </Button>
-                  <Button fx:id="volverAJugar" layoutX="758.0" layoutY="598.0" mnemonicParsing="false" onAction="#seleccionadovolverAJugar" prefHeight="51.0" prefWidth="508.0" text="Volver a jugar">
+                  <Button fx:id="volverAJugar" layoutX="732.0" layoutY="572.0" mnemonicParsing="false" onAction="#seleccionadovolverAJugar" prefHeight="108.0" prefWidth="508.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Volver a jugar" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
                      <font>
-                        <Font size="51.0" />
+                        <Font name="System Bold" size="50.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="185.0" fitWidth="157.0" layoutX="562.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="10.0">
+                  <ImageView fitHeight="185.0" fitWidth="157.0" layoutX="1085.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="225.0">
                      <image>
                         <Image url="@../images/trofeo.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="623.0" layoutY="318.0" text="Label" />
-                  <ImageView fitHeight="185.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="10.0">
+                  <ImageView fitHeight="185.0" fitWidth="157.0" layoutX="100.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="225.0">
                      <image>
                         <Image url="@../images/trofeo.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="335.0" layoutY="20.0" prefHeight="83.0" prefWidth="222.0" text="FELICIDADES" textFill="#fffafa">
+                  <Label layoutX="263.0" layoutY="62.0" prefHeight="83.0" prefWidth="293.0" text="FELICIDADES" textFill="#fffafa" AnchorPane.leftAnchor="263.0" AnchorPane.topAnchor="62.0">
                      <font>
-                        <Font size="36.0" />
+                        <Font name="System Bold" size="40.0" />
                      </font></Label>
-                  <Label fx:id="nombreDelGanador" layoutX="557.0" layoutY="20.0" prefHeight="83.0" prefWidth="405.0" text="Nombre del jugador" textFill="#fffafa">
+                  <Label fx:id="nombreDelGanador" alignment="CENTER" layoutX="556.0" layoutY="62.0" prefHeight="83.0" prefWidth="572.0" text="Nombre del jugador" textAlignment="CENTER" textFill="#fffafa">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ganasteCon" alignment="CENTER" layoutX="461.0" layoutY="205.0" prefHeight="83.0" prefWidth="359.0" text="GANASTE CON" textFill="#fffafa">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ganasteCon" layoutX="335.0" layoutY="103.0" prefHeight="83.0" prefWidth="254.0" text="GANASTE CON" textFill="#fffafa">
+                  <Label fx:id="puntosDelGanador" alignment="CENTER" layoutX="528.0" layoutY="297.0" prefHeight="83.0" prefWidth="224.0" text="1000" textFill="#fffafa">
                      <font>
-                        <Font size="36.0" />
+                        <Font name="System Bold" size="40.0" />
                      </font>
                   </Label>
-                  <Label fx:id="puntosDelGanador" layoutX="589.0" layoutY="103.0" prefHeight="83.0" prefWidth="288.0" text="1000" textFill="#fffafa">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="puntos" layoutX="680.0" layoutY="103.0" prefHeight="83.0" prefWidth="156.0" text="PUNTOS" textFill="#fffafa">
+                  <Label fx:id="puntos" alignment="CENTER" layoutX="481.0" layoutY="399.0" prefHeight="83.0" prefWidth="319.0" text="PUNTOS" textFill="#fffafa">
                      <font>
                         <Font size="36.0" />
                      </font>
