@@ -65,10 +65,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
             }
             i++;
         }
-        i++;
-        for (;i< opciones.length;i++){
-            opciones[i].setText("");
-        }
+        BoxSinGrupo.getChildren().remove(i,opciones.length);
         iniciarTemporizador();
     }
 
