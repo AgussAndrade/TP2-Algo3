@@ -10,6 +10,8 @@ import java.util.List;
 public class ControladorFinal extends ControladorPregunta{
     public Label puntosDelGanador;
     public Label nombreDelGanador;
+    public Label ganasteCon;
+    public Label puntos;
 
     public void initialize(){
         String ganador;
@@ -17,13 +19,21 @@ public class ControladorFinal extends ControladorPregunta{
         if (jugadores.get(0).puntos() > jugadores.get(1).puntos()){
             ganador = jugadores.get(0).nombre();
             puntosGanador = jugadores.get(0).puntos();
+            nombreDelGanador.setText(ganador);
+            puntosDelGanador.setText(String.valueOf(puntosGanador));
+        }
+        else if(jugadores.get(0).puntos() == jugadores.get(1).puntos()){
+            nombreDelGanador.setText("SON IGUAL DE BUENOS");
+            puntosDelGanador.setText("EMPATE");
+            puntos.setVisible(false);
+            ganasteCon.setVisible(false);
         }
         else {
             ganador = jugadores.get(1).nombre();
             puntosGanador = jugadores.get(1).puntos();
+            nombreDelGanador.setText(ganador);
+            puntosDelGanador.setText(String.valueOf(puntosGanador));
         }
-        nombreDelGanador.setText(ganador);
-        puntosDelGanador.setText(String.valueOf(puntosGanador));
     }
 
     public void seleccionadoSalir(ActionEvent actionEvent) throws IOException {

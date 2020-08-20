@@ -44,17 +44,17 @@
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label layoutX="335.0" layoutY="103.0" prefHeight="83.0" prefWidth="254.0" text="GANASTE CON" textFill="#fffafa">
+                  <Label fx:id="ganasteCon" layoutX="335.0" layoutY="103.0" prefHeight="83.0" prefWidth="254.0" text="GANASTE CON" textFill="#fffafa">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label fx:id="puntosDelGanador" layoutX="589.0" layoutY="103.0" prefHeight="83.0" prefWidth="80.0" text="1000" textFill="#fffafa">
+                  <Label fx:id="puntosDelGanador" layoutX="589.0" layoutY="103.0" prefHeight="83.0" prefWidth="288.0" text="1000" textFill="#fffafa">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label layoutX="680.0" layoutY="103.0" prefHeight="83.0" prefWidth="156.0" text="PUNTOS" textFill="#fffafa">
+                  <Label fx:id="puntos" layoutX="680.0" layoutY="103.0" prefHeight="83.0" prefWidth="156.0" text="PUNTOS" textFill="#fffafa">
                      <font>
                         <Font size="36.0" />
                      </font>

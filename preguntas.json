@@ -43,8 +43,8 @@
     "estrategia" : "penalizable",
     "enunciado" : "ser homosexual esta bien",
     "opciones" : {
-      "correcta" :  "Verdadero",
-      "incorrecta" : "Verdadero"
+      "correcta" :  "Falso",
+      "incorrecta" :  "Verdadero"
     }
   },
   {
