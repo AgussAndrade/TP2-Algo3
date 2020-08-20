@@ -45,6 +45,14 @@
     -fx-background-radius :  10 10 10 10;
 }
 
+.optionMenuButton {
+    -fx-background-color :   #36393F;
+}
+.optionMenuButton:hover {
+    -fx-background-color :  #40444B;
+    -fx-text-fill:  WHITE;
+}
+
 .minimizeButton {
     -fx-background-color :   #202225;
 }

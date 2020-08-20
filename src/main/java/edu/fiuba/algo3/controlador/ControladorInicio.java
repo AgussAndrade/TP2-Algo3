@@ -1,21 +1,31 @@
 package edu.fiuba.algo3.controlador;
 
 import javafx.application.Platform;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.Slider;
 
 import java.io.IOException;
 public class ControladorInicio extends ControladorPrincipal {
 
     public Button botonIniciar;
-    public SplitMenuButton menuMusica;
-    public SplitMenuButton menuTiempo;
+    public MenuButton menuMusica;
+    public MenuButton menuTiempo;
+    public Slider controlVolumen;
 
     public void initialize(){
         Platform.runLater(()->botonIniciar.requestFocus());
-
+        controlVolumen.setValue(((flujoDePrograma.getMediaplayer()).getVolume()) * 100);
+        controlVolumen.valueProperty().addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                (flujoDePrograma.getMediaplayer()).setVolume(controlVolumen.getValue() / 100);
+            }
+        });
     }
 
     @FXML
@@ -38,18 +48,18 @@ public class ControladorInicio extends ControladorPrincipal {
         flujoDePrograma.musica("clasico");
     }
 
-    public void setearDiezSegundos(ActionEvent actionEvent) {
-        menuTiempo.setText("10");
-        tiempoBase = 10;
-    }
-
-    public void setearVeinteSegundos(ActionEvent actionEvent) {
-        menuTiempo.setText("20");
-        tiempoBase = 20;
-    }
-
     public void setearTreintaSegundos(ActionEvent actionEvent) {
-        menuTiempo.setText("30");
+        menuTiempo.setText("30 segundos");
         tiempoBase = 30;
+    }
+
+    public void setearCuarentaYCincoSegundos(ActionEvent actionEvent) {
+        menuTiempo.setText("45 segundos");
+        tiempoBase = 45;
+    }
+
+    public void setearSesentaSegundos(ActionEvent actionEvent) {
+        menuTiempo.setText("60 segundos");
+        tiempoBase = 60;
     }
 }

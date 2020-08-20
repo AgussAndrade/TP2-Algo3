@@ -24,7 +24,7 @@ public class FlujoDePrograma {
     public FlujoDePrograma(Stage stage){
         this.stage = stage;
         stage.setTitle("Kahoot!");
-
+        musica("clasico");
         ordenDeAparicionDeEscenas = new ArrayList<>();
         ordenDeAparicionDeEscenas.add("/vista/MenuDeInicio.fxml");
         ordenDeAparicionDeEscenas.add("/vista/InterfazRegistroJugadores.fxml");
@@ -57,7 +57,6 @@ public class FlujoDePrograma {
 
     public void escenaIntermedia() throws IOException {
         loader = new FXMLLoader(getClass().getResource("/vista/PantallaIntermedia.fxml" ));
-//        ((ControladorPregunta)loader.getController()).cargarBotones(pregunta.devolverEstrategia(),pregunta);
         root = loader.load();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -91,5 +90,9 @@ public class FlujoDePrograma {
         if (mediaPlayer != null){
             mediaPlayer.pause();
         }
+    }
+
+    public MediaPlayer getMediaplayer() {
+        return mediaPlayer;
     }
 }

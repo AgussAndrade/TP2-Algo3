@@ -3,8 +3,11 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -22,28 +25,51 @@
                 <Font name="System Bold" size="60.0" />
             </font>
         </Label>
-      <SplitMenuButton fx:id="menuMusica" layoutX="156.0" layoutY="59.0" mnemonicParsing="false" onAction="#pausarMusica" style="-fx-border-color: #8697D4;" text="Sin Musica">
+      <Label alignment="CENTER" layoutX="748.0" layoutY="51.0" prefHeight="44.0" prefWidth="284.0" text="Tiempo para responder :" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="248.0" AnchorPane.topAnchor="51.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="menuMusica" alignment="CENTER" layoutX="158.0" layoutY="53.0" mnemonicParsing="false" onAction="#pausarMusica" prefHeight="44.0" prefWidth="194.0" styleClass="optionButton" stylesheets="@../css/fullpackstyling.css" text="Clasico" textFill="WHITE" AnchorPane.leftAnchor="158.0" AnchorPane.topAnchor="53.0">
         <items>
-          <MenuItem mnemonicParsing="false" onAction="#PonerKakut" text="Kakut" />
-          <MenuItem mnemonicParsing="false" onAction="#PonerClasico" text="Clasico" />
+          <MenuItem mnemonicParsing="false" onAction="#PonerClasico" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;" styleClass="optionMenuButton" text="Clasico" />
+          <MenuItem mnemonicParsing="false" onAction="#PonerKakut" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;" styleClass="optionMenuButton" text="Kakut" />
+            <MenuItem mnemonicParsing="false" onAction="#pausarMusica" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;" styleClass="optionMenuButton" text="Sin Musica" />
         </items>
-      </SplitMenuButton>
-      <SplitMenuButton fx:id="menuTiempo" layoutX="402.0" layoutY="60.0" mnemonicParsing="false" text="10">
-         <items>
-            <MenuItem mnemonicParsing="false" onAction="#setearDiezSegundos" text="10s" />
-            <MenuItem mnemonicParsing="false" onAction="#setearVeinteSegundos" text="20s" />
-            <MenuItem mnemonicParsing="false" onAction="#setearTreintaSegundos" text="30s" />
-         </items>
-      </SplitMenuButton>
-      <Label alignment="CENTER" layoutY="35.0" prefHeight="79.0" prefWidth="202.0" text="Musica" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </MenuButton>
+      <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="112.0" layoutY="53.0" AnchorPane.leftAnchor="112.0" AnchorPane.topAnchor="53.0">
+         <image>
+            <Image url="@../images/Music.png" />
+         </image>
+      </ImageView>
+      <MenuButton fx:id="menuTiempo" layoutX="1021.0" layoutY="51.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="207.0" styleClass="optionButton" stylesheets="@../css/fullpackstyling.css" text="30 segundos" textFill="WHITE" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="51.0">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#setearTreintaSegundos" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;" styleClass="optionMenuButton" text="30 segundos" />
+          <MenuItem mnemonicParsing="false" onAction="#setearCuarentaYCincoSegundos" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;" styleClass="optionMenuButton" text="45 segundos" />
+            <MenuItem mnemonicParsing="false" onAction="#setearSesentaSegundos" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;" styleClass="optionMenuButton" text="60 segundos" />
+        </items>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </MenuButton>
+      <Slider fx:id="controlVolumen" layoutX="1228.0" layoutY="290.0" orientation="VERTICAL" AnchorPane.rightAnchor="38.0" />
+      <Label alignment="CENTER" layoutX="1199.0" layoutY="247.0" prefHeight="44.0" prefWidth="72.0" text="100 %" textFill="WHITE" AnchorPane.rightAnchor="9.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="260.0" layoutY="35.0" prefHeight="79.0" prefWidth="202.0" text="Tiempo" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
+      <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="1173.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="81.0">
+         <image>
+            <Image url="@../images/VolumeImage.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="1222.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="32.0">
+         <image>
+            <Image url="@../images/Muteimage.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
