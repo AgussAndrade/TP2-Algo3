@@ -32,6 +32,8 @@ public class App extends Application {
         mediaPlayer = new MediaPlayer(new Media(song));
         mediaPlayer.play();
         mediaPlayer.setVolume(0.3);
+        mediaPlayer.setAutoPlay(true);
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
     }
 
     public static void main(String[] args) {
