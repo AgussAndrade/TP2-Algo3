@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorMultipleChoice">
@@ -141,13 +140,26 @@
                      </Label>
                   </children>
                </Pane>
-               <VBox layoutX="61.0" layoutY="178.0" spacing="10.0">
-                  <children>
-                     <ToggleButton fx:id="botonExclusividad" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="ActivarExclusividad" />
-                     <ToggleButton id="2" fx:id="botonMultiplicadorX2" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador x2" />
-                     <ToggleButton id="3" fx:id="botonMultiplicadorX3" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador x3" />
-                  </children>
-               </VBox>
+               <ToggleButton fx:id="botonExclusividadJugador1" contentDisplay="CENTER" layoutX="61.0" layoutY="380.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="380.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
+               <ToggleButton fx:id="botonExclusividadJugador2" contentDisplay="CENTER" layoutX="71.0" layoutY="390.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="380.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
+               <ToggleButton id="2" fx:id="botonMultiplicadorX2" layoutX="63.0" layoutY="303.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador &#10;X2" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
+               <ToggleButton id="3" fx:id="botonMultiplicadorX3" layoutX="61.0" layoutY="465.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador &#10;X3" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
             </children>
          </AnchorPane>
       </left>

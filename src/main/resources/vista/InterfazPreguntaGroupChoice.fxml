@@ -33,12 +33,12 @@
                            <Font size="25.0" />
                         </font>
                      </Label>
-                     <Button fx:id="responder" layoutX="413.0" layoutY="590.0" mnemonicParsing="false" onAction="#responder" prefHeight="44.0" prefWidth="245.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Responder" textFill="WHITE">
+                     <Button fx:id="responder" layoutX="413.0" layoutY="590.0" mnemonicParsing="false" onAction="#responder" prefHeight="44.0" prefWidth="245.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Responder" textFill="WHITE" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="355.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </Button>
-                     <HBox layoutX="131.0" layoutY="256.0" prefHeight="299.0" prefWidth="810.0" spacing="30.0">
+                     <HBox layoutX="131.0" layoutY="256.0" prefHeight="299.0" prefWidth="810.0" spacing="30.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="72.0">
                         <children>
                            <VBox id="A" fx:id="BoxGrupoA" alignment="TOP_CENTER" onDragDropped="#dragDroppedBox" onDragEntered="#dragEnteredBox" onDragExited="#dragExitedBox" onDragOver="#dragOverBox" prefHeight="200.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: #69C49A; -fx-background-radius: 20 20 20 20;" stylesheets="@../css/fullpackstyling.css">
                               <padding>
@@ -87,7 +87,7 @@
                               </padding></VBox>
                         </children>
                      </HBox>
-                     <Label fx:id="nombreGrupoA" alignment="CENTER" contentDisplay="CENTER" layoutX="199.0" layoutY="215.0" stylesheets="@../css/fullpackstyling.css" text="textoOpcion" textFill="WHITE">
+                     <Label fx:id="nombreGrupoA" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="215.0" stylesheets="@../css/fullpackstyling.css" text="textoOpcion" textFill="WHITE" AnchorPane.leftAnchor="140.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
@@ -95,7 +95,7 @@
                            <Insets top="5.0" />
                         </padding>
                      </Label>
-                     <Label fx:id="nombreGrupoB" alignment="CENTER" contentDisplay="CENTER" layoutX="757.0" layoutY="215.0" stylesheets="@../css/fullpackstyling.css" text="textoOpcion" textFill="WHITE">
+                     <Label fx:id="nombreGrupoB" alignment="CENTER" contentDisplay="CENTER" layoutX="697.0" layoutY="215.0" stylesheets="@../css/fullpackstyling.css" text="textoOpcion" textFill="WHITE" AnchorPane.rightAnchor="140.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
@@ -171,13 +171,26 @@
                      </Label>
                   </children>
                </Pane>
-               <VBox layoutX="65.0" layoutY="185.0" spacing="10.0">
-                  <children>
-                     <ToggleButton fx:id="botonExclusividad" mnemonicParsing="false" onAction="#activarExclusividad" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="ActivarExclusividad" />
-                     <ToggleButton fx:id="botonMultiplicadorX2" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador x2" />
-                     <ToggleButton fx:id="botonMultiplicadorX3" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador x3" />
-                  </children>
-               </VBox>
+               <ToggleButton fx:id="botonExclusividadJugador1" contentDisplay="CENTER" layoutX="61.0" layoutY="380.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="380.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
+               <ToggleButton fx:id="botonExclusividadJugador2" contentDisplay="CENTER" layoutX="71.0" layoutY="390.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Activar&#10;Exclusividad" textAlignment="CENTER" textFill="WHITE" visible="false" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="380.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
+               <ToggleButton id="2" fx:id="botonMultiplicadorX2" layoutX="63.0" layoutY="303.0" mnemonicParsing="false" onAction="#activarMultiplicadorX2" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador &#10;X2" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
+               <ToggleButton id="3" fx:id="botonMultiplicadorX3" layoutX="61.0" layoutY="465.0" mnemonicParsing="false" onAction="#activarMultiplicadorX3" prefHeight="133.0" prefWidth="200.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Multiplicador &#10;X3" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="63.0" AnchorPane.rightAnchor="63.0">
+                  <font>
+                     <Font name="System Bold" size="25.0" />
+                  </font>
+               </ToggleButton>
             </children>
          </AnchorPane>
       </left>

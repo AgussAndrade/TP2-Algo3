@@ -122,6 +122,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
     }
 
     public void responder(ActionEvent actionEvent) throws IOException {
+        accionExclusividad();
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         constructorDeRespuestaActual.conMultiplicador( new Multiplicador(multiplicador) );
         constructorDeRespuestaActual.conSelecciones(List.copyOf(selecciones));

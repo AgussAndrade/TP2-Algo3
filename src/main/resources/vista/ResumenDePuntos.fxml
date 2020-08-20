@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorResumenDePuntos" />
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #36393F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.fiuba.algo3.controlador.ControladorResumenDePuntos">
+   <children>
+      <BorderPane layoutX="331.0" layoutY="184.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="720.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="informacionJugador1" layoutX="62.0" layoutY="37.0" prefHeight="539.0" prefWidth="530.0" style="-fx-background-color: #43B581; -fx-background-radius: 30 30 30 30;" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="107.0" prefWidth="484.0" text="NombreJugador1" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="720.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="informacionJugador1" layoutX="23.0" prefHeight="539.0" prefWidth="530.0" style="-fx-background-color: #F04747; -fx-background-radius: 30 30 30 30;" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="30.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="107.0" prefWidth="484.0" text="NombreJugador2" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </right>
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: #202225;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="1243.0" layoutY="5.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="35.0" style="-fx-background-image: close.png;" styleClass="closeButton" stylesheets="@../css/fullpackstyling.css" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="1210.0" layoutY="4.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="35.0" styleClass="minimizeButton" stylesheets="@../css/fullpackstyling.css" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/minimize.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+      <Button minHeight="60.0" minWidth="280.0" mnemonicParsing="false" onAction="#irALaPregunta" prefHeight="60.0" prefWidth="280.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Siguiente Pregunta &gt;" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

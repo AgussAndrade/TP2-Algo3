@@ -45,6 +45,20 @@
     -fx-background-radius :  10 10 10 10;
 }
 
+.minimizeButton {
+    -fx-background-color :   #202225;
+}
+.minimizeButton:hover {
+    -fx-background-color :  #26292E;
+}
+
+.closeButton {
+    -fx-background-color :   #202225;
+}
+.closeButton:hover {
+    -fx-background-color :  #F04747;
+}
+
 .textField {
     -fx-background-color :  #303338;
     -fx-border-radius :  5 5 5 5;

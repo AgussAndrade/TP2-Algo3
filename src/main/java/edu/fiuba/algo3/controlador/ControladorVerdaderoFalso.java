@@ -41,11 +41,25 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
 
     public void seleccionadoVerdadero(ActionEvent actionEvent) throws IOException {
         selecciones.get(0).seleccionar();
+        if((selecciones.get(0).texto()).equals("Verdadero")){
+            selecciones.get(0).seleccionar();
+        }else{
+
+            selecciones.get(1).seleccionar();
+        }
+        accionExclusividad();
         responder();
     }
 
     public void seleccionadoFalso(ActionEvent actionEvent) throws IOException {
         selecciones.get(1).seleccionar();
+        if((selecciones.get(0).texto()).equals("Falso")){
+            selecciones.get(0).seleccionar();
+        }else{
+
+            selecciones.get(1).seleccionar();
+        }
+        accionExclusividad();
         responder();
     }
 

@@ -16,6 +16,8 @@ public abstract class ControladorPrincipal {
     static public List<Pregunta> preguntas;
     static public List<Jugador> jugadores;
     static FlujoDePrograma flujoDePrograma;
+    static int llamadosExclusividadJugador1 = 0;
+    static int llamadosExclusividadJugador2 = 0;
     private final double MAX_TEXT_WIDTH = 650;
     private final double defaultFontSize = 55;
     private final Font defaultFont = Font.font(defaultFontSize);
