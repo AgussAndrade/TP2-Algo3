@@ -32,4 +32,8 @@ public class Incorrecta implements Binaria {
         fueSeleccionada = true;
     }
 
+    @Override
+    public void deseleccionar() {
+        fueSeleccionada = false;
+    }
 }

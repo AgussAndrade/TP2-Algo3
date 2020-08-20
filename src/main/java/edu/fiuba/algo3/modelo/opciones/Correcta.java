@@ -33,4 +33,8 @@ public class Correcta implements Binaria {
         fueSeleccionada = true;
     }
 
+    @Override
+    public void deseleccionar() {
+        fueSeleccionada = false;
+    }
 }

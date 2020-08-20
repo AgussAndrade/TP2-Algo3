@@ -12,6 +12,7 @@ import javafx.scene.input.*;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -45,6 +46,7 @@ public class ControladorGroupChoice extends ControladorPregunta{
         enunciadoPregunta.setText(preguntaActual.enunciado());
         ajustarLabel(enunciadoPregunta);
         selecciones = ((GroupChoice)preguntaActual).obtenerOpciones();
+        Collections.shuffle(selecciones);
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         opciones = new Label[]{opcion1, opcion2, opcion3, opcion4, opcion5, opcion6};
         boxGrupos = new VBox[]{BoxSinGrupo,BoxGrupoA,BoxGrupoB};
@@ -63,9 +65,9 @@ public class ControladorGroupChoice extends ControladorPregunta{
             }
             i++;
         }
-        j++;
-        for (;j< opciones.length;j++){
-            opciones[j].setText("");
+        i++;
+        for (;i< opciones.length;i++){
+            opciones[i].setText("");
         }
         iniciarTemporizador();
     }
@@ -91,14 +93,14 @@ public class ControladorGroupChoice extends ControladorPregunta{
         Dragboard db = dragEvent.getDragboard();
         boolean success = false;
         if (db.hasString()) {
-                success = true;
-                for (Grupal opcion : selecciones) {
-                    if (opcion.texto().equals(dragEvent.getDragboard().getString())) { //El else-if busca si es que uno esta dropeando sobre el objetivo o uno de sus hijos
-                        if (dragEvent.getTarget().getClass() == VBox.class) opcion.seleccionar(((VBox) (dragEvent.getTarget())).getId());
-                        else if (dragEvent.getTarget().getClass() == Label.class) opcion.seleccionar(((VBox)(((Label)dragEvent.getTarget()).getParent())).getId());
-                        else opcion.seleccionar(((VBox)(((Node)dragEvent.getTarget()).getParent().getParent())).getId());
-                    }
+            success = true;
+            for (Grupal opcion : selecciones) {
+                if (opcion.texto().equals(dragEvent.getDragboard().getString())) { //El else-if busca si es que uno esta dropeando sobre el objetivo o uno de sus hijos
+                    if (dragEvent.getTarget().getClass() == VBox.class) opcion.seleccionar(((VBox) (dragEvent.getTarget())).getId());
+                    else if (dragEvent.getTarget().getClass() == Label.class) opcion.seleccionar(((VBox)(((Label)dragEvent.getTarget()).getParent())).getId());
+                    else opcion.seleccionar(((VBox)(((Node)dragEvent.getTarget()).getParent().getParent())).getId());
                 }
+            }
         }
         dragEvent.setDropCompleted(success);
         actualizarVistaDeListas();
