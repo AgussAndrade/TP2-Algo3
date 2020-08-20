@@ -1,5 +1,6 @@
 package edu.fiuba.algo3.controlador;
 
+import edu.fiuba.algo3.App;
 import edu.fiuba.algo3.FlujoDePrograma;
 import edu.fiuba.algo3.modelo.Jugador;
 import edu.fiuba.algo3.modelo.preguntas.Pregunta;
@@ -12,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class ControladorPrincipal {
+public abstract class ControladorPrincipal extends App {
     static public List<Pregunta> preguntas;
     static public List<Jugador> jugadores;
     static FlujoDePrograma flujoDePrograma;

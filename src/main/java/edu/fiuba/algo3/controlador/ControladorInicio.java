@@ -11,6 +11,7 @@ public class ControladorInicio extends ControladorPrincipal {
 
     public void initialize(){
         Platform.runLater(()->botonIniciar.requestFocus());
+
     }
 
     @FXML
@@ -18,4 +19,3 @@ public class ControladorInicio extends ControladorPrincipal {
         flujoDePrograma.siguienteEscena();
     }
 }
-//ControladorMenuDeInicio controladorPrincipal = (ControladorMenuDeInicio)loader.getController();
