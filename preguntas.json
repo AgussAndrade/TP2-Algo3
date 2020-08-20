@@ -39,18 +39,9 @@
     }
   },
   {
-    "tipoDePregunta" : "verdaderoFalso",
-    "estrategia" : "penalizable",
-    "enunciado" : "ser homosexual esta bien",
-    "opciones" : {
-      "correcta" :  "Falso",
-      "incorrecta" :  "Verdadero"
-    }
-  },
-  {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "penalizable",
-    "enunciado" : "Cual de los siguientes jugadores de futbol tiene mas asistencias",
+    "enunciado" : "Futbolista con mas asistencias",
     "opciones" : {
       "correcta" : ["Lewandowski"],
       "incorrecta" : ["Alisson", "Pique", "Ramos"]
@@ -70,7 +61,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
-    "enunciado" : "Cual de los siguientes nombres son capicua",
+    "enunciado" : "Seleccionar los nombres que son capicua",
     "opciones" : {
       "correcta" :  ["Ana", "Otto"],
       "incorrecta" : ["Marisol"]
@@ -79,9 +70,9 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "puntajeParcial",
-    "enunciado" : "Cual de les siguientes pibis juega al teto",
+    "enunciado" : "Seleccionar jugadores de fortnite",
     "opciones" : {
-      "correcta" : ["k1ng"],
+      "correcta" : ["k1ng","Ninja"],
       "incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
     }
   },
@@ -116,16 +107,16 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "penalizable",
-    "enunciado" : "Quien pinto el cuadro Las meninas",
+    "enunciado" : "Autor del cuadro Las Meninas",
     "opciones" : {
       "correcta" : ["Diego Velazquez"],
-      "incorrecta" : [" mojamed Dali", "Da Vinci"]
+      "incorrecta" : ["Dali", "Da Vinci"]
     }
   },
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
-    "enunciado" : "Que ciudades pertenecen a Francia",
+    "enunciado" : "Seleccionar ciudades de Francia",
     "opciones" : {
       "correcta" :  ["Paris", "Marsella"],
       "incorrecta" : ["Praga","Viena", "Estambul"]
@@ -134,7 +125,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "puntajeParcial",
-    "enunciado" : "Cual de estos sabores son primarios",
+    "enunciado" : "Seleccionar sabores primarios",
     "opciones" : {
       "correcta" : ["Acido", "Amargo","Dulce"],
       "incorrecta" : ["Agridulce", "Agrio"]
@@ -162,7 +153,7 @@
   {
     "tipoDePregunta" : "verdaderoFalso",
     "estrategia" : "penalizable",
-    "enunciado" : "La estatua de la libertad fue un regalo de Francia para nuestra amada usa",
+    "enunciado" : "La estatua de la libertad fue un regalo de Francia a USA",
     "opciones" : {
       "correcta" :  "Verdadero",
       "incorrecta" :  "Falso"
@@ -171,7 +162,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "penalizable",
-    "enunciado" : "Cual de las siguientes personas ganaron un Nobel",
+    "enunciado" : "Ganadores del premio Nobel",
     "opciones" : {
       "correcta" : ["Obama","Marie Curie"],
       "incorrecta" : ["Susana Gimenez", "Newton", "Gandhi"]
@@ -191,7 +182,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
-    "enunciado" : "En que continente se encuentra el pais Eritrea",
+    "enunciado" : "Continente en donde se ubica el pais Eritrea",
     "opciones" : {
       "correcta" :  ["Africa"],
       "incorrecta" : ["Asia","Oceania","Europa"]
@@ -200,7 +191,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "puntajeParcial",
-    "enunciado" : "Cual de estos son lenguajes compilados",
+    "enunciado" : "Seleccionar lenguajes compilados",
     "opciones" : {
       "correcta" : ["C","Java","Go"],
       "incorrecta" : ["Python"]
