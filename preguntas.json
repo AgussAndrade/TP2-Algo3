@@ -13,7 +13,7 @@
   {
     "tipoDePregunta" : "verdaderoFalso",
     "estrategia" : "clasica",
-    "enunciado" : "Argentina es un país",
+    "enunciado" : "Argentina es un pais",
     "opciones" : {
       "correcta" :  "Verdadero",
       "incorrecta" : "Falso"
@@ -32,19 +32,28 @@
   {
     "tipoDePregunta" : "verdaderoFalso",
     "estrategia" : "penalizable",
-    "enunciado" : "¿Argentina es una construccion social?",
+    "enunciado" : "Argentina es una construccion social",
     "opciones" : {
       "correcta" :  "Falso",
       "incorrecta" :  "Verdadero"
     }
   },
   {
+    "tipoDePregunta" : "verdaderoFalso",
+    "estrategia" : "penalizable",
+    "enunciado" : "ser homosexual esta bien",
+    "opciones" : {
+      "correcta" :  "Verdadero",
+      "incorrecta" : "Verdadero"
+    }
+  },
+  {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "penalizable",
-    "enunciado" : "¿Cual de los siguientes jugadores de futbol tiene mas asistencias?",
+    "enunciado" : "Cual de los siguientes jugadores de futbol tiene mas asistencias",
     "opciones" : {
       "correcta" : ["Lewandowski"],
-      "incorrecta" : ["Alisson", "Piqué", "Ramos"]
+      "incorrecta" : ["Alisson", "Pique", "Ramos"]
     }
   },
   {
@@ -61,7 +70,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
-    "enunciado" : "¿Cual de los siguientes nombres son capicua?",
+    "enunciado" : "Cual de los siguientes nombres son capicua",
     "opciones" : {
       "correcta" :  ["Ana", "Otto"],
       "incorrecta" : ["Marisol"]
@@ -70,9 +79,9 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "puntajeParcial",
-    "enunciado" : "¿Cual de les siguientes pibis juega fortnite?",
+    "enunciado" : "Cual de les siguientes pibis juega al teto",
     "opciones" : {
-      "correcta" : ["k1ng", "Kun Agüero"],
+      "correcta" : ["k1ng"],
       "incorrecta" : ["Adabel Guerrero", "Lionel Messi"]
     }
   },
@@ -107,16 +116,16 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "penalizable",
-    "enunciado" : "¿Quien pinto el cuadro Las meninas?",
+    "enunciado" : "Quien pinto el cuadro Las meninas",
     "opciones" : {
       "correcta" : ["Diego Velazquez"],
-      "incorrecta" : ["Dali", "Da Vinci"]
+      "incorrecta" : [" mojamed Dali", "Da Vinci"]
     }
   },
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
-    "enunciado" : "¿Que ciudades pertenecen a Francia?",
+    "enunciado" : "Que ciudades pertenecen a Francia",
     "opciones" : {
       "correcta" :  ["Paris", "Marsella"],
       "incorrecta" : ["Praga","Viena", "Estambul"]
@@ -125,7 +134,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "puntajeParcial",
-    "enunciado" : "¿Cual de estos sabores son primarios?",
+    "enunciado" : "Cual de estos sabores son primarios",
     "opciones" : {
       "correcta" : ["Acido", "Amargo","Dulce"],
       "incorrecta" : ["Agridulce", "Agrio"]
@@ -134,7 +143,7 @@
   {
     "tipoDePregunta" : "verdaderoFalso",
     "estrategia" : "clasica",
-    "enunciado" : "Stephen Hawking rechazó el título de caballero de la Reina",
+    "enunciado" : "Stephen Hawking rechazo el titulo de caballero de la Reina",
     "opciones" : {
       "correcta" :  "Verdadero",
       "incorrecta" : "Falso"
@@ -142,7 +151,7 @@
   },
   {
     "tipoDePregunta" : "orderedChoice",
-    "enunciado" : "Ordenar de menor a mayor las superficies de los países",
+    "enunciado" : "Ordenar de menor a mayor las superficies de los paises",
     "opciones" : {
       "1" : "Vaticano",
       "2" : "Monaco",
@@ -153,7 +162,7 @@
   {
     "tipoDePregunta" : "verdaderoFalso",
     "estrategia" : "penalizable",
-    "enunciado" : "La estatua de la libertad fue un regalo de Francia",
+    "enunciado" : "La estatua de la libertad fue un regalo de Francia para nuestra amada usa",
     "opciones" : {
       "correcta" :  "Verdadero",
       "incorrecta" :  "Falso"
@@ -162,7 +171,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "penalizable",
-    "enunciado" : "¿Cual de las siguientes personas ganaron un Nobel?",
+    "enunciado" : "Cual de las siguientes personas ganaron un Nobel",
     "opciones" : {
       "correcta" : ["Obama","Marie Curie"],
       "incorrecta" : ["Susana Gimenez", "Newton", "Gandhi"]
@@ -182,7 +191,7 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "clasica",
-    "enunciado" : "¿En que continente se encuentra el pais Eritrea?",
+    "enunciado" : "En que continente se encuentra el pais Eritrea",
     "opciones" : {
       "correcta" :  ["Africa"],
       "incorrecta" : ["Asia","Oceania","Europa"]
@@ -191,12 +200,11 @@
   {
     "tipoDePregunta" : "multipleChoice",
     "estrategia" : "puntajeParcial",
-    "enunciado" : "¿Cual de estos son lenguajes compilados?",
+    "enunciado" : "Cual de estos son lenguajes compilados",
     "opciones" : {
       "correcta" : ["C","Java","Go"],
       "incorrecta" : ["Python"]
     }
   }
-
 
 ]
