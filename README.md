@@ -25,6 +25,7 @@ Apache Maven 3.6.3
 javafx 11
 javafx mediaplayer
 json simple
+jfoenix
 
 ```
 
