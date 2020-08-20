@@ -53,8 +53,8 @@ public class ControladorMultipleChoice extends ControladorPregunta {
 
     public void activarOpcion(ActionEvent actionEvent) {
         if (((ToggleButton) actionEvent.getSource()).isSelected()) {
-            opciones.get(Integer.parseInt(((ToggleButton) actionEvent.getSource()).getId())).seleccionar();
-        } else opciones.get(Integer.parseInt(((ToggleButton) actionEvent.getSource()).getId())).deseleccionar();
+            opciones.get(Integer.parseInt(((ToggleButton) actionEvent.getSource()).getId())-1).seleccionar();
+        } else opciones.get(Integer.parseInt(((ToggleButton) actionEvent.getSource()).getId())-1).deseleccionar();
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
     }
 }
