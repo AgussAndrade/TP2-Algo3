@@ -50,7 +50,6 @@ public class ControladorOrderedChoice extends ControladorPregunta{
     }
 
     public void seleccionarOpcion(ActionEvent actionEvent) {
-        System.out.print(((ToggleButton) actionEvent.getSource()).getId());
         opciones.get(botonesOpcion.indexOf(((ToggleButton) actionEvent.getSource()))).seleccionar(posicion);
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
         ((ToggleButton) actionEvent.getSource()).setDisable(true);
