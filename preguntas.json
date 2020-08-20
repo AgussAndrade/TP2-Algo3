@@ -23,10 +23,11 @@
     "tipoDePregunta" : "orderedChoice",
     "enunciado" : "Ordenar de menor a mayor poblacion de paises",
     "opciones" : {
-      "1" : "Argentina",
-      "2": "Brasil",
-      "3" : "Estados Unidos",
-      "4" : "India"
+      "1" : "Vaticano",
+      "2" : "Argentina",
+      "3": "Brasil",
+      "4" : "Estados Unidos",
+      "5" : "India"
     }
   },
   {

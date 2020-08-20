@@ -56,7 +56,6 @@ public class ControladorVerdaderoFalso extends ControladorPregunta{
         if((selecciones.get(0).texto()).equals("Falso")){
             selecciones.get(0).seleccionar();
         }else{
-
             selecciones.get(1).seleccionar();
         }
         accionExclusividad();

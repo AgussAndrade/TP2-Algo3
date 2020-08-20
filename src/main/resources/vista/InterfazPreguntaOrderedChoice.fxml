@@ -34,7 +34,7 @@
                            <Font size="25.0" />
                         </font>
                      </Label>
-                     <ToggleButton fx:id="opcion5" layoutX="128.0" layoutY="470.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton id="5" fx:id="opcion5" layoutX="128.0" layoutY="470.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
@@ -44,27 +44,27 @@
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </Button>
-                     <ToggleButton fx:id="opcion3" layoutX="128.0" layoutY="377.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton id="3" fx:id="opcion3" layoutX="128.0" layoutY="377.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton fx:id="opcion1" layoutX="128.0" layoutY="284.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
+                     <ToggleButton id="1" fx:id="opcion1" layoutX="128.0" layoutY="284.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.leftAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton fx:id="opcion2" layoutX="544.0" layoutY="284.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton id="2" fx:id="opcion2" layoutX="544.0" layoutY="284.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton fx:id="opcion4" layoutX="544.0" layoutY="377.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton id="4" fx:id="opcion4" layoutX="544.0" layoutY="377.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
                      </ToggleButton>
-                     <ToggleButton fx:id="opcion6" layoutX="544.0" layoutY="470.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
+                     <ToggleButton id="6" fx:id="opcion6" layoutX="544.0" layoutY="470.0" onAction="#seleccionarOpcion" prefHeight="82.0" prefWidth="255.0" styleClass="greenButton" stylesheets="@../css/fullpackstyling.css" text="Opcion" textFill="WHITE" AnchorPane.rightAnchor="160.0">
                         <font>
                            <Font name="System Bold" size="20.0" />
                         </font>
