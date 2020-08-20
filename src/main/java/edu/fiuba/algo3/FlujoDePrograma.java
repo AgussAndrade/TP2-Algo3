@@ -49,7 +49,6 @@ public class FlujoDePrograma {
 
     public void escenaParaPregunta(Pregunta pregunta) throws IOException {
         loader = new FXMLLoader(getClass().getResource("/vista/InterfazPregunta" + pregunta.getClass().getSimpleName() + ".fxml" ));
-//        ((ControladorPregunta)loader.getController()).cargarBotones(pregunta.devolverEstrategia(),pregunta);
         root = loader.load();
         scene = new Scene(root);
         stage.setScene(scene);

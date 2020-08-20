@@ -14,7 +14,6 @@ public class ControladorResumenDePuntos extends ControladorPregunta {
     public Label puntosAnterioresJugador2Label;
     public Label puntosGanadosJugador1Label;
     public Label puntosGanadosJugador2Label;
-    public Label nombreJugador;
     public AnchorPane informacionJugador1;
     public AnchorPane informacionJugador2;
 
@@ -32,11 +31,11 @@ public class ControladorResumenDePuntos extends ControladorPregunta {
 
 
         if(diferenciaActualJ1 > 0){
-            puntosGanadosJugador1Label.setText("+" + String.valueOf(diferenciaActualJ1));
+            puntosGanadosJugador1Label.setText("+" +(diferenciaActualJ1));
             informacionJugador1.setStyle("-fx-background-color: #43B581 ; -fx-background-radius: 30 30 30 30");
         }
         else if(diferenciaActualJ1 == 0){
-            puntosGanadosJugador1Label.setText("+" + String.valueOf(diferenciaActualJ1));
+            puntosGanadosJugador1Label.setText("+" + (diferenciaActualJ1));
             informacionJugador1.setStyle("-fx-background-color: #F04747 ; -fx-background-radius: 30 30 30 30");
         }
         else{
@@ -44,11 +43,11 @@ public class ControladorResumenDePuntos extends ControladorPregunta {
             informacionJugador1.setStyle("-fx-background-color: #F04747 ; -fx-background-radius: 30 30 30 30");
         }
         if(diferenciaActualJ2 > 0){
-            puntosGanadosJugador2Label.setText("+" + String.valueOf(diferenciaActualJ2));
+            puntosGanadosJugador2Label.setText("+" + (diferenciaActualJ2));
             informacionJugador2.setStyle("-fx-background-color: #43B581 ; -fx-background-radius: 30 30 30 30");
         }
         else if(diferenciaActualJ2 == 0){
-            puntosGanadosJugador2Label.setText("+" + String.valueOf(diferenciaActualJ2));
+            puntosGanadosJugador2Label.setText("+" + (diferenciaActualJ2));
             informacionJugador2.setStyle("-fx-background-color: #F04747 ; -fx-background-radius: 30 30 30 30");
         }
         else{
