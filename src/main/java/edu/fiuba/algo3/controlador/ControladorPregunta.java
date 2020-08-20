@@ -27,7 +27,8 @@ public class ControladorPregunta extends ControladorPrincipal {
     public void initialize() throws IOException {
         Platform.runLater(()-> {
             try {
-                flujoDePrograma.escenaParaPregunta(preguntaActual=preguntas.remove(0));
+                preguntaActual=preguntas.remove(0);
+                flujoDePrograma.escenaIntermedia();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -46,7 +47,7 @@ public class ControladorPregunta extends ControladorPrincipal {
                 jugadorActual=0;
                 respuestas.clear();
                 preguntaActual=preguntas.remove(0);
-                flujoDePrograma.escenaIntermedia();
+                flujoDePrograma.escenaResumenDePuntos();
             }else {
                 flujoDePrograma.siguienteEscena();
             }
