@@ -22,18 +22,28 @@
                 <Font name="System Bold" size="60.0" />
             </font>
         </Label>
-      <SplitMenuButton layoutX="133.0" layoutY="59.0" mnemonicParsing="false" onAction="#pausarMusica" text="Musica">
+      <SplitMenuButton fx:id="menuMusica" layoutX="156.0" layoutY="59.0" mnemonicParsing="false" onAction="#pausarMusica" style="-fx-border-color: #8697D4;" text="Sin Musica">
         <items>
           <MenuItem mnemonicParsing="false" onAction="#PonerKakut" text="Kakut" />
           <MenuItem mnemonicParsing="false" onAction="#PonerClasico" text="Clasico" />
         </items>
       </SplitMenuButton>
-      <SplitMenuButton layoutX="286.0" layoutY="59.0" mnemonicParsing="false" text="TiempoSobrePreguntas">
+      <SplitMenuButton fx:id="menuTiempo" layoutX="402.0" layoutY="60.0" mnemonicParsing="false" text="10">
          <items>
             <MenuItem mnemonicParsing="false" onAction="#setearDiezSegundos" text="10s" />
             <MenuItem mnemonicParsing="false" onAction="#setearVeinteSegundos" text="20s" />
             <MenuItem mnemonicParsing="false" onAction="#setearTreintaSegundos" text="30s" />
          </items>
       </SplitMenuButton>
+      <Label alignment="CENTER" layoutY="35.0" prefHeight="79.0" prefWidth="202.0" text="Musica" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="260.0" layoutY="35.0" prefHeight="79.0" prefWidth="202.0" text="Tiempo" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
