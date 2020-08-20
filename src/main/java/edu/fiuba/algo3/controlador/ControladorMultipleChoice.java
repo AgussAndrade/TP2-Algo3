@@ -26,7 +26,6 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public ToggleButton opcion3;
     public ToggleButton opcion4;
     private  List<Binaria> opciones;
-    private int multiplicador = 1;
     @FXML
     public void initialize() {
         cargarBotones();
@@ -76,10 +75,8 @@ public class ControladorMultipleChoice extends ControladorPregunta{
     public void responder(ActionEvent actionEvent) throws IOException {
         constructorDeRespuestaActual.conResponsable(jugadores.get(jugadorActual));
         constructorDeRespuestaActual.conSelecciones(List.copyOf(opciones));
-        System.out.println(multiplicador);
-        constructorDeRespuestaActual.conMultiplicador( new Multiplicador(multiplicador) );
         respuestas.add(constructorDeRespuestaActual.build());
-        multiplicador = 1;
+
         continuar();
     }
 
