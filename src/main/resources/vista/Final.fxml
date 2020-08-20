@@ -26,13 +26,13 @@
                   </Button>
                   <ImageView fitHeight="185.0" fitWidth="157.0" layoutX="562.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="10.0">
                      <image>
-                        <Image url="@../trofeo.png" />
+                        <Image url="@../images/trofeo.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="623.0" layoutY="318.0" text="Label" />
                   <ImageView fitHeight="185.0" fitWidth="157.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="10.0">
                      <image>
-                        <Image url="@../trofeo.png" />
+                        <Image url="@../images/trofeo.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="335.0" layoutY="20.0" prefHeight="83.0" prefWidth="222.0" text="FELICIDADES" textFill="#fffafa">
