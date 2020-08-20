@@ -115,13 +115,23 @@ public class ControladorPregunta extends ControladorPrincipal {
     }
 
     public void activarMultiplicadorX2(ActionEvent actionEvent) {
-        botonMultiplicadorX3.setSelected(false);
-        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
+        if(botonMultiplicadorX2.isSelected()){
+            botonMultiplicadorX3.setSelected(false);
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(2));
+        }
+        else{
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(1));
+        }
     }
 
     public void activarMultiplicadorX3(ActionEvent actionEvent) {
-        botonMultiplicadorX2.setSelected(false);
-        constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
+        if(botonMultiplicadorX3.isSelected()){
+            botonMultiplicadorX2.setSelected(false);
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(3));
+        }
+        else{
+            constructorDeRespuestaActual.conMultiplicador(new Multiplicador(1));
+        }
     }
 
     protected void inicializarLabelsPregunta(){
