@@ -9,7 +9,7 @@
    <children>
       <Button layoutX="408.0" layoutY="549.0" mnemonicParsing="false" onAction="#irALaPregunta" prefHeight="93.0" prefWidth="420.0" styleClass="blueButton" stylesheets="@../css/fullpackstyling.css" text="Empezar Turno" textFill="WHITE" AnchorPane.leftAnchor="430.0" AnchorPane.rightAnchor="430.0">
          <font>
-            <Font name="System Bold" size="40.0" />
+            <Font name="System Bold" size="35.0" />
          </font>
       </Button>
       <Label fx:id="nombreJugador" alignment="CENTER" layoutX="280.0" layoutY="167.0" prefHeight="90.0" prefWidth="717.0" text="NombreJugadorActual" textFill="WHITE" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0">

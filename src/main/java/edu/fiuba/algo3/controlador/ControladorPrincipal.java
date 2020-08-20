@@ -21,7 +21,7 @@ public abstract class ControladorPrincipal extends App {
     static int llamadosExclusividadJugador2 = 0;
     static int puntosAnterioresJugador1 = 0;
     static int puntosAnterioresJugador2 = 0;
-    private final double MAX_TEXT_WIDTH = 650;
+    private final double MAX_TEXT_WIDTH = 600;
     private final double defaultFontSize = 55;
     private final Font defaultFont = Font.font(defaultFontSize);
 
