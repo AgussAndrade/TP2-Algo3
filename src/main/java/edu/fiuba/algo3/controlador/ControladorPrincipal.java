@@ -24,6 +24,7 @@ public abstract class ControladorPrincipal extends App {
     private final double MAX_TEXT_WIDTH = 600;
     private final double defaultFontSize = 55;
     private final Font defaultFont = Font.font(defaultFontSize);
+    static int tiempoBase = 10;
 
 
     public static void inicializar(List<Pregunta> _preguntas, Stage stage) throws IOException {

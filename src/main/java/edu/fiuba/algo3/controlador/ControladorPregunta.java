@@ -56,7 +56,7 @@ public class ControladorPregunta extends ControladorPrincipal {
 
     protected void iniciarTemporizador(){
         temporizador = new Timer(true);//Avisa que es un thread secundario y debe finalizar al finalizar el programa
-        tiempoRestante = 10;
+        tiempoRestante = tiempoBase;
         temporizador.schedule(new TimerTask(){
             @Override
             public void run() {

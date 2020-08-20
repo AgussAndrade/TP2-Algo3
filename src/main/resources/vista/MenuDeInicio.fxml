@@ -28,5 +28,12 @@
           <MenuItem mnemonicParsing="false" onAction="#PonerClasico" text="Clasico" />
         </items>
       </SplitMenuButton>
+      <SplitMenuButton layoutX="286.0" layoutY="59.0" mnemonicParsing="false" text="TiempoSobrePreguntas">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#setearDiezSegundos" text="10s" />
+            <MenuItem mnemonicParsing="false" onAction="#setearVeinteSegundos" text="20s" />
+            <MenuItem mnemonicParsing="false" onAction="#setearTreintaSegundos" text="30s" />
+         </items>
+      </SplitMenuButton>
     </children>
 </AnchorPane>

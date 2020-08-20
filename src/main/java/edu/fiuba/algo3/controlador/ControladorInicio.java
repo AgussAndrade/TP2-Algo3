@@ -31,4 +31,16 @@ public class ControladorInicio extends ControladorPrincipal {
     public void PonerClasico(ActionEvent actionEvent) {
         flujoDePrograma.musica("clasico");
     }
+
+    public void setearDiezSegundos(ActionEvent actionEvent) {
+        tiempoBase = 10;
+    }
+
+    public void setearVeinteSegundos(ActionEvent actionEvent) {
+        tiempoBase = 20;
+    }
+
+    public void setearTreintaSegundos(ActionEvent actionEvent) {
+        tiempoBase = 30;
+    }
 }
