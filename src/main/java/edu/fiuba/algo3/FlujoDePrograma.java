@@ -4,12 +4,16 @@ import edu.fiuba.algo3.modelo.preguntas.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
 public class FlujoDePrograma {
+    public MediaPlayer mediaPlayer = null;
     private final Stage stage;
     static FXMLLoader loader;
     static Parent root;
@@ -71,5 +75,22 @@ public class FlujoDePrograma {
 
     public Stage stage() {
         return stage;
+    }
+    public void musica(String nombre_cancion){
+        if (mediaPlayer != null){
+            mediaPlayer.pause();
+        }
+        String cancion = new File("src/main/resources/music/" + nombre_cancion + ".mp3").toURI().toString();
+        mediaPlayer = new MediaPlayer(new Media(cancion));
+        mediaPlayer.play();
+        mediaPlayer.setVolume(0.2);
+        mediaPlayer.setAutoPlay(true);
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+    }
+
+    public void pausarMusica() {
+        if (mediaPlayer != null){
+            mediaPlayer.pause();
+        }
     }
 }

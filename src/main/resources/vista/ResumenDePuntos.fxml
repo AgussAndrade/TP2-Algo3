@@ -38,6 +38,11 @@
                         </Label>
                      </children>
                   </AnchorPane>
+                  <Label fx:id="puntosAnterioresJugador1Label1" alignment="CENTER" layoutX="21.0" layoutY="611.0" prefHeight="73.0" prefWidth="461.0" text="Resumen de puntos" textFill="WHITE">
+                     <font>
+                        <Font name="System Italic" size="24.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
          </left>
          <right>

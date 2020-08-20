@@ -47,4 +47,5 @@ public abstract class ControladorPrincipal extends App {
             label.setStyle("-fx-font-weight: bold");
         }
     }
+
 }
