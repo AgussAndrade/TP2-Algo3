@@ -22,6 +22,10 @@ Listado de software/herramientas necesarias para el proyecto
 
 java 14
 Apache Maven 3.6.3
+javafx 11
+javafx mediaplayer
+json simple
+jfoenix
 
 ```
 
@@ -31,7 +35,7 @@ $ mvn clean test
 ```
 ## Ejecutando la aplicación
 
-La aplicación se encuentra en desarollo y no es posible ejecutarla.
+mvn clean javafx:run
 
 ## Licencia
 
